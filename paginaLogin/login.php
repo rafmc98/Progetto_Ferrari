@@ -1,7 +1,5 @@
-
 <?php
     /* Controllo sessione */
-    
     session_start();
     if(isset($_SESSION['email'])){
         header("location: ../paginaProfilo/paginaProfilo.html");

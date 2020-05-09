@@ -1,3 +1,5 @@
+<?php /* Controllo sessione */session_start(); ?>
+
 <html>
   <head>
     <link rel="stylesheet" href="homePage.css">
@@ -35,8 +37,10 @@
     <div class="navbar">
       <div class="openbtn" onclick="openNav()">☰ MENU</div>
       <div class="loginbtn">
-        <!-- mettere qui il link per la pagina utente-->
-        <a href="#">LOGIN</a>
+        <?php if(isset($_SESSION['email']))
+          echo "<a class=\"user\" href=\"../paginaProfilo/paginaProfilo.html\">USER</a>";?>
+        <?php if(!isset($_SESSION['email']))
+          echo "<a href=\"#\">LOGIN</a>"?>
       </div>
     </div>
     
