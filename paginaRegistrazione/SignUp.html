@@ -1,0 +1,40 @@
+<html>
+  <head>
+    <meta charset="utf-8">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.0/jquery.min.js" charset="utf-8"></script>
+    <link rel="stylesheet" href="SignUpCss.css">
+  </head>
+  <body>
+      <form action="SignUp.php"  method="POST" class="login-form">
+        <img class="logo" src="logo.png">
+        <h1>Sign up</h1>
+        <div class="txtb">
+          <input type="text" name="inputName" required>
+          <span data-placeholder="Name"></span>
+        </div>
+        <div class="txtb">
+          <input type="text" name="inputSurname" required>
+          <span data-placeholder="Surname"></span>
+        </div>
+        <div class="txtb">
+          <input type="email" name="inputEmail" required>
+          <span data-placeholder="Email"></span>
+        </div>
+        <div class="txtb">
+          <input type="password" name="inputPassword" required>
+          <span data-placeholder="Password"></span>
+        </div>
+        <button type="submit" class="logbtn" name="registrationButton">Sign up</button>
+        </form>
+      <script>
+        $(".txtb input").on("focus",function(){
+          $(this).addClass("focus");
+        });
+        
+        $(".txtb input").on("blur",function(){
+          if($(this).val() == "")
+            $(this).removeClass("focus");
+        });
+    </script>
+  </body>
+</html>

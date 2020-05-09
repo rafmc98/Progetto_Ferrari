@@ -1,0 +1,113 @@
+*{
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+  font-family: Arial, Helvetica, sans-serif ; /* add font-family  (monteserrat)*/
+  box-sizing: border-box;
+}
+
+body{
+  min-height: 100vh;
+  background: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ),url('../ferrari2.jpg');  /* Opacizza la foto di background */
+}
+
+.logo{
+  height: 70px;
+  width: 125px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 20px;
+}
+
+.login-form{
+  width: 360px;
+  background: #1c1e1f;  /*colore sfondo box del form */
+  opacity: 0.9;
+  height: 550px;
+  padding: 30px 40px;
+  border-radius: 10px;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%,-50%);
+}
+
+
+.login-form h1{
+  text-align: center;
+  margin-bottom: 10px;
+  color: white;
+}
+
+.txtb{
+  border-bottom: 2px solid #adadad; /*linea sotto la casella di testo */
+  position: relative;
+  margin: 30px 0;
+}
+
+.txtb input{
+  font-size: 15px;
+  color: white; /* colore scritta nella casella di testo*/
+  border: none;
+  width: 100%;
+  outline: none;
+  background: none;
+  padding: 0 5px;
+  height: 40px; /* altezza casella di testo */
+}
+
+.txtb span::before{
+  content: attr(data-placeholder); /*css del placeholder(da rivedere) */
+  position: absolute;
+  top: 50%;
+  left: 5px;
+  color: #adadad; /*colore placeholder*/
+  transform: translateY(-50%); /*alza la scritta del placeholder*/
+  z-index: -1;
+  transition: .5s;
+}
+
+
+/** PER ME SUPERFLUO (Comprende anche uno script) ------------------------------------------------------------------------------------------------------- */
+
+.txtb span::after{
+  content: '';
+  position: absolute;
+  width: 0%;
+  height: 2px;
+  background: linear-gradient(120deg,#cf0a0a,#e5f502); /*gradiente animazione */
+  top: 100%; /* posizionano correttamente le linee colorate */
+  left: 0;  /* // */
+  transition: .5s;
+}
+
+.focus + span::before{
+  top: -5px;          /*  la scritta nel placeholder sale quando si verifica l'evento focus*/
+}
+
+.focus + span::after{
+  width: 100%;      /* la scritta nel placeholder torna alla sua altezza normale */
+}
+
+/** ----------------------------------------------------------------------------------------------------------------------------*/
+
+
+
+.logbtn{
+  display: block;
+  width: 100%;
+  height: 50px;
+  border: none;
+  background-color:	#E4002B;
+  background-size: 200%;
+  color: #fff;
+  outline : none;
+  cursor: pointer;
+  transition: .5s;
+  border-radius: 120px;
+}
+
+.logbtn:hover{
+  background-color:rgb(136, 2, 26);
+}
