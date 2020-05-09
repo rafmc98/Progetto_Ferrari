@@ -1,0 +1,158 @@
+<html>
+  <head>
+    <link rel="stylesheet" href="../paginaIniziale/homePage.css">
+    <link rel="stylesheet" href="modal.css" rel="stylesheet">
+
+    <script src="HomePageScript.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.0/jquery.min.js" charset="utf-8"></script>
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+
+
+    <!-- stylesheet for demo and examples -->
+    <script src="js/jquery.min.js"></script>
+	  <script src="js/jquery-ui.min.js"></script>
+    <script src="js/jquery.mousewheel.min.js"></script>
+    
+    <!-- custom scrollbars plugin -->
+    <script src="js/jquery.mCustomScrollbar.js"></script>
+    <script>
+
+      $(function(){
+      
+        $(window).load(function(){
+    
+          $(".slider").mCustomScrollbar({
+            horizontalScroll:true,
+            scrollInertia:1100,
+            
+            advanced:{
+              autoExpandHorizontalScroll:true
+            },
+            /*,
+            callbacks:{
+              onScroll:function() {
+                alert("scrolled...");
+              }
+            },
+            scrollButtons:{
+              enable:true
+            }*/
+          });
+    
+          /* Navigation */
+          $(".menu a").click(function(){
+          
+            var myid= $(this).attr("href");
+            
+            $(".menu a").removeClass('selected');
+            $(this).addClass('selected');
+      
+            $(".slider").mCustomScrollbar("scrollTo","" + myid + "");
+            
+          });
+    
+        });
+          
+          
+      })(jQuery);
+    
+      </script>
+
+      <link href="css/jquery.mCustomScrollbar.css" rel="stylesheet" type="text/css" />
+      <link href="css/stile.css" rel="stylesheet" type="text/css" />
+
+      <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,400italic,700' rel='stylesheet' type='text/css'>
+      <link href='http://fonts.googleapis.com/css?family=Oswald:400,300' rel='stylesheet' type='text/css'>
+
+  </head>
+  <body>
+
+    <div id="mySidebar" class="sidebar">
+      <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
+      <a href="#">About</a>
+      <div class="dropdown">
+        <div class="dropbtn">Formula 1</div>
+        <div class="dropdown-content">
+            <a href="#">Panoramica</a>
+            <a href="#">Auto</a>
+            <a href="#">Piloti</a>
+        </div>
+      </div>
+      <a href="#">Clients</a>
+      <a href="#">Contact</a>
+    </div>
+
+    <div class="navbar">
+      <div class="openbtn" onclick="openNav()">☰ MENU</div>
+      <div class="loginbtn"><a href="#">LOGIN</a></div>
+    </div>
+    
+
+    <div class="header">
+      <div class="titolo">Passione Ferrari</div>
+    </div>
+
+    <div id="container">
+      <div class="slider content">
+          <div class="my_container">
+
+              <div class="line-element" id="page-1">
+                  <div class="cont-page">
+                    <div class="caption">
+                      <figure class="nomeClasse" data-effect="fade-in">
+                        <img src="img/enzo.jpg" alt="" width="110%" height="90%"/>
+                        <figcaption>
+                        <h2 style="text-align: center; margin-top: 50px;">Cover Fade</h2>
+                        <p>Lorem ipsum dolor sit amet.</p>
+                        </figcaption>
+                        </figure>
+                   </div>
+                  </div>
+      </div>
+              
+               <div class="line-element" id="page-2">
+                  <div class="cont-page">
+                    <img src="img/times-square.jpg" class="cop" /> 
+                  </div>
+      </div>
+             
+              <div class="line-element" id="page-3">
+                  <div class="cont-page">
+                    <img src="img/brooklyn.jpg" class="cop" />
+                      <h2>Brooklyn</h2>
+                      <p>Questa pagina contiene un immagine e del testo.</p>
+                  </div>
+              </div>
+              
+              <div class="line-element" id="page-4">
+                 <div class="cont-page">
+                    <img src="img/newbedford.jpg" class="cop" />
+                      <p>Questa pagina contiene un immagine e del testo.</p>
+                </div>
+              </div>
+              
+              <div class="line-element" id="page-5">
+                  <div class="cont-page">
+                    <h2>Contacts</h2>
+                      <p>Questa pagina contiene solo del testo.</p>
+                  </div>
+              </div>
+
+          </div>
+      </div>
+</div>
+   
+    
+    
+    
+    
+<div class="footer">
+  <ul class="footerContent">
+    <li><i class="fab fa-instagram"></i></li>
+    <li><i class="fab fa-facebook"></i></li>
+    <li><i class="fab fa-twitter"></i></li>
+  </ul>
+</div>
+
+  </body>
+</html>

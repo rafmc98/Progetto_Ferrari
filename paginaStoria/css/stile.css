@@ -1,0 +1,71 @@
+html,body{height:100%;}
+	body{margin:0; padding:0;background: #FF2800; color: #666;font: 16px/28px;font-family: 'Open Sans', sans-serif; line-height:22px;}
+	
+
+	#header{width:155px;background:#21aabd;float:left;position:fixed; top:50%;margin-top:-325px;left:15px;z-index:80;}
+		h1{margin:0;padding:0;}
+		#logo{display:block;float:left;font-family: oswald;font-weight:normal;font-size: 20px; color: #fff;text-transform:uppercase; text-decoration:none;padding:10px; line-height: 24px; border-bottom: 2px solid #e2e2e0; }
+		.menu {float:left; list-style-type:none;padding:0;width:100%;}
+		.menu li a{color: #fff; display: block; font: 14px;font-family: oswald; text-transform:uppercase;text-decoration:none;padding: 3px 10px;}
+		.menu li a:hover{background:#666;}
+		.selected{background: #999; color:#fff!important;}
+		.selected:hover{background: #999!important;}
+	
+	#container{padding:10px 0px 0px 0px;}
+		.slider{ top:50%; margin-top:50px; width:99%; height:500px;   -webkit-box-sizing:border-box; -moz-box-sizing:border-box; box-sizing:border-box;}
+		.slider.toggle_width{width:70%;}
+		.slider .my_container{overflow: hidden;}
+		.slider .my_container .line-element{border-radius: 10px 10px 10px 10px;-webkit-box-shadow: 10px 8px 11px 1px #000000;
+			-moz-box-shadow: 10px 8px 11px 1px #000000;
+			-o-box-shadow: 10px 8px 11px 1px #000000;
+			box-shadow: 10px 8px 11px 1px #000000; float:left; z-index:10;height:400px;width: 600px;display:block;background:#fff;margin-left:190px; margin-bottom: 20px;}
+		
+		.slider .my_container span{position:absolute; bottom:0;left:0; }
+		.slider .my_container img:first-child{margin-left:0;}
+		.slider .my_container img:last-child{margin-right:0;}
+		
+	
+	.cont-page{padding:20px;}
+		h2{font-family: oswald;font-weight:normal; text-transform:uppercase}
+		.cop{float:left; margin-right:20px; margin-bottom: 20px; height: 90%;
+			width: 100%;}
+
+			.nomeClasse {
+				position: relative;
+				overflow: hidden;
+				width: 90%;
+				margin: 0 auto;
+				}
+
+				.nomeClasse img {
+					width: 100%;
+					display: block;
+					-moz-transition:800ms;
+					-webkit-transition: 800ms; 
+					-o-transition: 800ms; 
+					transition: 800ms;
+					}
+
+					.nomeClasse figcaption {
+						background: rgba(0,0,0,0.8);
+						color: #fff;
+						padding: .5rem;
+						position: absolute;
+						-webkit-transition: 800ms; 
+						-o-transition: 800ms; 
+						transition: 800ms;
+						width: 100%;
+						cursor: pointer;
+						}
+
+						.nomeClasse[data-effect="fade-in"] figcaption {
+							top: 0;
+							left: 0;
+							height: 100%;
+							opacity: 0;
+							}
+
+							.nomeClasse[data-effect="fade-in"]:hover figcaption {
+								opacity: 1;
+								}
+								
