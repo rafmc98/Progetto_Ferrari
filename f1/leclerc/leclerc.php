@@ -44,11 +44,10 @@
             <div class="titolo">Passione Ferrari </div>
         </div>
 
-        <div class="titoletto">
-            <h1 class="title">CHARLES LECLERC</h1>
-        </div>
-        
-        <div class="content" style="width:100%;height:150%;">
+        <div class="content" style="width:100%;height:150%">
+            <div class="titoletto">
+                <h1 class="title">CHARLES LECLERC</h1>
+            </div>
             <div id="descrizione" style="width:65%;height:150%;float:left;position:relative">
                 <div id="descr" style="border:3px solid green;width:100%;height:27%;position:relative">
                 </div>
@@ -105,14 +104,15 @@
                         pg_last_error( ) ) ;
                         while ($line = pg_fetch_array ($result , null , PGSQL_ASSOC ) ) {
                             foreach ( $line as $col_value) {
-                                echo "<p class='centra'>$col_value</p>" ;
+                                echo "<p class='centra'>$col_value</p>";
                             }
                         }
-
+                        pg_free_result($result);
+                        pg_close($dbconn);
+                    ?>
                 </div>
             </div>
         </div>
-    </div>
     <div class="footer">
         <ul class="footerContent">
             <li><i class="fab fa-instagram"></i></li>
