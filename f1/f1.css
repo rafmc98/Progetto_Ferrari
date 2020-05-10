@@ -1,0 +1,172 @@
+
+body{
+  background-image:url("immagini/bg3.jpg");
+  font-family:"formula1";
+}
+.pagpil{
+  width:80%;
+  height:100%;
+  -webkit-box-shadow: 1px -4px 18px 13px #000000;
+  -moz-box-shadow: 1px -4px 18px 13px #000000;
+  -o-box-shadow: 1px -4px 18px 13px #000000;
+  box-shadow: 1px -4px 18px 13px #000000;
+  border-radius: 10px;
+}
+.scomparsa{
+  width:100%;
+  height:30%;
+}
+
+.box{
+  width:100%;
+  height:40%;
+  text-align:center;
+}
+
+.testo{
+  color:orange;
+}
+.database{
+  width:50%;
+  height:45%;
+  position:relative;
+  text-align:center;
+  float:right;
+}
+.tabella{
+  font-size:20px;
+  color:red;
+}
+.spazietto{
+  width:100%;
+  height:5%;
+  position:relative;
+}
+
+.descr{
+  font-family:"formula1";
+  color:red;
+}
+
+.footer {
+  height:260px;
+  width:100%;
+  background-color: #FF2800;
+  text-align: center;
+  display:table;
+}
+
+.spazio{
+  width:100%;
+  height:15%;
+  position:relative;
+}
+.color-box{
+  background: rgb(238, 238, 238);
+  width:100px;
+  height:100px;
+  margin-left:85px;
+  margin-right:100px;
+  margin-top:10px;
+  float:left;
+  padding: 10px;
+  -webkit-box-shadow: 1px -4px 18px 13px #000000;
+  -moz-box-shadow: 1px -4px 18px 13px #000000;
+  -o-box-shadow: 1px -4px 18px 13px #000000;
+  box-shadow: 1px -4px 18px 13px #000000;
+  border-radius: 10px;
+  cursor:pointer;
+}
+
+.eventi2{
+  cursor:pointer;
+}
+.imgpiloti{
+  width:500px;
+  height:300px;
+  -webkit-box-shadow: 1px -4px 18px 13px #000000;
+  -moz-box-shadow: 1px -4px 18px 13px #000000;
+  -o-box-shadow: 1px -4px 18px 13px #000000;
+  box-shadow: 1px -4px 18px 13px #000000;
+  border-radius: 10px;
+}
+.title{
+  text-align:center;
+  font-family:'formula1';
+  color:red;
+  margin:30px;
+}
+
+.titoletto{
+  width:100%; 
+  height:13%;
+  position:relative;
+}
+
+/* INSERIMENTO FONT F1 */
+@font-face {
+	font-family: 'formula1';
+	src: url('f1-fonts/Formula1-Display-Bold.eot');
+	src: url('f1-fonts/Formula1-Display-Bold.eot?#iefix') format('embedded-opentype'),
+		url('f1-fonts/Formula1-Display-Bold.woff') format('woff'),
+		url('f1-fonts/Formula1-Display-Bold.ttf') format('truetype');
+	font-weight: bold;
+	font-style: normal;
+}
+
+@font-face {
+  font-family:"FerrariFont";
+  src: url("f1-fonts/FerroRosso.ttf");
+}
+.nomepiloti{
+  font-family:formula1;
+  color:red;
+  text-align:center;
+  text-decoration:none;
+  margin-bottom:20px;
+}
+
+.nomepiloti:hover{
+  opacity:0.7
+}
+
+.embed-responsive.embed-responsive-16by9{
+  width:100%;
+  height:40%;
+}
+
+.embed-responsive-item{
+  width:300px;
+  height:300px;
+}
+/* SLIDESHOW */
+.centra{
+  text-align:center;
+}
+
+.carousel-indicators .active{
+  background-color:blue;
+}
+
+.piloti{
+  width:90%;;
+  height:100%;
+  -webkit-box-shadow: 1px -4px 18px 13px #000000;
+  -moz-box-shadow: 1px -4px 18px 13px #000000;
+  -o-box-shadow: 1px -4px 18px 13px #000000;
+  box-shadow: 1px -4px 18px 13px #000000;
+  border-radius: 10px;
+
+}
+
+.car{
+  width:90%;
+  height:100%;
+  -webkit-box-shadow: 1px -4px 18px 13px #000000;
+  -moz-box-shadow: 1px -4px 18px 13px #000000;
+  -o-box-shadow: 1px -4px 18px 13px #000000;
+  box-shadow: 1px -4px 18px 13px #000000;
+  border-radius: 10px;
+}
+
+/* FINE SLIDESHOW /*
