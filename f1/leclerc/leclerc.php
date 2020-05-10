@@ -93,6 +93,7 @@
                         <p class="centra">Nazione:</p>
                         <p class="centra">GP:</p>
                         <p class="centra">Vittorie: </p>
+
                 </div>
                 <div class="database">
                     <?php
@@ -107,9 +108,7 @@
                                 echo "<p class='centra'>$col_value</p>" ;
                             }
                         }
-                        pg_free_result($result) ;
-                        pg_close($dbconn) ;
-                    ?>
+
                 </div>
             </div>
         </div>
