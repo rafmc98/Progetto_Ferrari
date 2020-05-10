@@ -44,9 +44,10 @@
             <div class="titolo">Passione Ferrari </div>
         </div>
 
-            <div class="titoletto">
-                <h1 class="title">CHARLES LECLERC</h1>
-            </div>
+        <div class="titoletto">
+            <h1 class="title">CHARLES LECLERC</h1>
+        </div>
+        
         <div class="content" style="width:100%;height:150%;">
             <div id="descrizione" style="width:65%;height:150%;float:left;position:relative">
                 <div id="descr" style="border:3px solid green;width:100%;height:27%;position:relative">
@@ -64,7 +65,7 @@
                             <h2 class="descr" style="text-align:center"><i id="freccia" class="fas fa-angle-down"></i></h2>
                         </div>
                         <div v-class="scomparsa" id="sparisci">
-                            <h5 class="testo">{{desc}}</h5><br>
+                            <h5 class="testo">{{desc}}</h5>
                             <div class="embed-responsive embed-responsive-16by9" style="width:100%; height:20%;">
                             <iframe v-bind:src="video" frameborder="0" style="margin-left:200px;width:500px;height:300px;" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                             </div>
@@ -92,8 +93,6 @@
                         <p class="centra">Nazione:</p>
                         <p class="centra">GP:</p>
                         <p class="centra">Vittorie: </p>
-
-                    </table>
                 </div>
                 <div class="database">
                     <?php
@@ -104,15 +103,12 @@
                         $result = pg_query ($query) or die ( ' Query failed : ' .
                         pg_last_error( ) ) ;
                         while ($line = pg_fetch_array ($result , null , PGSQL_ASSOC ) ) {
-                            echo "\t<tr>\n" ;
                             foreach ( $line as $col_value) {
-                                echo "\t\t<tr><td><p class='centra'>$col_value</p> </td></tr>" ;
+                                echo "<p class='centra'>$col_value</p>" ;
                             }
-                        echo "\t</tr>\n" ;
                         }
-                    echo "</table>\n" ;
-                    pg_free_result($result) ;
-                    pg_close($dbconn) ;
+                        pg_free_result($result) ;
+                        pg_close($dbconn) ;
                     ?>
                 </div>
             </div>
