@@ -93,7 +93,7 @@
                         <p class="centra">GP:</p>
                         <p class="centra">Vittorie: </p>
 
-                    </table>
+                
                 </div>
                 <div class="database">
                     <?php
@@ -104,13 +104,11 @@
                         $result = pg_query ($query) or die ( ' Query failed : ' .
                         pg_last_error( ) ) ;
                         while ($line = pg_fetch_array ($result , null , PGSQL_ASSOC ) ) {
-                            echo "\t<tr>\n" ;
                             foreach ( $line as $col_value) {
-                                echo "\t\t<tr><td><p class='centra'>$col_value</p> </td></tr>" ;
+                                echo "<p class='centra'>$col_value</p>" ;
                             }
-                        echo "\t</tr>\n" ;
                         }
-                    echo "</table>\n" ;
+                    
                     pg_free_result($result) ;
                     pg_close($dbconn) ;
                     ?>
