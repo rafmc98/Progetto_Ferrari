@@ -2,13 +2,13 @@
     /* Controllo sessione */
     session_start();
     if(isset($_SESSION['email'])){
-        header("location: ../paginaProfilo/paginaProfilo.html");
+        header("Location: ../paginaProfilo/paginaProfilo.php");
     }
     else{
         $dbconn = pg_connect("host=localhost port=5432 dbname=ProjectDB user=postgres password=password")
                 or die('Could not connect: '.pg_last_error());
             if(!(isset($_POST['loginButton']))){
-                header("Location: ../index.html");
+                header("Location: login.html");
             }
             else{
                 $email = $_POST['inputEmail'];
@@ -16,7 +16,7 @@
                 $result = pg_query_params($dbconn,$q1,array($email));
                 if(!($line = pg_fetch_array($result,null,PGSQL_ASSOC))){
                     echo "<h1>Sorry you are not a registered user</h1>
-                            <a href=../paginaRegistrazione/registrazione.html></a>";
+                            <a href=../paginaRegistrazione/SignUp.html></a>";
                 }
                 else{
                     $password = md5($_POST['inputPassword']);
@@ -27,7 +27,7 @@
                     }
                     else{
                         $_SESSION['email'] = $email;
-                        header("location: ../paginaProfilo/paginaProfilo.html");
+                        header("Location: ../paginaProfilo/paginaProfilo.php");
                     }
                 }
             }

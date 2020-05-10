@@ -38,7 +38,6 @@
 }
 
 /* sezione scelta avatar */
-
 .select-box{
     width: 100%;
     height: 50%;
@@ -119,4 +118,10 @@
     float: right;
     height: 100%;
     width: 50%;
+}
+
+.info{
+    margin: 10% auto;
+    width: 90%;
+    height: 90%;
 }

@@ -1,3 +1,8 @@
+<?php 
+    session_start();
+    if(!isset($_SESSION['email']))
+        header("Location: ../paginaIniziale/homePage.php");
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -46,7 +51,6 @@
     <!--Navabar-->
     <div class="navbar">
     <div class="openbtn" onclick="openNav()">☰ MENU</div>
-    <div class="loginbtn"><a href="#">LOGIN</a></div>
     </div>
     
     <!--Header-->
@@ -56,6 +60,8 @@
 
     <!--Riepilogo info utente-->
     <div class="box-info">
+
+        <!-- Sezione avatar-->
         <div id="app" class="profile-pic">
             <div class="img-box">
                 <img v-bind:src="image" height="160px" widht="160px">
@@ -72,7 +78,7 @@
         </div>
         <script  type="text/javascript" src="avatar.js" ></script>   
         
-        
+        <!-- Sezione informazioni utente dal db -->
         <div class="user-info">
             <div class="info">
                 <a href="logout.php"><input type="button" value="logout" name="logout"></a>

@@ -1,3 +1,4 @@
+<?php  session_start(); ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -36,7 +37,12 @@
 
     <div class="navbar">
       <div class="openbtn" onclick="openNav()">☰ MENU</div>
-      <div class="loginbtn"><a href="#">LOGIN</a></div>
+      <div class="loginbtn">
+        <?php if(isset($_SESSION['email']))
+          echo "<a class=\"user\" href=\"../paginaProfilo/paginaProfilo.html\">USER</a>";?>
+        <?php if(!isset($_SESSION['email']))
+          echo "<a href=\"#\">LOGIN</a>"?>
+      </div>
     </div>
     
 
