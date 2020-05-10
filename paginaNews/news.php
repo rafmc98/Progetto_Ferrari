@@ -59,7 +59,7 @@
           <img src="<?php echo $News->urlToImage ?>" alt="News thumbnail">
         </div>
         <div class="col-md-9">
-          <h2><!--Title:--> <?php echo $News->title ?></h2>
+          <h2 class="news-title"><!--Title:--> <?php echo $News->title ?></h2>
           <h5><!--Description: --><?php echo $News->description ?></h5>
           <p><!--Content:--> <?php echo $News->content ?></p>
           <h6><!--URL:--><?php  echo "<a href=$News->url>Click to see more</a>"; ?></h6>

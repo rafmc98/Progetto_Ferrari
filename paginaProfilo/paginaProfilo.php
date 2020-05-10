@@ -80,11 +80,35 @@
         
         <!-- Sezione informazioni utente dal db -->
         <div class="user-info">
-            <div class="info">
-                <a href="logout.php"><input type="button" value="logout" name="logout"></a>
+            <?php
+                $dbconn = pg_connect("host=localhost port=5432 dbname=ProjectDB user=postgres password=password")
+                or die('Could not connect: '.pg_last_error());
+                $email = $_SESSION['email'];
+                $q = "select * from utenze where email = '$email' ";
+                $result = pg_query($q) or die('Query failed: '.pg_last_error());
+                while ($line = pg_fetch_array($result, null, PGSQL_ASSOC)){
+            ?>
+                    <div class="info">
+                            <div class="user-field">
+                                <div class="title-field">Name</div>
+                                <div class="info-db"><?php echo $line["name"]; ?></div>
+                            </div>
+                            <div class="user-field">
+                                <div class="title-field">Surname</div>
+                                <div class="info-db"><?php echo $line["surname"]; ?></div>
+                            </div>
+                            <div class="user-field">
+                                <div class="title-field">Email</div>
+                                <div class="info-db"><?php echo $line["email"]; ?></div>
+                            </div>
+                            <div class="user-field" id="button-div">
+                                <button onclick="window.location.href='logout.php'" class="logout-button">Logout</button>
+                            </div>
+                        </div>
+                <?php
+                    }
+                ?>
             </div>
-        </div>
-        
     </div>
 
 

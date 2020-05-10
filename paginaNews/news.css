@@ -1,9 +1,9 @@
 .header{
-  height: 200px;
+  height: 175px;
 }
 
 .titolo{
-  line-height: 200px;
+  line-height: 175px;
 }
 
 .navbar{
@@ -33,5 +33,13 @@ img{
 .container-fluid{
   width: 90%;
   margin: 60px;
+}
+
+.news-title{
+  text-transform: lowercase;
+}
+
+.news-title::first-letter{
+  text-transform: capitalize;
 }
 
