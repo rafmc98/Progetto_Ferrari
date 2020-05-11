@@ -15,6 +15,12 @@
       $(".parent div").mouseleave(function(){
         $(this).find("span").fadeOut(600);
       });
+
+      $('#iconaProfilo').css({
+                "background-image" : "url('<?php echo $_SESSION['user-pic'] ?>')",
+                "background-size" : "cover"
+            });
+
     });
   </script>
   <body>
@@ -33,12 +39,12 @@
       <a href="#">Clients</a>
       <a href="#">Contact</a>
     </div>
-
+    
     <div class="navbar">
       <div class="openbtn" onclick="openNav()">☰ MENU</div>
       <div class="loginbtn">
         <?php if(isset($_SESSION['email']))
-          echo "<a class=\"user\" href=\"../paginaProfilo/paginaProfilo.html\">USER</a>";?>
+          echo "<div><div id=\"iconaProfilo\" style=\"margin-left: 3px; margin-top: 3px; width: 30px; height: 30px; margin-right: 5px;\"></div><a class=\"user\" href=\"../paginaProfilo/paginaProfilo.html\">USER</a></div>";?>
         <?php if(!isset($_SESSION['email']))
           echo "<a href=\"#\">LOGIN</a>"?>
       </div>

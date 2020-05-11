@@ -166,3 +166,12 @@
     height: 50%;
     font-family: Calibri;
 }
+
+
+
+/* immagine di profilo (prova) */
+#immagine{
+    height: 160px;
+    width: 160px;
+    border-radius: 50%;
+}

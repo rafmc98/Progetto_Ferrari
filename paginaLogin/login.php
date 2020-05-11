@@ -27,6 +27,7 @@
                     }
                     else{
                         $_SESSION['email'] = $email;
+                        $_SESSION['user-pic'] = '../Flat avatars icons pack/PNG/256x256/256_1.png';
                         header("Location: ../paginaProfilo/paginaProfilo.php");
                     }
                 }

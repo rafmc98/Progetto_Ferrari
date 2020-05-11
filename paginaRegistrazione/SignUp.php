@@ -28,6 +28,7 @@
                 $data = pg_query_params($dbconn,$q2,array($email,$name,$surname,$password));
                 if($data){
                     $_SESSION['email'] = $email;
+                    $_SESSION['user-pic'] = '../Flat avatars icons pack/PNG/256x256/256_1.png';
                     header("Location: ../paginaProfilo/paginaProfilo.php");
                 }
             }

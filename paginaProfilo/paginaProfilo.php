@@ -17,6 +17,7 @@
     
     <script>
         $(document).ready(function(){
+
             $('.select-button').on('click', function() {
                 $('.select-content').slideToggle(800);
             });
@@ -26,6 +27,27 @@
             $('.select-button').mouseleave(function(){
                 $(this).css("background-color","#ff2800")
             });
+
+            // setta l'immagine dell'avatar in base a quella di default
+            $('#immagine').css({
+                "background-image" : "url('<?php echo $_SESSION['user-pic'] ?>')",
+                "background-size" : "cover"
+            });
+
+            $('.avatar').click(function(){
+                var pic = $(this).attr("name");
+                var icon = $("img",this).attr("src");
+                pic = '../Flat avatars icons pack/PNG/'+ pic;
+                $('#immagine').css({
+                    "background-image" : "url('" + pic + "')",
+                    "background-size" : "cover"
+                });
+
+                // Send Ajax request to backend.php, with src set as "icon" in the POST data
+                $.post('backend.php',{iconcina : icon});
+            });
+
+            
         });
     </script>
 
@@ -64,19 +86,30 @@
         <!-- Sezione avatar-->
         <div id="app" class="profile-pic">
             <div class="img-box">
-                <img v-bind:src="image" height="160px" widht="160px">
+                <div id="immagine"></div>
             </div>
             <div class="select-box">
                 <div class="select-button">Choose avatar</div>
                 <div class="select-content">
-                    <div v-for="x in variants" v-on:Click="updateImage(x.image)" class="avatar">
-                        <img v-bind:src="x.iconImage">
-                        {{ x.name }}
-                    </div>
+                    <div class="avatar" name="128x128/128_1.png"><img src="../Flat avatars icons pack/PNG/128x128/128_1.png">Avatar 1</div>
+                    <div class="avatar" name="128x128/128_2.png"><img src="../Flat avatars icons pack/PNG/128x128/128_2.png">Avatar 2</div>
+                    <div class="avatar" name="128x128/128_3.png"><img src="../Flat avatars icons pack/PNG/128x128/128_3.png">Avatar 3</div>
+                    <div class="avatar" name="128x128/128_4.png"><img src="../Flat avatars icons pack/PNG/128x128/128_4.png">Avatar 4</div>
+                    <div class="avatar" name="128x128/128_5.png"><img src="../Flat avatars icons pack/PNG/128x128/128_5.png">Avatar 5</div>
+                    <div class="avatar" name="128x128/128_6.png"><img src="../Flat avatars icons pack/PNG/128x128/128_6.png">Avatar 6</div>
+                    <div class="avatar" name="128x128/128_7.png"><img src="../Flat avatars icons pack/PNG/128x128/128_7.png">Avatar 7</div>
+                    <div class="avatar" name="128x128/128_8.png"><img src="../Flat avatars icons pack/PNG/128x128/128_8.png">Avatar 8</div>
+                    <div class="avatar" name="128x128/128_9.png"><img src="../Flat avatars icons pack/PNG/128x128/128_9.png">Avatar 9</div>
+                    <div class="avatar" name="128x128/128_10.png"><img src="../Flat avatars icons pack/PNG/128x128/128_10.png">Avatar 10</div>
+                    <div class="avatar" name="128x128/128_11.png"><img src="../Flat avatars icons pack/PNG/128x128/128_11.png">Avatar 11</div>
+                    <div class="avatar" name="128x128/128_12.png"><img src="../Flat avatars icons pack/PNG/128x128/128_12.png">Avatar 12</div>
+                    <div class="avatar" name="128x128/128_13.png"><img src="../Flat avatars icons pack/PNG/128x128/128_13.png">Avatar 13</div>
+                    <div class="avatar" name="128x128/128_14.png"><img src="../Flat avatars icons pack/PNG/128x128/128_14.png">Avatar 14</div>
+                    <div class="avatar" name="128x128/128_15.png"><img src="../Flat avatars icons pack/PNG/128x128/128_15.png">Avatar 15</div>
+                    <div class="avatar" name="128x128/128_16.png"><img src="../Flat avatars icons pack/PNG/128x128/128_16.png">Avatar 16</div>
                 </div>
             </div>
-        </div>
-        <script  type="text/javascript" src="avatar.js" ></script>   
+        </div> 
         
         <!-- Sezione informazioni utente dal db -->
         <div class="user-info">
