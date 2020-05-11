@@ -33,7 +33,7 @@ html,body{height:100%;}
 			.nomeClasse {
 				position: relative;
 				overflow: hidden;
-				width: 90%;
+				width: 100%;
 				margin: 0 auto;
 				}
 
@@ -66,6 +66,6 @@ html,body{height:100%;}
 							}
 
 							.nomeClasse[data-effect="fade-in"]:hover figcaption {
-								opacity: 1;
+								opacity: 3;
 								}
 								
