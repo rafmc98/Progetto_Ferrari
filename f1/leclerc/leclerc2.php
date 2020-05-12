@@ -125,7 +125,7 @@
                 <div class="database">
                     <?php
                         $dbconn = pg_connect("host=localhost port=5432
-                        dbname=Formula1 user=postgres password=admin ")or die ( ' Could not connect : ' . pg_last_error( ) ) ;
+                        dbname=PassioneFerrari user=postgres password=password ")or die ( ' Could not connect : ' . pg_last_error( ) ) ;
                         $pilota="'Leclerc'";
                         $query='SELECT nome,cognome,"data nascita",altezza,nazionalità,gare,vittorie FROM "Piloti" WHERE "cognome"='."$pilota";
                         $result = pg_query ($query) or die ( ' Query failed : ' .

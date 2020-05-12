@@ -5,7 +5,7 @@
         header("Location: ../paginaProfilo/paginaProfilo.php");
     }
     else{
-        $dbconn = pg_connect("host=localhost port=5432 dbname=ProjectDB user=postgres password=password")
+        $dbconn = pg_connect("host=localhost port=5432 dbname=PassioneFerrari user=postgres password=password")
                 or die('Could not connect: '.pg_last_error());
             if(!(isset($_POST['loginButton']))){
                 header("Location: login.html");

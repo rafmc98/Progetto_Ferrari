@@ -5,7 +5,7 @@
         header("Location: ../paginaProfilo/paginaProfilo.php");
     }
     else{
-        $dbconn = pg_connect("host=localhost port=5432 dbname=ProjectDB user=postgres password=password")
+        $dbconn = pg_connect("host=localhost port=5432 dbname=PassioneFerrari user=postgres password=password")
                     or die('Could not connect: '.pg_last_error());
         // questo isset impedisce di accedere a  questa pagina utilizzando direttamente l'url
         if(!(isset($_POST['registrationButton']))){
@@ -16,6 +16,7 @@
             $q1="select * from utenze where email = $1";
             $result = pg_query_params($dbconn,$q1,array($email));
             if($line=pg_fetch_array($result,null,PGSQL_ASSOC)){
+                // FARE ALERT
                 echo "<h1>Sorry, you are already a register user</h1>
                     <a href=../paginaLogin/login.html>Click here to login</a>";
             }

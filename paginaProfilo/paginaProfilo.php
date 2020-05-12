@@ -114,7 +114,7 @@
         <!-- Sezione informazioni utente dal db -->
         <div class="user-info">
             <?php
-                $dbconn = pg_connect("host=localhost port=5432 dbname=ProjectDB user=postgres password=password")
+                $dbconn = pg_connect("host=localhost port=5432 dbname=PassioneFerrari user=postgres password=password")
                 or die('Could not connect: '.pg_last_error());
                 $email = $_SESSION['email'];
                 $q = "select * from utenze where email = '$email' ";
