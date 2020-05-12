@@ -4,12 +4,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="../../paginaIniziale/homePage.css" rel="stylesheet">
+    <link href="piloti.css" rel="stylesheet">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js" type="text/javascript"></script>
     <script src="https://cdn.rawgit.com/twbs/bootstrap/v4-dev/dist/js/bootstrap.js" type="text/javascript"></script>
     <link href="../bootstrap/css/bootstrap.min.css" rel="stylesheet"/>
     <script src="https://kit.fontawesome.com/a076d05399.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
-    <link href="piloti.css" rel="stylesheet">
+    
     <title>Document</title>
     <!--JQUERY-->
     <script>
@@ -30,20 +31,32 @@
         <!--FINE JQUERY-->
 </head>
 <body>
+    
+    <div id="mySidebar" class="sidebar">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
+        <a href="#">About</a>
+        <div class="dropdown">
+        <div class="dropbtn">Formula 1</div>
+            <div class="dropdown-content">
+                <a href="#">Panoramica</a>
+                <a href="#">Auto</a>
+                <a href="#">Piloti</a>
+            </div>
+        </div>
+        <a href="#">Clients</a>
+        <a href="#">Contact</a>
+    </div>
+
+    <div class="navbar" style="position:absolute;">
+        <div class="openbtn" onclick="openNav()">☰ MENU</div>
+        <div class="loginbtn">
+            <a href="#">LOGIN</a>
+        </div>
+    </div>
+    
+
     <div class="header">
-            <div id="mySidebar" class="sidebar">
-                <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
-                <a href="../f1.html">Formula1</a>
-                <a href="#">Services</a>
-                <a href="#">Clients</a>
-                <a href="#">Contact</a>
-            </div>
-  
-            <div class="navbar">
-                <div class="openbtn" onclick="openNav()">☰ MENU</div>
-                <div class="loginbtn"><a href="#">LOGIN</a></div>
-            </div>
-            <div class="titolo">Passione Ferrari </div>
+        <div class="titolo">Passione Ferrari</div>
     </div>
 
     <div class="nome-pilota">
@@ -94,8 +107,40 @@
             <script src="javascript/script.js" type="text/javascript"></script>
         </div>
 
+        
+        <div class="tabella-pilota">
+            <div style="width:360px">
+                <p class="centra"> DATI DEL PILOTA </p>
+                <div class="campi">
+                    <p>Nome: </p>
+                    <p>Cognome:</p>
+                    <p>Data di Nascita: </p>
+                    <p>Altezza:</p>
+                    <p>Nazione:</p>
+                    <p>GP:</p>
+                    <p>Vittorie: </p>
+                </div>
 
-        <div class="tabella-pilota"></div>
+                        
+                <div class="database">
+                    <?php
+                        $dbconn = pg_connect("host=localhost port=5432
+                        dbname=Formula1 user=postgres password=admin ")or die ( ' Could not connect : ' . pg_last_error( ) ) ;
+                        $pilota="'Leclerc'";
+                        $query='SELECT * FROM "Piloti" WHERE "Cognome"='."$pilota";
+                        $result = pg_query ($query) or die ( ' Query failed : ' .
+                        pg_last_error( ) ) ;
+                        while ($line = pg_fetch_array ($result , null , PGSQL_ASSOC ) ) {
+                            foreach ( $line as $col_value) {
+                                echo "<p class='centra'>$col_value</p>";
+                            }
+                        }
+                        pg_free_result($result);
+                        pg_close($dbconn);
+                    ?>
+                </div>
+            </div>
+        </div>
     </div>
 </body>
 </html>

@@ -21,34 +21,34 @@
   ?>
 
 <div id="mySidebar" class="sidebar">
-      <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
-      <a href="#">About</a>
-      <div class="dropdown">
-        <div class="dropbtn">Formula 1</div>
-        <div class="dropdown-content">
-            <a href="#">Panoramica</a>
-            <a href="#">Auto</a>
-            <a href="#">Piloti</a>
-        </div>
-      </div>
-      <a href="#">Clients</a>
-      <a href="#">Contact</a>
+  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
+  <a href="#">About</a>
+  <div class="dropdown">
+    <div class="dropbtn">Formula 1</div>
+    <div class="dropdown-content">
+        <a href="#">Panoramica</a>
+        <a href="#">Auto</a>
+        <a href="#">Piloti</a>
     </div>
+  </div>
+  <a href="#">Clients</a>
+  <a href="#">Contact</a>
+</div>
 
-    <div class="navbar">
-      <div class="openbtn" onclick="openNav()">☰ MENU</div>
-      <div class="loginbtn">
-        <?php if(isset($_SESSION['email']))
-          echo "<a class=\"user\" href=\"../paginaProfilo/paginaProfilo.html\">USER</a>";?>
-        <?php if(!isset($_SESSION['email']))
-          echo "<a href=\"#\">LOGIN</a>"?>
-      </div>
-    </div>
+<div class="navbar">
+  <div class="openbtn" onclick="openNav()">☰ MENU</div>
+  <div class="loginbtn">
+    <?php if(isset($_SESSION['email']))
+      echo "<a class=\"user\" href=\"../paginaProfilo/paginaProfilo.html\">USER</a>";?>
+    <?php if(!isset($_SESSION['email']))
+      echo "<a href=\"#\">LOGIN</a>"?>
+  </div>
+</div>
     
 
-    <div class="header">
-      <div class="titolo">News Section</div>
-    </div>
+  <div class="header">
+    <div class="titolo">News Section</div>
+  </div>
   <div class="container-fluid">
     <?php
       foreach($NewsData->articles as $News)

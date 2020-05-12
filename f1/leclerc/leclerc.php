@@ -92,8 +92,9 @@
                         <p class="centra">Nazione:</p>
                         <p class="centra">GP:</p>
                         <p class="centra">Vittorie: </p>
-
                 </div>
+
+                
                 <div class="database">
                     <?php
                         $dbconn = pg_connect("host=localhost port=5432
