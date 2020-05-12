@@ -127,7 +127,7 @@
                         $dbconn = pg_connect("host=localhost port=5432
                         dbname=Formula1 user=postgres password=admin ")or die ( ' Could not connect : ' . pg_last_error( ) ) ;
                         $pilota="'Leclerc'";
-                        $query='SELECT * FROM "Piloti" WHERE "Cognome"='."$pilota";
+                        $query='SELECT nome,cognome,"data nascita",altezza,nazionalità,gare,vittorie FROM "Piloti" WHERE "cognome"='."$pilota";
                         $result = pg_query ($query) or die ( ' Query failed : ' .
                         pg_last_error( ) ) ;
                         while ($line = pg_fetch_array ($result , null , PGSQL_ASSOC ) ) {
