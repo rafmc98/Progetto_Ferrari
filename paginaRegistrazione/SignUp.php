@@ -16,9 +16,10 @@
             $q1="select * from utenze where email = $1";
             $result = pg_query_params($dbconn,$q1,array($email));
             if($line=pg_fetch_array($result,null,PGSQL_ASSOC)){
-                // FARE ALERT
-                echo "<h1>Sorry, you are already a register user</h1>
-                    <a href=../paginaLogin/login.html>Click here to login</a>";
+                echo    '<script>
+                                alert("Sei un utente già registrato");
+                                window.location.href = "login.html";
+                        </script>';
             }
             else{
                 $name= $_POST['inputName'];
