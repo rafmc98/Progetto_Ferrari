@@ -116,6 +116,7 @@
 .angolo{
     padding-left: 30px;
     display: inline-block;
+    cursor:pointer;
 }
 
 
