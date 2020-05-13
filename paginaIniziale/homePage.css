@@ -26,7 +26,7 @@
 }
 
 body{
-  background-color: white;
+  background-image: url('../f1/immagini/bg3.jpg');
   background-size: cover;
   background-repeat: none;
 }
@@ -61,12 +61,11 @@ body{
 }
 
 /*Contenitore grid */
-
 .parent {
-  margin:25px;
+  margin: 150px;
+  margin-top: 60px;
   display: grid;
-  grid-template-columns: 13% 14% 15% 19%;
-  grid-template-rows: 100px 0px repeat(2, 400px) 400px;
+  grid-template-rows: 1px 0px repeat(2, 400px) 400px;
   grid-column-gap: 25px;
   grid-row-gap: 25px;
   }
