@@ -234,9 +234,10 @@ height: 100%;
 
 
 .header{
-    height: 175px;
+    height: 120px;
 }
 
 .titolo{
-    line-height: 175px;
+    line-height: 120px;
+    font-size: 50px;
 }
