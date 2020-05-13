@@ -16,10 +16,10 @@
 /*box informazioni utente */
 .box-info{
     width: 60%;
-    border: 1px solid lightgray;
     height: 400px;
     margin: 70px auto;
     box-shadow: 2px 4px 21px 1px rgba(0,0,0,0.33);
+    background-color: #fff;
 }
 
 /* box foto profilo */

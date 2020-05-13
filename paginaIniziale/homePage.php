@@ -37,9 +37,11 @@
       <div class="openbtn" onclick="openNav()">☰ MENU</div>
       <div class="loginbtn">
         <?php if(isset($_SESSION['email']))
-          echo "<div><div id=\"iconaProfilo\" style=\"margin-left: 3px; margin-top: 3px; width: 30px; height: 30px; margin-right: 5px;\"></div><a class=\"user\" href=\"../paginaProfilo/paginaProfilo.html\">USER</a></div>";?>
+          echo "<div id=\"profile\"><div id=\"iconaProfilo\"></div><div id=\"username\"><a href=\"../paginaProfilo/paginaProfilo.php\">".$_SESSION['nome']."</a></div></div>";
+        ?>
         <?php if(!isset($_SESSION['email']))
-          echo "<a href=\"#\">LOGIN</a>"?>
+          echo "<a href=\"../paginaLogin/Login.html\">LOGIN</a>";
+        ?>
       </div>
     </div>
     

@@ -35,11 +35,9 @@
             });
 
             $('.avatar').click(function(){
-                var pic = $(this).attr("name");
                 var icon = $("img",this).attr("src");
-                pic = '../Flat avatars icons pack/PNG/'+ pic;
                 $('#immagine').css({
-                    "background-image" : "url('" + pic + "')",
+                    "background-image" : "url('" + icon + "')",
                     "background-size" : "cover"
                 });
 
@@ -86,29 +84,29 @@
     <div class="box-info">
 
         <!-- Sezione avatar-->
-        <div id="app" class="profile-pic">
+        <div class="profile-pic">
             <div class="img-box">
                 <div id="immagine"></div>
             </div>
             <div class="select-box">
                 <div class="select-button">Choose avatar</div>
                 <div class="select-content">
-                    <div class="avatar" name="128x128/128_1.png"><img src="../Flat avatars icons pack/PNG/128x128/128_1.png">Avatar 1</div>
-                    <div class="avatar" name="128x128/128_2.png"><img src="../Flat avatars icons pack/PNG/128x128/128_2.png">Avatar 2</div>
-                    <div class="avatar" name="128x128/128_3.png"><img src="../Flat avatars icons pack/PNG/128x128/128_3.png">Avatar 3</div>
-                    <div class="avatar" name="128x128/128_4.png"><img src="../Flat avatars icons pack/PNG/128x128/128_4.png">Avatar 4</div>
-                    <div class="avatar" name="128x128/128_5.png"><img src="../Flat avatars icons pack/PNG/128x128/128_5.png">Avatar 5</div>
-                    <div class="avatar" name="128x128/128_6.png"><img src="../Flat avatars icons pack/PNG/128x128/128_6.png">Avatar 6</div>
-                    <div class="avatar" name="128x128/128_7.png"><img src="../Flat avatars icons pack/PNG/128x128/128_7.png">Avatar 7</div>
-                    <div class="avatar" name="128x128/128_8.png"><img src="../Flat avatars icons pack/PNG/128x128/128_8.png">Avatar 8</div>
-                    <div class="avatar" name="128x128/128_9.png"><img src="../Flat avatars icons pack/PNG/128x128/128_9.png">Avatar 9</div>
-                    <div class="avatar" name="128x128/128_10.png"><img src="../Flat avatars icons pack/PNG/128x128/128_10.png">Avatar 10</div>
-                    <div class="avatar" name="128x128/128_11.png"><img src="../Flat avatars icons pack/PNG/128x128/128_11.png">Avatar 11</div>
-                    <div class="avatar" name="128x128/128_12.png"><img src="../Flat avatars icons pack/PNG/128x128/128_12.png">Avatar 12</div>
-                    <div class="avatar" name="128x128/128_13.png"><img src="../Flat avatars icons pack/PNG/128x128/128_13.png">Avatar 13</div>
-                    <div class="avatar" name="128x128/128_14.png"><img src="../Flat avatars icons pack/PNG/128x128/128_14.png">Avatar 14</div>
-                    <div class="avatar" name="128x128/128_15.png"><img src="../Flat avatars icons pack/PNG/128x128/128_15.png">Avatar 15</div>
-                    <div class="avatar" name="128x128/128_16.png"><img src="../Flat avatars icons pack/PNG/128x128/128_16.png">Avatar 16</div>
+                    <div class="avatar"><img src="../Flat avatars icons pack/PNG/256x256/256_1.png">Avatar 1</div>
+                    <div class="avatar"><img src="../Flat avatars icons pack/PNG/256x256/256_2.png">Avatar 2</div>
+                    <div class="avatar"><img src="../Flat avatars icons pack/PNG/256x256/256_3.png">Avatar 3</div>
+                    <div class="avatar"><img src="../Flat avatars icons pack/PNG/256x256/256_4.png">Avatar 4</div>
+                    <div class="avatar"><img src="../Flat avatars icons pack/PNG/256x256/256_5.png">Avatar 5</div>
+                    <div class="avatar"><img src="../Flat avatars icons pack/PNG/256x256/256_6.png">Avatar 6</div>
+                    <div class="avatar"><img src="../Flat avatars icons pack/PNG/256x256/256_7.png">Avatar 7</div>
+                    <div class="avatar"><img src="../Flat avatars icons pack/PNG/256x256/256_8.png">Avatar 8</div>
+                    <div class="avatar"><img src="../Flat avatars icons pack/PNG/256x256/256_9.png">Avatar 9</div>
+                    <div class="avatar"><img src="../Flat avatars icons pack/PNG/256x256/256_10.png">Avatar 10</div>
+                    <div class="avatar"><img src="../Flat avatars icons pack/PNG/256x256/256_11.png">Avatar 11</div>
+                    <div class="avatar"><img src="../Flat avatars icons pack/PNG/256x256/256_12.png">Avatar 12</div>
+                    <div class="avatar"><img src="../Flat avatars icons pack/PNG/256x256/256_13.png">Avatar 13</div>
+                    <div class="avatar"><img src="../Flat avatars icons pack/PNG/256x256/256_14.png">Avatar 14</div>
+                    <div class="avatar"><img src="../Flat avatars icons pack/PNG/256x256/256_15.png">Avatar 15</div>
+                    <div class="avatar"><img src="../Flat avatars icons pack/PNG/256x256/256_16.png">Avatar 16</div>
                 </div>
             </div>
         </div> 
