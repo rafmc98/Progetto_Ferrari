@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie-edge">
-    <title>Implement Google API</title>
+    <title>News section</title>
     <link href="css/bootstrap.css" rel="stylesheet">
     <link href="../paginaIniziale/homePage.css" rel="stylesheet">
     <link href="news.css" rel="stylesheet">
@@ -47,8 +47,12 @@
     
 
   <div class="header">
-    <div class="titolo">News Section</div>
+    <div class="titolo">Passione Ferrari</div>
   </div>
+
+  <div class="titolo-pagina">News section</div>
+
+
   <div class="container-fluid">
     <?php
       foreach($NewsData->articles as $News)
@@ -76,6 +80,7 @@
         <li><i class="fab fa-instagram"></i></li>
         <li><i class="fab fa-facebook"></i></li>
         <li><i class="fab fa-twitter"></i></li>
+        <li><i class="fab fa-youtube"></i></li>
       </ul>
     </div>
 </body>

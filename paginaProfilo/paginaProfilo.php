@@ -77,8 +77,10 @@
     
     <!--Header-->
     <div class="header">
-    <div class="titolo">Profile</div>
+    <div class="titolo">Passione Ferrari</div>
     </div>
+    
+    <div class="titolo-pagina">Profilo</div>
 
     <!--Riepilogo info utente-->
     <div class="box-info">
@@ -151,6 +153,7 @@
           <li><i class="fab fa-instagram"></i></li>
           <li><i class="fab fa-facebook"></i></li>
           <li><i class="fab fa-twitter"></i></li>
+          <li><i class="fab fa-youtube"></i></li>
         </ul>
     </div>
     

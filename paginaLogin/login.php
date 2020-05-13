@@ -15,8 +15,10 @@
                 $q1 = "select * from utenze where email = $1";
                 $result = pg_query_params($dbconn,$q1,array($email));
                 if(!($line = pg_fetch_array($result,null,PGSQL_ASSOC))){
-                    echo "<h1>Sorry you are not a registered user</h1>
-                            <a href=../paginaRegistrazione/SignUp.html></a>";
+                    echo    '<script>
+                                alert("Non hai ancora effettuato la registrazione");
+                                window.location.href = "login.html";
+                            </script>';
                 }
                 else{
                     $password = md5($_POST['inputPassword']);
