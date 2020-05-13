@@ -8,6 +8,14 @@ function closeNav() {
   document.getElementById("main").style.marginLeft= "0";
 }
 
+$(document).ready(function(){
+  $(".parent div").mouseenter(function(){
+    $(this).find("span").fadeIn(900);
+  });
+  $(".parent div").mouseleave(function(){
+    $(this).find("span").fadeOut(600);
+  });
+});
 
 
 

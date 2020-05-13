@@ -3,24 +3,17 @@
 <html>
   <head>
     <link rel="stylesheet" href="homePage.css">
-    <script src="HomePageScript.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.0/jquery.min.js" charset="utf-8"></script>
     <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+    <script src="HomePageScript.js"></script>
   </head>
   <script>
     $(document).ready(function(){
-      $(".parent div").mouseenter(function(){
-        $(this).find("span").fadeIn(900);
-      });
-      $(".parent div").mouseleave(function(){
-        $(this).find("span").fadeOut(600);
-      });
 
       $('#iconaProfilo').css({
                 "background-image" : "url('<?php echo $_SESSION['user-pic'] ?>')",
                 "background-size" : "cover"
             });
-
     });
   </script>
   <body>
