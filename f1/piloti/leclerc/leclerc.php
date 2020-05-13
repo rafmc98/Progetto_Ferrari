@@ -3,15 +3,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="../../paginaIniziale/homePage.css" rel="stylesheet">
-    <link href="piloti.css" rel="stylesheet">
+    <link href="../../../paginaIniziale/homePage.css" rel="stylesheet">
+    <link href="../piloti.css" rel="stylesheet">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js" type="text/javascript"></script>
     <script src="https://cdn.rawgit.com/twbs/bootstrap/v4-dev/dist/js/bootstrap.js" type="text/javascript"></script>
-    <link href="../bootstrap/css/bootstrap.min.css" rel="stylesheet"/>
+    <link href=".../bootstrap/css/bootstrap.min.css" rel="stylesheet"/>
     <script src="https://kit.fontawesome.com/a076d05399.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
     
-    <title>Document</title>
+    <title>Charles Leclerc</title>
     <!--JQUERY-->
     <script>
             $(document).ready(function() {
