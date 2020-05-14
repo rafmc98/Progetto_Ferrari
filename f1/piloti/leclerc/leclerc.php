@@ -31,30 +31,28 @@
         <!--FINE JQUERY-->
 </head>
 <body>
-    
-    <div id="mySidebar" class="sidebar">
-        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
-        <a href="#">About</a>
-        <div class="dropdown">
+
+    <div id="mySidebar" class="sidebar" >
+      <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
+      <a href="#">About</a>
+      <div class="dropdown">
         <div class="dropbtn">Formula 1</div>
-            <div class="dropdown-content">
-                <a href="#">Panoramica</a>
-                <a href="#">Auto</a>
-                <a href="#">Piloti</a>
-            </div>
+        <div class="dropdown-content">
+            <a href="#">Panoramica</a>
+            <a href="#">Auto</a>
+            <a href="#">Piloti</a>
         </div>
-        <a href="#">Clients</a>
-        <a href="#">Contact</a>
+      </div>
+      <a href="#">Clients</a>
+      <a href="#">Contact</a>
     </div>
 
-    <div class="navbar" style="position:absolute;">
-        <div class="openbtn" onclick="openNav()">☰ MENU</div>
-        <div class="loginbtn">
-            <a href="#">LOGIN</a>
-        </div>
+    <div class="navbar">
+      <div class="openbtn" onclick="openNav()">☰ MENU</div>
+      <div class="loginbtn"><a href="#">LOGIN</a></div>
     </div>
     
-
+    
     <div class="header">
         <div class="titolo">Passione Ferrari</div>
     </div>
@@ -71,7 +69,6 @@
     <div class="contenuto">
         <div class="eventi">
             <div id="app">
-
                 <!-- sezione foto eventi --> 
                 <h1 class="titolo-evento"> EVENTI PILOTA </h1>
                 <div class="foto-evento">
@@ -104,7 +101,7 @@
                         </div>
                 </div>
             </div>
-            <script src="javascript/script.js" type="text/javascript"></script>
+            <script src="javascript/scriptPiloti.js" type="text/javascript"></script>
         </div>
 
         
