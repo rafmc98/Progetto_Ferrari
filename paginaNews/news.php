@@ -1,6 +1,6 @@
 <?php  session_start(); ?>
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -10,8 +10,18 @@
     <link href="../paginaIniziale/homePage.css" rel="stylesheet">
     <link href="news.css" rel="stylesheet">
     <script src="js/bootstrap.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.0/jquery.min.js" charset="utf-8"></script>
     <script src="../paginaIniziale/homePageScript.js"></script>
     <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+    <script>
+       $(document).ready(function(){
+
+        $('#iconaProfilo').css({
+          "background-image" : "url('<?php echo $_SESSION['user-pic'] ?>')",
+          "background-size" : "cover"
+        });
+      });
+    </script>
 </head>
 <body>
   <?php
@@ -39,9 +49,11 @@
   <div class="openbtn" onclick="openNav()">☰ MENU</div>
   <div class="loginbtn">
     <?php if(isset($_SESSION['email']))
-      echo "<a class=\"user\" href=\"../paginaProfilo/paginaProfilo.html\">USER</a>";?>
-    <?php if(!isset($_SESSION['email']))
-      echo "<a href=\"#\">LOGIN</a>"?>
+          echo "<div id=\"profile\"><div id=\"iconaProfilo\"></div><div id=\"username\"><a href=\"../paginaProfilo/paginaProfilo.php\">".$_SESSION['nome']."</a></div></div>";
+      ?>
+      <?php if(!isset($_SESSION['email']))
+        echo "<a href=\"../paginaLogin/Login.html\">LOGIN</a>";
+      ?>
   </div>
 </div>
     

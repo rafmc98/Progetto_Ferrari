@@ -11,6 +11,23 @@ body{
   background: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ),url('../ferrari2.jpg');  /* Opacizza la foto di background */
 }
 
+.back-home{
+  position: absolute;
+  left:20;
+  top: 20;
+  font-size: 20px;
+}
+
+.back-home a{
+  color: whitesmoke;
+  text-decoration: none;
+}
+
+.back-home:hover a{
+  color: rgb(117, 114, 114);
+  cursor: pointer;
+}
+
 .logo{
   height: 70px;
   width: 125px;

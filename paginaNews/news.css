@@ -19,8 +19,14 @@
   padding:0;
 }
 
+#iconaProfilo{
+  margin-top: 5px;
+}
+
 body{
-  background-color: whitesmoke;
+  background:none;
+  background-image: url('../f1/immagini/bg3.jpg');
+  background-repeat: repeat;
 }
 
 img{
