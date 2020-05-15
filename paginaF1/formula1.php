@@ -43,7 +43,7 @@
         <a href="#">Contact</a>
     </div>
 
-    <div class="navbar">
+    <div class="navbar" style="position:absolute">
         <div class="openbtn" onclick="openNav()">☰ MENU</div>
         <div class="loginbtn">
             <?php if(isset($_SESSION['email']))
