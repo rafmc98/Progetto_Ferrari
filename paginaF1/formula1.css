@@ -14,11 +14,18 @@ body{
     font-family: 'FerrariFont';
 }
 
+#iconaProfilo{
+    margin-top: 5px;
+}
+
 .titolo{
     line-height: 120px;
     font-size: 50px;
 }
 
+.loginbtn a:hover{
+    text-decoration: none;
+}
 
 .description-box{
     font-family: 'formula1';
