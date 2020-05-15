@@ -18,11 +18,11 @@
                 $("#sparisci").hide();
                 $(".angolo").click(function() {
                     if($("#freccia").attr('class')=='fas fa-angle-down'){
-                        $("#sparisci").slideToggle();
+                        $("#sparisci").slideToggle(700);
                         $('#freccia').attr('class','fas fa-angle-up');
                     }
                     else{
-                        $("#sparisci").hide();
+                        $("#sparisci").slideToggle(700);
                         $('#freccia').attr('class','fas fa-angle-down');
                     }
                 });
