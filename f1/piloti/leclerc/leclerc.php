@@ -1,3 +1,5 @@
+<?php /* Controllo sessione */session_start(); ?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -14,21 +16,14 @@
     <title>Charles Leclerc</title>
     <!--JQUERY-->
     <script>
-            $(document).ready(function() {
-                $("#sparisci").hide();
-                $(".angolo").click(function() {
-                    if($("#freccia").attr('class')=='fas fa-angle-down'){
-                        $("#sparisci").slideToggle(700);
-                        $('#freccia').attr('class','fas fa-angle-up');
-                    }
-                    else{
-                        $("#sparisci").slideToggle(700);
-                        $('#freccia').attr('class','fas fa-angle-down');
-                    }
-                });
-            });
-        </script>
-        <!--FINE JQUERY-->
+    $(document).ready(function(){
+        $('#iconaProfilo').css({
+            "background-image" : "url('<?php echo $_SESSION['user-pic'] ?>')",
+            "background-size" : "cover"
+        });
+    });
+    </script>
+    <!--FINE JQUERY-->
 </head>
 <body>
 
@@ -48,8 +43,15 @@
     </div>
 
     <div class="navbar">
-      <div class="openbtn" onclick="openNav()">☰ MENU</div>
-      <div class="loginbtn"><a href="#">LOGIN</a></div>
+        <div class="openbtn" onclick="openNav()">☰ MENU</div>
+        <div class="loginbtn">
+            <?php if(isset($_SESSION['email']))
+                echo "<div id=\"profile\"><div id=\"iconaProfilo\"></div><div id=\"username\"><a href=\"../paginaProfilo/paginaProfilo.php\">".$_SESSION['nome']."</a></div></div>";
+            ?>
+            <?php if(!isset($_SESSION['email']))
+                echo "<a href=\"../paginaLogin/Login.html\">LOGIN</a>";
+            ?>
+        </div>
     </div>
     
     
