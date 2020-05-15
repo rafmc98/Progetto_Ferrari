@@ -124,7 +124,7 @@
                         <div class="testo-evento">{{desc}}</div>
                         <div class="box-video">
                             <p class="centra">
-                                <iframe v-bind:src="video" frameborder="0" style="width:500px;height:300px;" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                                <video width="500px" height="300px" controls :src="video"></video>
                             </p>
                         </div>
                     </div>
