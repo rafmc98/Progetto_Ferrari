@@ -18,7 +18,7 @@
                 $("#sparisci").hide();
                 $(".angolo").click(function() {
                     if($("#freccia").attr('class')=='fas fa-angle-down'){
-                        $("#sparisci").slideToggle(20);
+                        $("#sparisci").slideToggle();
                         $('#freccia').attr('class','fas fa-angle-up');
                     }
                     else{
