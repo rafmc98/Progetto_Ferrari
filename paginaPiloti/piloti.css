@@ -1,5 +1,5 @@
 body{
-    background-image: url('../immagini/bg3.jpg');
+    background-image: url('../paginaF1/immagini/bg3.jpg');
 }
 
 .nome-pilota{
@@ -228,10 +228,10 @@ body{
 
 @font-face {
 	font-family: 'formula1';
-	src: url('../f1-fonts/Formula1-Display-Bold.eot');
-	src: url('../f1-fonts/Formula1-Display-Bold.eot?#iefix') format('embedded-opentype'),
-		url('../f1-fonts/Formula1-Display-Bold.woff') format('woff'),
-		url('../f1-fonts/Formula1-Display-Bold.ttf') format('truetype');
+	src: url('../paginaF1/f1-fonts/Formula1-Display-Bold.eot');
+	src: url('../paginaF1/f1-fonts/Formula1-Display-Bold.eot?#iefix') format('embedded-opentype'),
+		url('../paginaF1/f1-fonts/Formula1-Display-Bold.woff') format('woff'),
+		url('../paginaF1/f1-fonts/Formula1-Display-Bold.ttf') format('truetype');
 	font-weight: bold;
 	font-style: normal;
 }

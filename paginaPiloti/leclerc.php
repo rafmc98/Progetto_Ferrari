@@ -5,8 +5,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="../../../paginaIniziale/homePage.css" rel="stylesheet">
-    <link href="../piloti.css" rel="stylesheet">
+    <link href="../paginaIniziale/homePage.css" rel="stylesheet">
+    <link href="piloti.css" rel="stylesheet">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js" type="text/javascript"></script>
     <script src="https://cdn.rawgit.com/twbs/bootstrap/v4-dev/dist/js/bootstrap.js" type="text/javascript"></script>
     <link href=".../bootstrap/css/bootstrap.min.css" rel="stylesheet"/>
@@ -18,7 +18,7 @@
     <script>
     $(document).ready(function(){
         $('#iconaProfilo').css({
-            "background-image" : "url('../../../<?php echo $_SESSION['user-pic'] ?>')",
+            "background-image" : "url('<?php echo $_SESSION['user-pic'] ?>')",
             "background-size" : "cover"
         });
     });
@@ -101,7 +101,7 @@
                 </div>
             </div>
         </div>
-        <div class="foto-pilota"><div style="background-image:url('immagini/leclerc3.jpg'); background-size:cover;"></div></div>
+        <div class="foto-pilota"><div style="background-image:url('leclerc/immagini/leclerc3.jpg'); background-size:cover;"></div></div>
     </div>
 
     <div class="contenuto">

@@ -1,9 +1,10 @@
+<?php /* Controllo sessione */session_start(); ?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
     <link href="../paginaIniziale/homePage.css" rel="stylesheet">
     <link href="formula1.css" rel="stylesheet">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js" type="text/javascript"></script>
@@ -17,10 +18,11 @@
 
     <!--JQUERY-->
     <script>
-        $(document).ready(function() {
-            $('.carousel').carousel({
-                interval: 4000
-            })
+        $(document).ready(function(){
+            $('#iconaProfilo').css({
+                "background-image" : "url('<?php echo $_SESSION['user-pic'] ?>')",
+                "background-size" : "cover"
+            });
         });
     </script>
     <!--FINE JQUERY-->
@@ -30,21 +32,28 @@
         <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
         <a href="#">About</a>
         <div class="dropdown">
-          <div class="dropbtn">Formula 1</div>
-          <div class="dropdown-content">
-              <a href="#">Panoramica</a>
-              <a href="#">Auto</a>
-              <a href="#">Piloti</a>
-          </div>
+            <div class="dropbtn">Formula 1</div>
+            <div class="dropdown-content">
+                <a href="#">Panoramica</a>
+                <a href="#">Auto</a>
+                <a href="#">Piloti</a>
+            </div>
         </div>
         <a href="#">Clients</a>
         <a href="#">Contact</a>
     </div>
-  
-    <div class="navbar" style="position:absolute;">
+
+    <div class="navbar">
         <div class="openbtn" onclick="openNav()">☰ MENU</div>
-        <div class="loginbtn"><a href="#">LOGIN</a></div>
-    </div>
+        <div class="loginbtn">
+            <?php if(isset($_SESSION['email']))
+                echo "<div id=\"profile\"><div id=\"iconaProfilo\"></div><div id=\"username\"><a href=\"../paginaProfilo/paginaProfilo.php\">".$_SESSION['nome']."</a></div></div>";
+            ?>
+            <?php if(!isset($_SESSION['email']))
+                echo "<a href=\"../paginaLogin/Login.html\">LOGIN</a>";
+            ?>
+        </div>
+    </div>   
       
     <!--Header-->
     <div class="header">
