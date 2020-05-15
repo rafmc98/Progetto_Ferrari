@@ -18,7 +18,7 @@
     <script>
     $(document).ready(function(){
         $('#iconaProfilo').css({
-            "background-image" : "url('<?php echo $_SESSION['user-pic'] ?>')",
+            "background-image" : "url('../../../<?php echo $_SESSION['user-pic'] ?>')",
             "background-size" : "cover"
         });
     });
