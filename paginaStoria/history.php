@@ -1,9 +1,11 @@
+<?php /* Controllo sessione */session_start(); ?>
+
 <html>
   <head>
     <link rel="stylesheet" href="../paginaIniziale/homePage.css">
-    <link rel="stylesheet" href="modal.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/modal.css" rel="stylesheet">
 
-    <script src="HomePageScript.js"></script>
+    <script src="../paginaIniziale/HomePageScript.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.0/jquery.min.js" charset="utf-8"></script>
     <script src="https://kit.fontawesome.com/a076d05399.js"></script>
 
@@ -28,15 +30,7 @@
             advanced:{
               autoExpandHorizontalScroll:true
             },
-            /*,
-            callbacks:{
-              onScroll:function() {
-                alert("scrolled...");
-              }
-            },
-            scrollButtons:{
-              enable:true
-            }*/
+            
           });
     
           /* Navigation */
@@ -58,6 +52,15 @@
     
       </script>
 
+<script>
+    $(document).ready(function(){
+
+      $('#iconaProfilo').css({
+                "background-image" : "url('<?php echo $_SESSION['user-pic'] ?>')",
+                "background-size" : "cover"
+            });
+    });
+  </script>
       
 
       <link href="css/jquery.mCustomScrollbar.css" rel="stylesheet" type="text/css" />
@@ -90,7 +93,14 @@
 
     <div class="navbar">
       <div class="openbtn" onclick="openNav()">☰ MENU</div>
-      <div class="loginbtn"><a href="#">LOGIN</a></div>
+      <div class="loginbtn">
+        <?php if(isset($_SESSION['email']))
+          echo "<div id=\"profile\"><div id=\"iconaProfilo\"></div><div id=\"username\"><a href=\"../paginaProfilo/paginaProfilo.php\">".$_SESSION['nome']."</a></div></div>";
+        ?>
+        <?php if(!isset($_SESSION['email']))
+          echo "<a href=\"../paginaLogin/Login.html\">LOGIN</a>";
+        ?>
+        </div>
     </div>
     
 
@@ -99,7 +109,7 @@
     </div>
     <div style="text-align: center;"></div>
 
-    <div style="text-align: center; margin-top: 40px; font-family: futura; color: white; font-size: xx-large;"> 10 Salti nella storia </div>
+    <div style="text-align: center; margin-top: 30px; font-family: calibri;  font-size: 45px;"> 10 Salti nella storia </div>
     <!-- PRIMO BOX -->
     <div id="container">
       <div class="slider content">
