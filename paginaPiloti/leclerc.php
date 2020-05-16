@@ -60,7 +60,7 @@
     </div>
 
     <div class="nome-pilota">
-        <h1 class="titoletto">CHARLES LECLERC</h1>
+        <h1 class="titolo-pagina">CHARLES LECLERC</h1>
     </div>
 
     <div class="description-box">

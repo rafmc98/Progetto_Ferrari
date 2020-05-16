@@ -4,7 +4,7 @@ body{
 
 .nome-pilota{
     width: 100%;
-    height: 100px;
+    height: 80px;
     text-align: center;
     font-family: 'formula1';
 }
@@ -19,6 +19,9 @@ body{
     font-size: 50px;
 }
 
+.titolo-pagina{
+    color:red;
+}
 .titoletto{
     padding-top: 50px;
     color: red;
