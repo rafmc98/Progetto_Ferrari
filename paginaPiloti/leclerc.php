@@ -1,7 +1,17 @@
 <?php /* Controllo sessione */session_start(); ?>
-
+<?php 
+    $dbconn = pg_connect("host=localhost port=5432 dbname=PassioneFerrari user=postgres password=password ")or 
+                die ( ' Could not connect : ' . pg_last_error( ) ) ;
+    $pilota = 'Leclerc';
+    $query  = "SELECT * 
+                FROM piloti
+                WHERE cognome ='$pilota'";
+    $result = pg_query ($query) or die ( ' Query failed : ' .pg_last_error( ) ) ;
+    while ($line = pg_fetch_array ($result , null , PGSQL_ASSOC ) ) {
+?>       
+    
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -12,8 +22,9 @@
     <link href=".../bootstrap/css/bootstrap.min.css" rel="stylesheet"/>
     <script src="https://kit.fontawesome.com/a076d05399.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
     
-    <title>Charles Leclerc</title>
+    <title><?php echo $line["nome"];?> <?php echo $line["cognome"]; ?></title>
     <!--JQUERY-->
     <script>
     $(document).ready(function(){
@@ -60,48 +71,18 @@
     </div>
 
     <div class="nome-pilota">
-        <h1 class="titolo-pagina">CHARLES LECLERC</h1>
+        <h1 class="titolo-pagina"><?php echo $line["nome"];?> <?php echo $line["cognome"]; ?></h1>
     </div>
 
     <div class="description-box">
         <div class="testo">
             <div class="descrizione">
-                <div class="carriera">
-                    <p class="testo-pilota">
-                        Charles Leclerc è un pilota automobilistico monegasco, campione della GP3 2016 e della Formula 2 2017, pilota della Scuderia Ferrari dal 2019. Ha fatto parte dal 2016 al 2018 della Ferrari Driver Academy e nel 2018 ha corso in Formula 1 per la scuderia Alfa Romeo Sauber F1 Team.
-                        È il primo pilota monegasco ad aver vinto un Gran Premio di Formula 1, nonché il pilota più giovane della storia ad aver vinto un Gran Premio al volante di una vettura della scuderia di Maranello.
-                        Il suo numero di gara è il 16.
-                    </p>
-                </div>
-                <div class="macchineguidate">
-                    <div class="titolo-macchine">
-                        <h2 class="scritta" style="font-family:formula1">LE MACCHINE FERRARI GUIDATE</h2>
-                    </div>
-                    <!-- Query per vedere macchine del pilota -->
-                    <div class="cardab">
-                        <?php
-                            $dbconn = pg_connect("host=localhost port=5432
-                            dbname=PassioneFerrari user=postgres password=password ")or die ( ' Could not connect : ' . pg_last_error( ) ) ;
-                            $pilota="'Leclerc'";
-                            $q='and "Piloti".id="Piloti_Macchine".idpiloti and "Piloti_Macchine".idmacchine="Macchine".id';
-                            $query='SELECT "Macchine".nome,"Macchine".anno FROM "Piloti","Macchine","Piloti_Macchine" WHERE "Piloti".cognome='."$pilota".$q;
-                            $result = pg_query ($query) or die ( ' Query failed : ' .
-                            pg_last_error( ) ) ;
-                            while ($line = pg_fetch_array ($result , null , PGSQL_ASSOC ) ) {
-                        ?>        
-                                <div class="info">
-                                    <div class="namecar">
-                                        <?php echo $line["nome"]; ?>(<?php echo $line["anno"]; ?>)
-                                    </div>
-                                </div>
-                            <?php
-                                }
-                            ?>
-                    </div>
-                </div>
+                <p class="testo-pilota">
+                        <?php echo $line["descrizione"];?>
+                </p>
             </div>
         </div>
-        <div class="foto-pilota"><div style="background-image:url('leclerc/immagini/leclerc3.jpg'); background-size:cover;"></div></div>
+        <div class="foto-pilota"><div style="background-image:url('<?php echo $line['img']; ?>'); background-size:cover;"></div></div>
     </div>
 
     <div class="contenuto">
@@ -117,13 +98,13 @@
                 <div class="evento">
                     <div class="contenitore-titolo">
                         <p class="centra">
-                            <h2 class="scritta"> {{description}}</h2>
+                            <h2 class="scritta">{{titolo}}</h2>
                             <h2 class="angolo"><i id="freccia" class="fas fa-angle-down"></i></h2>
                         </p>
                     </div>
                     
                     <div class="scomparsa" id="sparisci">
-                        <div class="testo-evento">{{desc}}</div>
+                        <div class="testo-evento">{{descrizione}}</div>
                         <div class="box-video">
                             <p class="centra">
                                 <video width="500px" height="300px" controls :src="video"></video>
@@ -134,8 +115,8 @@
 
                 <!-- bottoni eventi -->
                 <div class="box">
-                        <div v-for = "x in variants" :key="x.id" class="color-box" v-on:click="updateAll(x.image,x.description,x.desc,x.video)">
-                            {{x.testo}}
+                        <div v-for = "x in variants" class="color-box">
+                            {{x.titolo}}
                         </div>
                 </div>
             </div>
@@ -159,24 +140,43 @@
 
                         
                 <div class="database">
-                    <?php
-                        $dbconn = pg_connect("host=localhost port=5432
-                        dbname=PassioneFerrari user=postgres password=password ")or die ( ' Could not connect : ' . pg_last_error( ) ) ;
-                        $pilota="'Leclerc'";
-                        $query='SELECT nome,cognome,"data nascita",altezza,nazionalità,gare,vittorie,mondiali FROM "Piloti" WHERE "cognome"='."$pilota";
-                        $result = pg_query ($query) or die ( ' Query failed : ' .
-                        pg_last_error( ) ) ;
-                        while ($line = pg_fetch_array ($result , null , PGSQL_ASSOC ) ) {
-                            foreach ( $line as $col_value) {
-                                echo "<p class='data'><strong>$col_value</strong></p>";
-                            }
-                        }
-                        pg_free_result($result);
-                        pg_close($dbconn);
-                    ?>
+                    <p class='data'><strong><?php echo $line["nome"];?></strong></p>
+                    <p class='data'><strong><?php echo $line["cognome"];?></strong></p>
+                    <p class='data'><strong><?php echo $line["data nascita"];?></strong></p>
+                    <p class='data'><strong><?php echo $line["altezza"];?></strong></p>
+                    <p class='data'><strong><?php echo $line["nazionalità"];?></strong></p>
+                    <p class='data'><strong><?php echo $line["gare"];?></strong></p>
+                    <p class='data'><strong><?php echo $line["vittorie"];?></strong></p>
+                    <p class='data'><strong><?php echo $line["mondiali"];?></strong></p>
                 </div>
             </div>
         </div>
+
+        <div class="macchineguidate">
+                <div class="titolo-macchine">
+                    <h2 class="scritta" style="font-family:formula1">VETTURE CARRIERA</h2>
+                </div>
+                <!-- Query per vedere macchine del pilota -->
+                <div class="cardab">
+                    <?php
+                        $pilota = 'Leclerc';
+                        $query = "SELECT macchine.nome, macchine.anno 
+                                    FROM macchine, piloti, piloti_macchine
+                                    WHERE cognome ='$pilota' and piloti.id = piloti_macchine.idpiloti and piloti_macchine.idmacchine = macchine.id";
+                        $risultato = pg_query ($query) or die ( ' Query failed : ' .pg_last_error( ) ) ;
+                        while ($macchine = pg_fetch_array ($risultato , null , PGSQL_ASSOC ) ) {
+                    ?>
+                        <div class="info">
+                            <div class="namecar">
+                                <?php echo $macchine["nome"]; ?>(<?php echo $macchine["anno"]; ?>)
+                            </div>
+                        </div>
+                    <?php
+                        }
+                    ?>
+                </div>
+            </div>
+        
     </div>
     <div class="footer">
       <ul class="footerContent">
@@ -188,3 +188,9 @@
     </div>
 </body>
 </html>
+
+<?php
+    }
+    pg_free_result($result);
+    pg_close($dbconn);
+?>
