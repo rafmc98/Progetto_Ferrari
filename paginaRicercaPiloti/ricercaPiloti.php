@@ -2,10 +2,18 @@
     
     $dbconn = pg_connect("host=localhost port=5432 dbname=PassioneFerrari user=postgres password=password ")or 
                 die ( ' Could not connect : ' . pg_last_error( ) ) ;
-    $pilota = 'Leclerc';
-    $query  = "SELECT * 
-                FROM  piloti, eventi
-                WHERE piloti.id = eventi.pilota and cognome ='$pilota'";
+
+               
+    if(isset($_GET['parametro'])){
+        $condition = $_GET['parametro']; 
+        $query = "select nome, cognome, nazionalità
+                  from piloti where cognome like '%".$condition."%'";
+    }
+    else{
+        $query = "SELECT nome, cognome, nazionalità
+                FROM piloti";
+    }
+
     
     $data = pg_query ($query) or die ( ' Query failed : ' .pg_last_error( ) ) ;
     $response = array();

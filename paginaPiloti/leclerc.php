@@ -23,6 +23,7 @@
     <script src="https://kit.fontawesome.com/a076d05399.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
     <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script src="javascript/scriptPiloti.js" type="text/javascript"></script>
     
     <title><?php echo $line["nome"];?> <?php echo $line["cognome"]; ?></title>
     <!--JQUERY-->
@@ -115,12 +116,42 @@
 
                 <!-- bottoni eventi -->
                 <div class="box">
-                        <div v-for = "x in variants" class="color-box">
+                        <div v-for = "x in variants" v-on:click="updateAll(x.img_evento,x.descrizione_evento,x.titolo,x.video)" class="color-box">
                             {{x.titolo}}
                         </div>
                 </div>
             </div>
-            <script src="javascript/scriptPiloti.js" type="text/javascript"></script>
+            <!-- Script -->
+            <script>
+                var app=new Vue({
+                    el:'#app',
+                    data:{
+                        image:'',
+                        description: '',
+                        video: '',
+                        titolo: '',
+                        variants:''
+                    },
+                    methods:{
+                        updateAll:function(im,des,d,v){
+                        this.image=im;
+                        this.description=des;
+                        this.titolo=d;
+                        this.video=v;
+                        },
+                        getQuery: function(){   
+                        axios.get('ajaxfile.php').then(function (response) {
+                            app.variants = response.data;
+                        }).catch(function (error) {
+                            console.log(error);
+                        });
+                        }
+                    },
+                    created: function(){
+                        this.getQuery()
+                    }
+                });
+            </script>
         </div>
 
         

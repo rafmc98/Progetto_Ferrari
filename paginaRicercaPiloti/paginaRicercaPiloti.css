@@ -1,0 +1,115 @@
+.header{
+    height: 120px;
+    font-family: 'FerrariFont';
+}
+
+.titolo{
+    line-height: 120px;
+    font-size: 50px;
+}
+
+body{
+    background-image: url('../paginaF1/immagini/bg3.jpg');
+}
+
+/* togliere altezza */
+.content{
+    width:100%;
+    min-height:500px;
+}
+
+.finestra{
+    margin: 30px auto;
+    width: 55%;
+}
+
+#search{
+    border-radius: 120px;
+    height: 30px;
+    padding: 5px;
+    border: none;
+    outline: none;
+}
+
+#search:focus{
+    -webkit-box-shadow: 0px 0px 5px 4px #ff2800;
+    -moz-box-shadow: 0px 0px 5px 4px #ff2800;
+    box-shadow: 0px 0px 5px 4px #ff2800;
+}   
+
+.barra{
+    width: 100%;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.barra i{
+    color: #111;
+}
+
+.search-button{
+    height: 30px;
+    width: 30px;
+    border-radius: 50%;
+    border: none;
+    outline: none;
+    cursor: pointer;
+}
+
+.search-button:hover{
+    background-color: #ff2800;
+}
+
+.seeAll{
+    width: 70px;
+    border-radius: 60px;
+    cursor: pointer;
+}
+
+
+.search-result{
+    font-family: 'Calibri';
+    margin-top: 10px;
+    text-align:center;
+    width: 100%;
+}
+
+.intestazione{
+    color: whitesmoke;
+    margin:20px auto;
+    width: 60%;
+    height: 40px;
+    text-align: center;
+    background-color: rgba(14, 12, 12, 0.781);
+    font-weight: bold;
+    display: none;
+}
+
+.intestazione div{
+    display: inline-block;
+    margin:0 auto;
+    width: 30%;
+    height: 100%;
+    line-height: 40px;
+}
+
+
+
+.riga-pilota{
+    margin:20px auto;
+    width: 60%;
+    height: 70px;
+    text-align: center;
+    background-color: whitesmoke;
+    box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
+
+}
+
+.riga-pilota div{
+    display: inline-block;
+    margin:0 auto;
+    width: 30%;
+    height: 100%;
+    line-height: 70px;
+}
+
