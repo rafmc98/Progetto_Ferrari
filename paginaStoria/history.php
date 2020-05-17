@@ -248,7 +248,7 @@
           <div class="cont-page">
             <div class="caption">
               <figure class="nomeClasse" data-effect="fade-in">
-                <img src="img/marc.webp" alt="" width="110%" height="90%"/>
+                <img src="img/team.jpg" alt="" width="110%" height="90%"/>
                 <figcaption>
                 <u><h2 style="text-align: center; margin-top: 50px; font-size: xx-large;">Aria di Rivoluzione</a></h2></u>
                 <h2 style="text-align: center; margin-top: 50px; font-size: small;"><a href="#win9">>scopri di più</a></h2>
@@ -332,6 +332,10 @@
     <h2>Niki Lauda</h2>
 <p>Negli anni di Luca Cordero di Montezemolo c’è stato un pilota che ha fatto sognare e festeggiare milioni di appassionati e fan del Cavallino, Niki Lauda. L’austriaco ha vinto due campionati del mondo di Formula Uno nel 1974 e nel 1977, in totale ha collezionato 57 gran premi e ben 15 vittorie.</p>
 <a class="close" title="chiudere" href="#close"></a>
+<br>
+<div class="video">
+  <iframe width="853" height="480" src="img/nikivideo.mp4" ></iframe>
+      </div>
 </div>
 
 <!-- finestra popup 6 -->
