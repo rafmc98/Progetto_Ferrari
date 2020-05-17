@@ -79,28 +79,18 @@
                 <button class="search-button seeAll" @click='allRecords()'>See All</button>
             </div>
             <!-- risultato ricerca -->
-            <!-- List records -->
-
             <div class="search-result">
-                <!--mostrare sull'onclick-->
                 <div class="intestazione">
                     <div>Nome</div>
                     <div>Cognome</div>
                     <div>Nazionalità</div>
                 </div>
-                <div v-for= "x in piloti" class="riga-pilota" >
+                <div v-for= "x in piloti" class="riga-pilota" @click='goToPilota(x.cognome)'>
                         <div>{{x.nome}}</div>
                         <div>{{x.cognome}}</div>
                         <div>{{x.nazionalità}}</div>
                 </div>
             </div>
-
-            
-        <!--
-        <button onClick="window.location.reload();">Clear search</button>--> 
-
-
-
         </div>
         <!-- Script -->
         <script>
@@ -114,7 +104,7 @@
                     allRecords: function(){ 
                         axios.get('ricercaPiloti.php')
                             .then(function (response) {
-                            app.piloti = response.data;
+                                app.piloti = response.data;
                             }).catch(function (error) {
                                 console.log(error);
                             });
@@ -130,34 +120,21 @@
                         }).catch(function(error){
                             console.log(error);
                         });
+                    },
+                    goToPilota: function(param){
+                        window.location.href = "../paginaPiloti/leclerc.php?cognome=" + param;
                     }
                 }
             });
         </script>
     </div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
     <div class="footer">
-      <ul class="footerContent">
-        <li><i class="fab fa-instagram"></i></li>
-        <li><i class="fab fa-facebook"></i></li>
-        <li><i class="fab fa-twitter"></i></li>
-        <li><i class="fab fa-youtube"></i></li>
-      </ul>
+        <ul class="footerContent">
+            <li><i class="fab fa-instagram"></i></li>
+            <li><i class="fab fa-facebook"></i></li>
+            <li><i class="fab fa-twitter"></i></li>
+            <li><i class="fab fa-youtube"></i></li>
+        </ul>
     </div>
 </body>
 </html>

@@ -2,7 +2,7 @@
     
     $dbconn = pg_connect("host=localhost port=5432 dbname=PassioneFerrari user=postgres password=password ")or 
                 die ( ' Could not connect : ' . pg_last_error( ) ) ;
-    $pilota = 'Leclerc';
+    $pilota = $_GET['cognome'];
     $query  = "SELECT * 
                 FROM  piloti, eventi
                 WHERE piloti.id = eventi.pilota and cognome ='$pilota'";

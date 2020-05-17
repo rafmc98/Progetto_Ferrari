@@ -7,7 +7,9 @@
     if(isset($_GET['parametro'])){
         $condition = $_GET['parametro']; 
         $query = "select nome, cognome, nazionalità
-                  from piloti where cognome like '%".$condition."%'";
+                  from piloti 
+                  where cognome like '%".$condition."%'
+                  or nome like '%".$condition."%'";
     }
     else{
         $query = "SELECT nome, cognome, nazionalità

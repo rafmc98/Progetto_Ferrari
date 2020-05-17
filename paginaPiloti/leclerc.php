@@ -2,7 +2,7 @@
 <?php 
     $dbconn = pg_connect("host=localhost port=5432 dbname=PassioneFerrari user=postgres password=password ")or 
                 die ( ' Could not connect : ' . pg_last_error( ) ) ;
-    $pilota = 'Leclerc';
+    $pilota = $_GET['cognome'];
     $query  = "SELECT * 
                 FROM piloti
                 WHERE cognome ='$pilota'";
@@ -126,6 +126,7 @@
                 var app=new Vue({
                     el:'#app',
                     data:{
+                        cognome: '<?php echo $pilota ?>',
                         image:'',
                         description: '',
                         video: '',
@@ -134,17 +135,21 @@
                     },
                     methods:{
                         updateAll:function(im,des,d,v){
-                        this.image=im;
-                        this.description=des;
-                        this.titolo=d;
-                        this.video=v;
+                            this.image=im;
+                            this.description=des;
+                            this.titolo=d;
+                            this.video=v;
                         },
                         getQuery: function(){   
-                        axios.get('ajaxfile.php').then(function (response) {
-                            app.variants = response.data;
-                        }).catch(function (error) {
-                            console.log(error);
-                        });
+                            axios.get('ajaxfile.php',{
+                                params:{
+                                    cognome: this.cognome
+                            }
+                            }).then(function (response) {
+                                app.variants = response.data;
+                            }).catch(function (error) {
+                                console.log(error);
+                            });
                         }
                     },
                     created: function(){
@@ -190,7 +195,7 @@
                 <!-- Query per vedere macchine del pilota -->
                 <div class="cardab">
                     <?php
-                        $pilota = 'Leclerc';
+                        /* $pilota = 'Leclerc'; */
                         $query = "SELECT macchine.nome, macchine.anno 
                                     FROM macchine, piloti, piloti_macchine
                                     WHERE cognome ='$pilota' and piloti.id = piloti_macchine.idpiloti and piloti_macchine.idmacchine = macchine.id";
