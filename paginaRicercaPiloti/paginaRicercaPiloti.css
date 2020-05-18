@@ -25,7 +25,7 @@ body{
 #search{
     border-radius: 120px;
     height: 30px;
-    padding: 5px;
+    padding: 10px;
     border: none;
     outline: none;
 }
@@ -64,7 +64,6 @@ body{
     cursor: pointer;
 }
 
-
 .search-result{
     font-family: 'Calibri';
     margin-top: 10px;
@@ -91,8 +90,6 @@ body{
     line-height: 40px;
 }
 
-
-
 .riga-pilota{
     margin:20px auto;
     width: 60%;
@@ -100,11 +97,14 @@ body{
     text-align: center;
     background-color: whitesmoke;
     box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
+    cursor:pointer;
 }
 
 .riga-pilota:hover{
+    transition: .3s;
     color:whitesmoke;
     background-color: #383535;
+    transform: scale(1.2,1.2);
 }
 
 .riga-pilota:active{

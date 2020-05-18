@@ -10,6 +10,8 @@ $(document).ready(function() {
           $('#freccia').attr('class','fas fa-angle-down');
       }
   });
+
+  
 });
 
 function openNav() {

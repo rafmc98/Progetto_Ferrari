@@ -65,7 +65,8 @@ body{
 
 .macchineguidate{
     margin-top: 30px;
-    width:35%;
+    margin-bottom: 50px;
+    width:100%;
     float:right;
     padding-right: 70px;
 }
@@ -84,14 +85,12 @@ body{
 .namecar{
     font-size:19px;
     color:white;
-    text-align:center;
-    color:azure;
+    text-align: center;
 }
 
 .info{
     width:100%;
     margin-top:20px;
-    margin-left:20px;
 }
 
 .foto-pilota div{
@@ -155,7 +154,12 @@ body{
 }
 
 .foto-evento{
-    width:100%
+    width:100%;
+    display:none;
+}
+
+.evento{
+    display: none;
 }
 
 .foto-evento img{
@@ -203,31 +207,39 @@ body{
 .box{
     text-align: center;
     width: 100%;
+    height: 120px;
+}
+
+.box ul{
+    margin-top: 50px;
+    width: 100%;
+    height: 100%;
 }
 
 .color-box{
-    height: 100px;
-    display: inline-block;
-    text-align: left;
-    width: 130px;
-    margin-left: 10px;
-    margin-right: 10px;
-    margin-top:30px;
-    background-color: blue;
-    border: 1px solid blue;
-    border-radius: 7px;
-    cursor:pointer;
+    background-color: red;
+    padding: 10px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    display: inline;
+    font-size: 15px;
+}
+
+
+.color-box:hover{
+    background-color: whitesmoke;
 }
 
 .campi{
     float:left;
-    width: 50%;
+    width: 60%;
+    padding-left:30px;
 }
 
 .database{
     font-family: Calibri;
     float: right;
-    width: 50%;
+    width: 40%;
 }
 
 @font-face {

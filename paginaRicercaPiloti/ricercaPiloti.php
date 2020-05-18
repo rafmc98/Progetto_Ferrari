@@ -8,8 +8,8 @@
         $condition = $_GET['parametro']; 
         $query = "select nome, cognome, nazionalità
                   from piloti 
-                  where cognome like '%".$condition."%'
-                  or nome like '%".$condition."%'";
+                  where cognome ilike '%".$condition."%'
+                  or nome ilike '%".$condition."%'";
     }
     else{
         $query = "SELECT nome, cognome, nazionalità

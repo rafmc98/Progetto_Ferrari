@@ -35,6 +35,14 @@
         });
     });
     </script>
+    <script>
+        $(document).ready(function(){
+            $(".box").click(function(){
+                $(".foto-evento, .evento").slideDown(700);
+
+            });
+        });
+    </script>
     <!--FINE JQUERY-->
 </head>
 <body>
@@ -105,10 +113,10 @@
                     </div>
                     
                     <div class="scomparsa" id="sparisci">
-                        <div class="testo-evento">{{descrizione}}</div>
+                        <div class="testo-evento">{{description}}</div>
                         <div class="box-video">
                             <p class="centra">
-                                <video width="500px" height="300px" controls :src="video"></video>
+                                <video width="500px" height="300px" controls :src="video" style="outline:none;"></video>
                             </p>
                         </div>
                     </div>
@@ -116,9 +124,11 @@
 
                 <!-- bottoni eventi -->
                 <div class="box">
-                        <div v-for = "x in variants" v-on:click="updateAll(x.img_evento,x.descrizione_evento,x.titolo,x.video)" class="color-box">
+                    <ul>
+                        <li v-for = "x in variants" v-on:click="updateAll(x.img_evento,x.descrizione_evento,x.titolo,x.video)" class="color-box">
                             {{x.titolo}}
-                        </div>
+                        </li>
+                    <ul>
                 </div>
             </div>
             <!-- Script -->
@@ -134,10 +144,10 @@
                         variants:''
                     },
                     methods:{
-                        updateAll:function(im,des,d,v){
+                        updateAll:function(im,des,t,v){
                             this.image=im;
                             this.description=des;
-                            this.titolo=d;
+                            this.titolo=t;
                             this.video=v;
                         },
                         getQuery: function(){   
@@ -161,7 +171,7 @@
 
         
         <div class="tabella-pilota">
-            <div style="width:360px">
+            <div style="width:360px;">
                 <p class="centra"> <h1 class="titolo-evento">DATI DEL PILOTA </h1></p>
                 <div class="campi">
                     <p class="dati">Nome:</p>
@@ -186,16 +196,14 @@
                     <p class='data'><strong><?php echo $line["mondiali"];?></strong></p>
                 </div>
             </div>
-        </div>
-
-        <div class="macchineguidate">
+            
+            <div class="macchineguidate">
                 <div class="titolo-macchine">
                     <h2 class="scritta" style="font-family:formula1">VETTURE CARRIERA</h2>
                 </div>
                 <!-- Query per vedere macchine del pilota -->
                 <div class="cardab">
                     <?php
-                        /* $pilota = 'Leclerc'; */
                         $query = "SELECT macchine.nome, macchine.anno 
                                     FROM macchine, piloti, piloti_macchine
                                     WHERE cognome ='$pilota' and piloti.id = piloti_macchine.idpiloti and piloti_macchine.idmacchine = macchine.id";
@@ -212,8 +220,10 @@
                     ?>
                 </div>
             </div>
-        
+        </div>
     </div>
+
+
     <div class="footer">
       <ul class="footerContent">
         <li><i class="fab fa-instagram"></i></li>
