@@ -26,7 +26,7 @@
 }
 
 body{
-  background-image: url('../f1/immagini/bg3.jpg');
+  background-image: url('../paginaF1/immagini/bg3.jpg');
   background-size: cover;
   background-repeat: none;
 }
@@ -105,14 +105,14 @@ body{
 
 .div1 { 
   grid-area: 1 / 1 / 4 / 3;
-  background-image: url("../FotoProgetto/f1.jpg");
+  background-image: url("../FotoProgetto/sid-ramirez-tjLa5hbq6rw-unsplash.jpg");
   background-size: cover;
   border-radius: 10px;
 }
 
 .div2 {
     grid-area: 1 / 3 / 4 / 6; 
-    background-image: url("../FotoProgetto/marc-kleen-h8UQV31X5AI-unsplash.jpg");
+    background-image: url("../FotoProgetto/schumacher_home.jfif");
     background-size: cover;
     border-radius: 10px;
 }
@@ -125,13 +125,14 @@ body{
 }
 .div4 {
     grid-area: 5 / 1 / 6 / 3; 
-    background-image: url("../FotoProgetto/viktor-theo-rZoq-mkutlE-unsplash.jpg");
+    background-image: url("../FotoProgetto/villenueve_home.jpg");
     background-size: cover;
+    background-position: center;
     border-radius: 10px;
   }
 .div5 { 
   grid-area: 5 / 3 / 6 / 6; 
-  background-image: url("../FotoProgetto/joshua-rawson-harris-LX0pplSjE2g-unsplash.jpg");
+  background-image: url("../FotoProgetto/lauda.jpg");
     background-size: cover;
     border-radius: 10px;
 } 
