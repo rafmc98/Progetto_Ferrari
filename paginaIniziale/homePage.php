@@ -61,42 +61,32 @@
      </div>
       <div class="div2"> 
         <span>
-          <strong>Html</strong><br>
-          In informatica l'HyperText Markup Language (HTML; traduzione letterale: linguaggio a marcatori per ipertesti) 
-          è un linguaggio di markup.Nato per la formattazione e impaginazione di documenti ipertestuali disponibili nel web 1.0,
-          oggi è utilizzato principalmente per il disaccoppiamento della struttura logica di una pagina web 
-          (definita appunto dal markup) e la sua rappresentazione, gestita tramite gli stili CSS per adattarsi alle
-          nuove esigenze di comunicazione e pubblicazione all'interno di Internet
+        <strong>Michael Shumacher</strong><br>
+          Non sei un vero campione del mondo finchè non vinci con la ferrari
       </span>
       </div>
       <div class="div3">
         <span>
-          <strong>Html</strong><br>
-          In informatica l'HyperText Markup Language (HTML; traduzione letterale: linguaggio a marcatori per ipertesti) 
-          è un linguaggio di markup.Nato per la formattazione e impaginazione di documenti ipertestuali disponibili nel web 1.0,
-          oggi è utilizzato principalmente per il disaccoppiamento della struttura logica di una pagina web 
-          (definita appunto dal markup) e la sua rappresentazione, gestita tramite gli stili CSS per adattarsi alle
-          nuove esigenze di comunicazione e pubblicazione all'interno di Internet
+        <strong>Enzo Ferrari</strong><br>
+          Una macchina è come una figlia, quando 
+          vince una corsa mi sento come il padre che sa 
+          che la propria figlia ha preso un bel voto a scuola
       </span>  
       </div>
       <div class="div4"> 
         <span>
-          <strong>Html</strong><br>
-          In informatica l'HyperText Markup Language (HTML; traduzione letterale: linguaggio a marcatori per ipertesti) 
-          è un linguaggio di markup.Nato per la formattazione e impaginazione di documenti ipertestuali disponibili nel web 1.0,
-          oggi è utilizzato principalmente per il disaccoppiamento della struttura logica di una pagina web 
-          (definita appunto dal markup) e la sua rappresentazione, gestita tramite gli stili CSS per adattarsi alle
-          nuove esigenze di comunicazione e pubblicazione all'interno di Internet
+        <strong>Gilles Villeneuve</strong><br>
+          C’è chi valutava Gilles Villeneuve uno svitato, ma con 
+          il suo ardimento, e con la capacità distruttiva che 
+          aveva nel pilotare auto macinando semiassi, cambi e freni 
+          ci ha insegnato cosa fare. È stato campione di combattività e ha 
+          regalato tanta notorietà alla Ferrari. Io gli volevo bene
       </span>
       </div>
       <div class="div5"> 
         <span>
-          <strong>Html</strong><br>
-          In informatica l'HyperText Markup Language (HTML; traduzione letterale: linguaggio a marcatori per ipertesti) 
-          è un linguaggio di markup.Nato per la formattazione e impaginazione di documenti ipertestuali disponibili nel web 1.0,
-          oggi è utilizzato principalmente per il disaccoppiamento della struttura logica di una pagina web 
-          (definita appunto dal markup) e la sua rappresentazione, gestita tramite gli stili CSS per adattarsi alle
-          nuove esigenze di comunicazione e pubblicazione all'interno di Internet
+          <strong>Niki Lauda</strong><br>
+          L'ambiguità appartiene alla Ferrari come il motore a dodici cilindri.
         </span>
       </div>
     </div>
