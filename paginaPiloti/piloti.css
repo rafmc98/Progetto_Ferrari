@@ -126,13 +126,15 @@ body{
 .dati{
     font-size:17px;
     margin:11px;
+    height:25px;
 }
 
 .data{
     font-size:17px;
-    margin:10px;
+    margin:11px;
     text-align:center;
     color:powderblue;
+    height:25px;
 }
 
 
@@ -234,13 +236,13 @@ body{
 .campi{
     float:left;
     width: 60%;
-    padding-left:30px;
 }
 
 .database{
     font-family: Calibri;
     float: right;
     width: 40%;
+    padding-left:30px;
 }
 
 @font-face {
