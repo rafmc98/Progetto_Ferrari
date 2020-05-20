@@ -39,7 +39,7 @@
     <script>
         $(document).ready(function() {
             $('.carousel').carousel({
-            interval: 4000
+            interval: 2500
             })
         });
     </script>
@@ -113,13 +113,17 @@
                     <ol class="carousel-indicators">
                         <li data-target="#carousel" data-slide-to="0" class="active"></li>
                         <li data-target="#carousel" data-slide-to="1"></li>
+                        <li data-target="#carousel" data-slide-to="2"></li>
                     </ol>
                     <div class="carousel-inner" role="listbox"  style="position:relative">
                         <div class="carousel-item active">
                             <img src='<?php echo $line['img']; ?>' alt="First Slide" class="foto-slideshow" ; />
                         </div>
                         <div class="carousel-item">
-                            <img src="immagini/f12019.jpeg" alt="Second Slide" class="foto-slideshow" />
+                            <img src='<?php echo $line['img2']; ?>' alt="Second Slide" class="foto-slideshow" />
+                        </div>
+                        <div class="carousel-item">
+                            <img src='<?php echo $line['img3']; ?>' alt="Third Slide" class="foto-slideshow" />
                         </div>
                     </div>
                 </div>

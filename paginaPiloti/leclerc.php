@@ -212,7 +212,7 @@
                     ?>
                         <div class="info">
                             <div class="namecar">
-                                <?php echo $macchine["nome"]; ?>(<?php echo $macchine["anno"]; ?>)
+                                <a href=<?php echo "../paginaMacchine/macchine.php?nome=" .$macchine['nome']?>> <?php echo $macchine["nome"]; ?>(<?php echo $macchine["anno"]; ?>) </a>
                             </div>
                         </div>
                     <?php

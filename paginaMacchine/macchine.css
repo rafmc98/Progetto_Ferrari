@@ -27,13 +27,13 @@
 }
 
 .tabella{
-    width: 45%;
+    width: 40%;
     height: 100%;
     float: left;  
 }
 
 .foto-macchina{
-    width: 55%;
+    width: 60%;
     height: 100%;   
     float: right;
 }
@@ -46,6 +46,7 @@
 
 .foto-slideshow{
     width:100%;
+    height:400px;
     box-shadow: 1px -4px 18px 13px #000000;
     border-radius: 7px;
 }
