@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="paginaStore.css" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+    <script src="../vue.min.js"></script>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <title>Document</title>
+</head>
+<body>
+    <div id="app">
+
+        <nav class="nav">
+        </nav>
+        <!-- Prodotti -->
+        <section class="products">
+          <div v-for="product in products" :key="product.idProdotto" class="product">
+            <h3 class="product__header">{{ product.nomeProdotto }}</h3>
+            <img :src="product.imgProdotto" class="product-image">
+            <p class="product__description">{{ product.descrizione }}</p>
+            <div class="cart">
+              <button @click="updateCart(product, 'add')" >add to cart</button>
+            </div>
+          </div>
+        </section>
+
+        <!-- Shopping cart -->
+        <section class="shopping-cart">
+          <h2 class="nav__header">Products</h2>
+          <button v-if="showCart" @click="clear()">clear</button>
+          <div class="nav__cart">
+            <span class="total-quantity">{{ totalQuantity }}</span>
+            <div class="cart-dropdown">
+              <ul class="cart-dropdown__list">
+                  <li v-for="product in cart" :key="product.idProdotto">
+                      {{ product.nomeProdotto }} ({{ product.quantity }})
+                      <button @click="updateCart(product, 'subtract')" class="cart__button">-</button>
+                      <button @click="updateCart(product, 'add')" class="cart__button">+</button>
+                      <button @click="deleteProduct(product)">X</button>
+                  </li>
+              </ul>
+            </div>
+            <button v-if="showCart" @click="buy()">Acquista</button>
+          </div>
+        </section> 
+    </div>     
+    <script>
+      var app = new Vue({
+            el: '#app',
+            data:{
+                products: '',
+                showCart: false,
+                acquistati:''
+            },
+            methods: {
+              updateCart: function(product, updateType) { 
+                // scorre tutti i prodotti      
+                for (let i = 0; i < this.products.length; i++) {
+                  // se il prodotto è quello selezionato
+                  if (this.products[i].id === product.id) {
+                    // controlla l'operazione da effettura sulla quantità del prodotto
+                    if (updateType === 'subtract') {
+                      // se l'operazione è una sottrazione diminiusce la quantità del prodotto nel carrello
+                      if (this.products[i].quantity !== 0) this.products[i].quantity--;
+                    } 
+                    else {
+                        // altrimenti aumenta la quantità del prodotto nel carrello
+                        this.products[i].quantity++;
+                    }
+                    break;
+                  }
+                }
+              },
+              getProducts: function(){
+                axios.get('ajaxProdotti.php')
+                    .then(function (response) {
+                      app.products = response.data;
+                    }).catch(function (error) {
+                      console.log(error);
+                  });
+              },
+              deleteProduct: function(product){     
+                for (let i = 0; i < this.products.length; i++) if(this.products[i].id == product.id) this.products[i].quantity = 0;
+              },
+              clear: function(){
+                for(let i = 0; i < this.products.length; i++) this.products[i].quantity = 0;
+              },
+              buy: function(){
+                /* implementa acquisto (collegamento DB) */
+                return null;
+              }
+            },
+            created: function(){
+              this.getProducts()
+            },
+            computed: {
+              cart() {
+                //mostra tutti i prodotti che hanno che hanno una quantità maggiore di 0 e che sono stati quindi aggiunti al carrello
+                this.acquistati = this.products.filter(product => product.quantity > 0);
+                if(this.acquistati.length > 0) this.showCart = true;
+                if(this.acquistati.length == 0) this.showCart = false;
+                return this.acquistati;
+              },
+              totalQuantity() {
+                // calcola la quantità totale di prodotti nel carrello
+                return this.products.reduce((total, product) => total + product.quantity,0);
+              }
+            }
+          });
+    </script>
+</body>
+</html>

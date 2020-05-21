@@ -1,0 +1,54 @@
+*{
+    margin:0;
+}
+
+.nav{
+    height: 70px;
+    width: 100%;
+    background-color: greenyellow;
+}
+
+.nav-cart{
+    float:right;
+}
+
+.shopping-cart{
+    float: right;
+    height: 500px;
+    width: 30%;
+    background-color: brown;
+}
+
+.products{
+    float: left;
+    width: 70%;
+    background-color: aquamarine;
+}
+
+.product{
+    float: left;
+    margin: 40px 0 0 40px;
+    width: 240px;
+    height: 320px;
+    background-color: bisque;
+    text-align: center;
+}
+
+.product-image{
+    height: 150px;
+    width: 150px;
+}
+
+.product-header{
+    text-align: center;
+}
+
+.product-description{
+    text-align: center;
+}
+
+.cart button{
+    width:20%;
+    text-align: center;
+}
+
