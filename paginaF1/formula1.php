@@ -65,12 +65,38 @@
     </div>
 
     <div class="description-box">
-        <div class="testo"><div class="descrizione"></div></div>
+        <div class="testo">
+            <div class="descrizione">
+                <div class="descr">
+
+                </div>
+                <div class="cont">
+                    
+                </div>
+            </div>
+        </div>
         <div class="albo-oro">
             <div class="container-albo">
                 <div class="titolo-albo">ALBO D'ORO</div>
-                <div class="campionato"><div class="titolo-campionato">campionato costruttori</div></div>
-                <div class="campionato"><div class="titolo-campionato">campionato piloti</div></div>
+                <div class="campionato">
+                    <div class="titolo-campionato">Campionato costruttori</div>
+                    <p class="dati">16 Titoli </p>
+                    <p class="dati">1961,1964,1975,</p>
+                    <p class="dati">1976,1977,1979,</p>
+                    <p class="dati">1982,1983,1999,</p>
+                    <p class="dati">2000,2001,2002,</p>
+                    <p class="dati">2003,2004,2007,</p>
+                    <p class="dati">2008.</p>
+                </div>
+                <div class="campionato">
+                    <div class="titolo-campionato">Campionato piloti</div>
+                    <p class="dati">15 Titoli </p>
+                    <p class="dati">1952,1953,1956,</p>
+                    <p class="dati">1958,1961,1964,</p>
+                    <p class="dati">1975,1977,1979,</p>
+                    <p class="dati">2000,2001,2002,</p>
+                    <p class="dati">2003,2004,2007.</p>
+                </div>
             </div>
         </div>
     </div>

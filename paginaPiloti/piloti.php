@@ -206,7 +206,8 @@
                     <?php
                         $query = "SELECT macchine.nome, macchine.anno 
                                     FROM macchine, piloti, piloti_macchine
-                                    WHERE cognome ='$pilota' and piloti.id = piloti_macchine.idpiloti and piloti_macchine.idmacchine = macchine.id";
+                                    WHERE cognome ='$pilota' and piloti.id = piloti_macchine.idpiloti and piloti_macchine.idmacchine = macchine.id
+                                    ORDER BY macchine.anno DESC";
                         $risultato = pg_query ($query) or die ( ' Query failed : ' .pg_last_error( ) ) ;
                         while ($macchine = pg_fetch_array ($risultato , null , PGSQL_ASSOC ) ) {
                     ?>

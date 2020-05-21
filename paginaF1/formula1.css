@@ -55,6 +55,17 @@ body{
     margin: 57px auto;
 }
 
+.descr{
+    width:100%;
+    height:45%;
+    border:4px solid yellow;
+}
+
+.cont{
+    width:100%;
+    height:55%;
+    border:4px solid green;
+}
 .albo-oro{
     width: 40%;
     height: 100%;   
@@ -63,7 +74,6 @@ body{
 
 /*rivedere altezza */
 .container-albo{
-    border: 1px solid red;
     width: 85%;
     height: 100%;
 }
@@ -72,6 +82,8 @@ body{
     margin-top: 57px;
     width: 100%;
     text-align: center;
+    color:red;
+    font-size:30px;
 }
 
 /*rivedere altezza */
@@ -79,15 +91,23 @@ body{
     float: left;
     width: 50%;
     height: 467px;
+    margin-top:20px;
 
 }
 
 .titolo-campionato{
     width: 100%;
-    background-color:beige;
+    color:red;
     text-align: center;
 }
 
+.dati{
+    font-size:17px;
+    margin-top:20px;
+    height:25px;
+    color:whitesmoke;
+    text-align:center;
+}
 /* sezione slideshow */
 .container-slide{
     width: 100%;
@@ -101,6 +121,10 @@ body{
     text-align:center;
     text-decoration:none;
     margin-bottom:20px;
+}
+
+.nomepiloti:hover{
+    opacity:0.7;
 }
 
 .titoli{
