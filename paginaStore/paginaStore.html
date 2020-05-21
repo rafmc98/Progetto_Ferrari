@@ -17,9 +17,11 @@
         <!-- Prodotti -->
         <section class="products">
           <div v-for="product in products" :key="product.idProdotto" class="product">
+            {{product.idProdotto}}
             <h3 class="product__header">{{ product.nomeProdotto }}</h3>
             <img :src="product.imgProdotto" class="product-image">
             <p class="product__description">{{ product.descrizione }}</p>
+            <p class="product__description">{{ product.prezzo }}</p>
             <div class="cart">
               <button @click="updateCart(product, 'add')" >add to cart</button>
             </div>
@@ -31,7 +33,6 @@
           <h2 class="nav__header">Products</h2>
           <button v-if="showCart" @click="clear()">clear</button>
           <div class="nav__cart">
-            <span class="total-quantity">{{ totalQuantity }}</span>
             <div class="cart-dropdown">
               <ul class="cart-dropdown__list">
                   <li v-for="product in cart" :key="product.idProdotto">
@@ -42,7 +43,9 @@
                   </li>
               </ul>
             </div>
-            <button v-if="showCart" @click="buy()">Acquista</button>
+            <div  v-if="showCart">
+              <button @click="buy()">Acquista</button><div>{{totalPrice}}</div>
+            </div>
           </div>
         </section> 
     </div>     
@@ -59,7 +62,7 @@
                 // scorre tutti i prodotti      
                 for (let i = 0; i < this.products.length; i++) {
                   // se il prodotto è quello selezionato
-                  if (this.products[i].id === product.id) {
+                  if (this.products[i].idProdotto === product.idProdotto) {
                     // controlla l'operazione da effettura sulla quantità del prodotto
                     if (updateType === 'subtract') {
                       // se l'operazione è una sottrazione diminiusce la quantità del prodotto nel carrello
@@ -103,9 +106,9 @@
                 if(this.acquistati.length == 0) this.showCart = false;
                 return this.acquistati;
               },
-              totalQuantity() {
-                // calcola la quantità totale di prodotti nel carrello
-                return this.products.reduce((total, product) => total + product.quantity,0);
+              totalPrice() {
+                // calcola il prezzo totale di acquisto
+                return this.acquistati.reduce((total, product) => total + product.prezzo * product.quantity,0);
               }
             }
           });
