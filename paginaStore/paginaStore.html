@@ -88,11 +88,23 @@
                 for (let i = 0; i < this.products.length; i++) if(this.products[i].id == product.id) this.products[i].quantity = 0;
               },
               clear: function(){
-                for(let i = 0; i < this.products.length; i++) this.products[i].quantity = 0;
+                for (let i = 0; i < this.products.length; i++) this.products[i].quantity = 0;
               },
-              buy: function(){
-                /* implementa acquisto (collegamento DB) */
-                return null;
+              buy: function(){ 
+                for (let i = 0; i < this.acquistati.length; i++){
+                  axios.post('acquista.php',{
+                    nomeProdotto: this.acquistati[i].nomeProdotto,
+                    quantity: this.acquistati[i].quantity,
+                    idProdotto: this.acquistati[i].idProdotto
+                  })
+                  .then(function (response) {
+                  console.log(response);
+                  })
+                  .catch(function (error) {
+                  console.log(error);
+                  });
+                }
+                
               }
             },
             created: function(){
