@@ -24,6 +24,7 @@
     <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
     <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
     <script src="javascript/scriptPiloti.js" type="text/javascript"></script>
+    <script src="../paginaIniziale/homePageScript.js" type="text/javascript"></script>
     
     <title><?php echo $line["nome"];?> <?php echo $line["cognome"]; ?></title>
     <!--JQUERY-->
