@@ -122,7 +122,7 @@
                         });
                     },
                     goToPilota: function(param){
-                        window.location.href = "../paginaPiloti/leclerc.php?cognome=" + param;
+                        window.location.href = "../paginaPiloti/piloti.php?cognome=" + param;
                     }
                 }
             });

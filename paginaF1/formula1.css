@@ -27,6 +27,14 @@ body{
     text-decoration: none;
 }
 
+.f1{
+    width: 100%;
+    height: 80px;
+    text-align: center;
+    color:red;
+    font-family: "formula1";
+}
+
 .description-box{
     font-family: 'formula1';
     width: 100%;
@@ -85,6 +93,7 @@ body{
     width: 100%;
     height: 1300px;
     margin: 0 auto;
+    font-family:"formula1";
 }
 
 .nomepiloti{
@@ -92,6 +101,17 @@ body{
     text-align:center;
     text-decoration:none;
     margin-bottom:20px;
+}
+
+.titoli{
+    text-align:center;
+    margin-bottom:30px;
+    color:red;
+}
+
+.titoletto{
+    width:100%;
+    margin-top:10px;
 }
 
 /* SLIDESHOW */
@@ -109,4 +129,16 @@ body{
     box-shadow: 1px -4px 18px 13px #000000;
     border-radius: 10px;
 }
-/* FINE SLIDESHOW /*
+
+.footer{
+    margin-top:50px;
+}
+@font-face {
+	font-family: 'formula1';
+	src: url('../paginaF1/f1-fonts/Formula1-Display-Bold.eot');
+	src: url('../paginaF1/f1-fonts/Formula1-Display-Bold.eot?#iefix') format('embedded-opentype'),
+		url('../paginaF1/f1-fonts/Formula1-Display-Bold.woff') format('woff'),
+		url('../paginaF1/f1-fonts/Formula1-Display-Bold.ttf') format('truetype');
+	font-weight: bold;
+	font-style: normal;
+}

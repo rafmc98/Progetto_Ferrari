@@ -60,6 +60,9 @@
         <div class="titolo">Passione Ferrari</div>
     </div>
     
+    <div class="f1">
+        <h1 class="titolo-pagina">FORMULA 1 E FERRARI</h1>
+    </div>
 
     <div class="description-box">
         <div class="testo"><div class="descrizione"></div></div>
@@ -74,30 +77,43 @@
 
     <!-- sezione slideshow-->
     <div class="container-slide">
-
-
         <div class="titoletto">
-            <h1 class="title">PILOTI </h1>
+            <h1 class="titoli">PILOTI FERRARI </h1>
         </div>
         <div id="carousel-pilota" class="carousel slide" data-ride="carousel" style="height: 500px;">
             <ol class="carousel-indicators">
                 <li data-target="#carousel-pilota" data-slide-to="0" class="active"></li>
                 <li data-target="#carousel-pilota" data-slide-to="1"></li>
                 <li data-target="#carousel-pilota" data-slide-to="2"></li>
+                <li data-target="#carousel-pilota" data-slide-to="3"></li>
+                <li data-target="#carousel-pilota" data-slide-to="4"></li>
+                <li data-target="#carousel-pilota" data-slide-to="5"></li>
             </ol>
     
             <div class="carousel-inner" role="listbox">
                 <div class="carousel-item active">
                     <p class="centra"><img src="immagini/leclerc.jpg" alt="First Slide" class="foto-slideshow"></p>
-                    <h3 class="nomepiloti"><a href="leclerc/leclerc.php" class="nomepiloti" style="text-decoration:none; color:red;"> CHARLES LECLERC(2019-) </a></h3>
+                    <h3 class="nomepiloti"><a href="../paginaPiloti/piloti.php?cognome=Leclerc" class="nomepiloti" style="text-decoration:none; color:red;"> CHARLES LECLERC</a></h3>
                 </div>
                 <div class="carousel-item">
-                    <p class="centra"><img src="immagini/leclerc.jpg" alt="Second Slide" class="foto-slideshow"></p>
-                    <h3 class="nomepiloti"><a href="" class="nomepiloti " style="text-decoration:none; color:red;"> SEBASTIAN VETTEL (2015-) </a></h3>
+                    <p class="centra"><img src="immagini/vettel.jpg" alt="Second Slide" class="foto-slideshow"></p>
+                    <h3 class="nomepiloti"><a href="../paginaPiloti/piloti.php?cognome=Vettel" class="nomepiloti " style="text-decoration:none; color:red;"> SEBASTIAN VETTEL</a></h3>
                 </div>
                 <div class="carousel-item">
-                    <p class="centra"><img src="immagini/img3.jpg" alt="Third Slide" class="foto-slideshow"></p>
-                    <h3 class="nomepiloti"><a href="" class="nomepiloti" style="text-decoration:none; color:red;">FERNANDO ALONSO </a></h3>
+                    <p class="centra"><img src="immagini/raikkonen.jpg" alt="Third Slide" class="foto-slideshow"></p>
+                    <h3 class="nomepiloti"><a href="../paginaPiloti/piloti.php?cognome=Raikkonen" class="nomepiloti" style="text-decoration:none; color:red;">KIMI RAIKKONEN </a></h3>
+                </div>
+                <div class="carousel-item">
+                    <p class="centra"><img src="immagini/alonso.jpg" alt="Four Slide" class="foto-slideshow"></p>
+                    <h3 class="nomepiloti"><a href="../paginaPiloti/piloti.php?cognome=Alonso" class="nomepiloti" style="text-decoration:none; color:red;">FERNANDO ALONSO </a></h3>
+                </div>
+                <div class="carousel-item">
+                    <p class="centra"><img src="immagini/massa.jpg" alt="Five Slide" class="foto-slideshow"></p>
+                    <h3 class="nomepiloti"><a href="../paginaPiloti/piloti.php?cognome=Massa" class="nomepiloti" style="text-decoration:none; color:red;">FELIPE MASSA </a></h3>
+                </div>
+                <div class="carousel-item">
+                    <p class="centra"><img src="immagini/schumacher.jpg" alt="Six Slide" class="foto-slideshow"></p>
+                    <h3 class="nomepiloti"><a href="../paginaPiloti/piloti.php?cognome=Schumacher" class="nomepiloti" style="text-decoration:none; color:red;">MICHEAL SCHUMACHER </a></h3>
                 </div>
             </div>
         </div>
@@ -105,28 +121,48 @@
         
 
         <!--SLIDESHOW MACCHINE-->
-        <div class="titoletto" style="margin-top: 100px;">
-            <h1 class="title"> MACCHINE DEL PRESENTE E STORICHE</h1>
+        <div class="titoletto" style="margin-top:100px">
+            <h1 class="titoli"> VETTURE DEL PRESENTE E STORICHE</h1>
         </div>
-        <div id="carouselcar" class="carousel slide" data-ride="carousel"style="height:500px">
+
+        <div id="carouselcar" class="carousel slide" data-ride="carousel" style="height:500px">
             <ol class="carousel-indicators">
                 <li data-target="#carouselcar" data-slide-to="0" class="active"></li>
                 <li data-target="#carouselcar" data-slide-to="1"></li>
+                <li data-target="#carouselcar" data-slide-to="2"></li>
+                <li data-target="#carouselcar" data-slide-to="3"></li>
+                <li data-target="#carouselcar" data-slide-to="4"></li>
+                <li data-target="#carouselcar" data-slide-to="5"></li>
             </ol>
 
             <div class="carousel-inner" role="listbox"  style="position:relative">
                 <div class="carousel-item active">
-                    <p class="centra"><img src="immagini/f12020.jpg" alt="First Slide" class="foto-slideshow" ; /></p>
-                    <h3 class="nomepiloti"><a href="" class="nomepiloti"style="text-decoration:none; color:red;"> SF1000 (2020) </a></h3>
+                    <p class="centra"><img src="immagini/sf1000.jpg" alt="First Slide" class="foto-slideshow" ; /></p>
+                    <h3 class="nomepiloti"><a href="../paginaMacchine/macchine.php?nome=SF1000" class="nomepiloti"style="text-decoration:none; color:red;"> SF1000 (2020) </a></h3>
                 </div>
                 <div class="carousel-item">
-                    <p class="centra"><img src="immagini/f12019.jpeg" alt="Second Slide" class="foto-slideshow" /></p>
-                    <h3 class="nomepiloti"><a href="" class="nomepiloti " style="text-decoration:none; color:red;"> SF90 (2019) </a></h3>
+                    <p class="centra"><img src="immagini/sf90.jpeg" alt="Second Slide" class="foto-slideshow" /></p>
+                    <h3 class="nomepiloti"><a href="../paginaMacchine/macchine.php?nome=SF90" class="nomepiloti " style="text-decoration:none; color:red;"> SF90 (2019) </a></h3>
                 </div>
+                <div class="carousel-item">
+                    <p class="centra"><img src="immagini/sf70h.jpg" alt="Third Slide" class="foto-slideshow" /></p>
+                    <h3 class="nomepiloti"><a href="../paginaMacchine/macchine.php?nome=SF70H" class="nomepiloti " style="text-decoration:none; color:red;"> SF70H(2017) </a></h3>
+                </div>
+                <div class="carousel-item">
+                    <p class="centra"><img src="immagini/f2012.jpg" alt="Four Slide" class="foto-slideshow" /></p>
+                    <h3 class="nomepiloti"><a href="../paginaMacchine/macchine.php?nome=F2012" class="nomepiloti " style="text-decoration:none; color:red;"> F2012(2012) </a></h3>
+                </div>
+                <div class="carousel-item">
+                    <p class="centra"><img src="immagini/f2007.jpg" alt="Five Slide" class="foto-slideshow" /></p>
+                    <h3 class="nomepiloti"><a href="../paginaMacchine/macchine.php?nome=F2007" class="nomepiloti " style="text-decoration:none; color:red;"> F2007(2007) </a></h3>
+                </div>
+                <div class="carousel-item">
+                    <p class="centra"><img src="immagini/f2004.jpg" alt="Six Slide" class="foto-slideshow" /></p>
+                    <h3 class="nomepiloti"><a href="../paginaMacchine/macchine.php?nome=F2004" class="nomepiloti " style="text-decoration:none; color:red;"> F2004(2004) </a></h3>
+                </div>
+
             </div>
         </div>
-
-
     </div>
 
     <div class="footer">
@@ -139,7 +175,6 @@
     </div>
     
     
-
 
 </body>
 </html>
