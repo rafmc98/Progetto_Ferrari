@@ -66,7 +66,7 @@
           <div class="container-prodotti">
             <div v-for="product in products" :key="product.idProdotto" class="product">
               <img :src="product.imgProdotto" class="product-image">
-              <div class="product-name">{{ product.nomeProdotto }}</div>
+              <div class="product-name"  @click='goToProdotto(product.idProdotto)' >{{ product.nomeProdotto }}</div>
               <div class="product-price"> Price: {{ product.prezzo }}€</div>
               <div class="cart">
                 <button class="addCart" @click="updateCart(product, 'add')" >add to cart</button>
@@ -152,6 +152,9 @@
                   });
                 }
                 
+              },
+              goToProdotto: function(param){
+                window.location.href = "../paginaProdotto/paginaProdotto.php?prodotto=" + param;
               }
             },
             created: function(){

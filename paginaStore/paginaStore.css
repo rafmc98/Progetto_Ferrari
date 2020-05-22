@@ -49,6 +49,7 @@ body{
     outline: none;
     border:none;
     background-color: violet;
+    cursor:pointer;
 }
 
 .clear-button{
@@ -59,6 +60,7 @@ body{
     outline: none;
     border:none;
     background-color: violet;
+    cursor:pointer;
 }
 
 .cart-row{
@@ -82,6 +84,7 @@ body{
     width: 40px;
     outline:none;
     border: none;
+    cursor:pointer;
 }
 
 .cart-button:hover{
@@ -110,14 +113,12 @@ body{
 
 .container-prodotti{
     float: right;
-    margin:0 auto;
     width: fit-content;
-    height: 2000px;
 }
 
 .product{
     margin-left: 25px;
-    float: left;
+    float: right;
     width: 200px;
     height: 314px;
     background-color: whitesmoke;
@@ -130,6 +131,11 @@ body{
     font-weight: bold;
     margin-top: 10px;
     font-size: 20px;
+    cursor:pointer;
+}
+
+.product-name:hover{
+    color: rgb(93, 93, 95)
 }
 
 .product-price{
@@ -153,6 +159,7 @@ body{
     width: 75%;
     background-color: rgb(93, 93, 235);
     border-radius: 10px;
+    cursor:pointer;
 }
 
 .addCart:hover{
