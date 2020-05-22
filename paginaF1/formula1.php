@@ -25,6 +25,7 @@
             });
         });
     </script>
+
     <!--FINE JQUERY-->
 </head>
 <body>
@@ -68,10 +69,15 @@
         <div class="testo">
             <div class="descrizione">
                 <div class="descr">
-
+                    <p class="centra">
+                        La Scuderia Ferrari è la squadra automobilistica più vincente della storia della Formula 1, visto che ha conquistato sedici campionati mondiali costruttori di Formula 1, a cui si aggiungono quindici campionati mondiali piloti.
+                        Il debutto della Scuderia Ferrari nel Campionato mondiale di Formula 1 risale al 1950 al Gran Premio di Monaco, la seconda prova stagionale, dove giunse seconda grazie ad Alberto Ascari. Nella stessa stagione arrivò seconda anche nel Gran Premio d'Italia, sempre grazie ad Alberto Ascari. La prima pole position e la prima vittoria arrivarono invece l'anno seguente al Gran Premio di Gran Bretagna grazie a José Froilán González.
+                        Il primo campionato del mondo piloti conquistato dalla Ferrari fu nella stagione 1952, quando Alberto Ascari si laureò campione del mondo su una Ferrari 500 F2. 
+                        Il bellissimo video qui sotto è stato realizzato dalla F1 per celebrare le 1000 gare e la sua lunghissima storia dove la Ferrari è sempre stata ben presente.
+                    </p>
                 </div>
                 <div class="cont">
-                    
+                    <p style="text-align:center"><video controls playsinline autoplay muted loop width="400px" src="video/storia.mp4" type="video/mp4" style="outline:none;margin:10px;" controls autoplay></video> </p>
                 </div>
             </div>
         </div>
