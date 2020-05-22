@@ -59,37 +59,39 @@
       <div class="titolo">Passione Ferrari</div>
     </div>
 
-
+      <div style="height:120px; width:100%"></div>
     <div id="app">
         <!-- Prodotti -->
         <section class="products">
-          <div v-for="product in products" :key="product.idProdotto" class="product">
-            <img :src="product.imgProdotto" class="product-image">
-            <h3 class="product__header">{{ product.nomeProdotto }}</h3>
-            <p class="product__description">{{ product.prezzo }}</p>
-            <div class="cart">
-              <button class="addCart" @click="updateCart(product, 'add')" >add to cart</button>
+          <div class="container-prodotti">
+            <div v-for="product in products" :key="product.idProdotto" class="product">
+              <img :src="product.imgProdotto" class="product-image">
+              <div class="product-name">{{ product.nomeProdotto }}</div>
+              <div class="product-price"> Price: {{ product.prezzo }}€</div>
+              <div class="cart">
+                <button class="addCart" @click="updateCart(product, 'add')" >add to cart</button>
+              </div>
             </div>
-          </div>
+          <div>
         </section>
 
         <!-- Shopping cart -->
         <section class="shopping-cart">
-          <h2 class="nav__header">Products</h2>
-          <button v-if="showCart" @click="clear()">clear</button>
-          <div class="nav__cart">
-            <div class="cart-dropdown">
-              <ul class="cart-dropdown__list">
-                  <li v-for="product in cart" :key="product.idProdotto">
-                      {{ product.nomeProdotto }} ({{ product.quantity }})
-                      <button @click="updateCart(product, 'subtract')" class="cart__button">-</button>
-                      <button @click="updateCart(product, 'add')" class="cart__button">+</button>
-                      <button @click="deleteProduct(product)">X</button>
-                  </li>
-              </ul>
+          <div class="carrello">
+            <div class="cart-header"><i class="fas fa-shopping-cart"></i> Cart</div>
+            <div class="cart-row" v-for="product in cart" :key="product.idProdotto">
+                <div class="cart-product">
+                  {{ product.nomeProdotto }} ({{ product.quantity }})
+                  <button class="delete" @click="deleteProduct(product)">x</button>
+                  <button class="cart-button" @click="updateCart(product, 'subtract')" class="cart__button">-</button>
+                  <button class="cart-button" @click="updateCart(product, 'add')" class="cart__button">+</button>
+                </div>
             </div>
-            <div  v-if="showCart">
-              <button @click="buy()">Acquista</button><div>{{totalPrice}}</div>
+            
+            
+            <div class="cart-footer" v-if="showCart">
+              <button class="buy-button" @click="buy()">Acquista</button> {{totalPrice}} €
+              <button class="clear-button"v-if="showCart" @click="clear()">clear</button>
             </div>
           </div>
         </section> 
