@@ -75,10 +75,10 @@
                 <h2 class="scegli"> Quale tipo di vetture vuoi ricercare? </h2>
             </div>
             <div class="scelta">
-                <input type="radio" id="corsa" value="corsa" v-model='type'>
+                <input type="radio" id="corsa" name="sc" value="corsa" v-model='type'>
                 <label for="corsa" class="tipo">Corsa</label>
                 <br>
-                <input type="radio" id="strada" value="strada" v-model='type'>
+                <input type="radio" id="strada" nome="sc" value="strada" v-model='type'>
                 <label for="strada" class="tipo">Strada</label>
             </div>
             <div class="barra">
