@@ -81,7 +81,11 @@
     </div>
 
     <div class="nome-pilota">
-        <h1 class="titolo-pagina"><?php echo $line["nome"];?> <?php echo $line["cognome"]; ?></h1>
+        <h1 class="titolo-pagina"><?php echo $line["nome"];?> <?php echo $line["cognome"]; ?> </h1>
+    </div>
+
+    <div class="ricerca">
+          <a href="../paginaRicercaPiloti/paginaRicercaPiloti.php" style="color:black"> Cerca piloti<i style="color:black;" class="fas fa-search-plus"></i> </a>
     </div>
 
     <div class="description-box">
