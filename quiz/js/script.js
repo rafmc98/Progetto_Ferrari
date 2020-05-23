@@ -18,7 +18,19 @@
 
                           {q:'Quale pilota brasiliano ha ottenuto più vittorie con la Ferrari?',options:['Rubens Barrichello','Felipe Massa','Nelson Piquet','Nessuno di questi'],answer:2},
 
-                          {q:'In quale anno venne fondata la Scuderia Ferrari?',options:['1929','1925','1930','1922'],answer:1}
+                          {q:'In quale anno venne fondata la Scuderia Ferrari?',options:['1929','1925','1930','1922'],answer:1},
+
+                          {q:'In quale città è nato Fernando Alonso?',options:['Madrid','Oviedo','Saragozza','Barcellona'],answer:2},
+
+                          {q:'Quale è stato il primo GP vinto da Schumacher con la Ferrari?',options:['Italia 1996','Francia 1996','Spagna 1996','Nessuna delle precedenti'],answer:3},
+
+                          {q:'Chi ha vinto il primo GP della storia della Ferrari?',options:['Nino Farina','Jose Froilàn Gonzàlez','Felipe Massa','Alberto Ascari'],answer:2},
+
+                          {q:'Quanti campionati piloti ha vinto in totale la Ferrari?',options:['16','12','15','18'],answer:3},
+
+                          {q:'Quale è stato il primo campione del mondo con la Ferrari?',options:['Ascari 1952','Farina 1950','Gonzales 1953','Nessuna delle precedenti'],answer:1},
+
+                          {q:'Quale pilota brasiliano ha ottenuto più vittorie con la Ferrari?',options:['Rubens Barrichello','Nelson Piquet','Felipe Massa','Nessuna delle precedneti'],answer:3}
 
                           ],
                 index:0,

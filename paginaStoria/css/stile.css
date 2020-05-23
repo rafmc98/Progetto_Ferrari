@@ -2,14 +2,6 @@ html,body{height:100%;}
 	body{margin:0; padding:0;background-image: url('../../paginaf1/immagini/bg3.jpg'); color: #666;font: 16px/28px;font-family: 'Open Sans', sans-serif; line-height:22px;}
 	
 
-	#header{width:155px;background:#21aabd;float:left;position:fixed; top:50%;margin-top:-325px;left:15px;z-index:80;}
-		h1{margin:0;padding:0;}
-		#logo{display:block;float:left;font-family: oswald;font-weight:normal;font-size: 20px; color: #fff;text-transform:uppercase; text-decoration:none;padding:10px; line-height: 24px; border-bottom: 2px solid #e2e2e0; }
-		.menu {float:left; list-style-type:none;padding:0;width:100%;}
-		.menu li a{color: #fff; display: block; font: 14px;font-family: oswald; text-transform:uppercase;text-decoration:none;padding: 3px 10px;}
-		.menu li a:hover{background:#666;}
-		.selected{background: #999; color:#fff!important;}
-		.selected:hover{background: #999!important;}
 	
 	#container{padding:10px 0px 0px 0px;}
 		.slider{ top:50%; margin-top:50px; width:99%; height:500px;   -webkit-box-sizing:border-box; -moz-box-sizing:border-box; box-sizing:border-box;}
