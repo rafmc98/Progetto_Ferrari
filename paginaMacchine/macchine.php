@@ -78,12 +78,13 @@
     </div>
 
     <div class="nome-macchina">
+        <div class="ricerca">
+            <a href="../paginaRicercaMacchine/paginaRicercaMacchine.php" style="color:black;text-decoration:none"> Cerca macchine  <i style="color:black;" class="fas fa-search-plus"></i> </a>
+        </div>
         <h1 class="titolo-pagina"><?php echo $line["nome"];?></h1>
     </div>
 
-    <div class="ricerca">
-          <a href="../paginaRicercaMacchine/paginaRicercaMacchine.php" style="color:black;text-decoration:none"> Cerca macchine<i style="color:black;" class="fas fa-search-plus"></i> </a>
-    </div>
+
 
     <div class="contenitore">
         <div class="tabella">
