@@ -11,6 +11,7 @@
     <script src="https://kit.fontawesome.com/a076d05399.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
     <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <link href="../paginaF1/bootstrap/css/bootstrap.min.css" rel="stylesheet"/>
     <script src="../paginaIniziale/HomePageScript.js"></script>
     <title>Ricerca Macchine</title>
 </head>
@@ -50,7 +51,7 @@
         <a href="#">Contact</a>
     </div>
   
-    <div class="navbar">
+    <div class="navbar" style="position:absolute">
         <div class="openbtn" onclick="openNav()">☰ MENU</div>
         <div class="loginbtn">
             <?php if(isset($_SESSION['email']))
@@ -71,17 +72,12 @@
 
     <div class="content">
         <div id="app" class="finestra">
-            <div class="titoletto">
-                <h2 class="scegli"> Quale tipo di vetture vuoi ricercare? </h2>
-            </div>
-            <div class="scelta">
-                <input type="radio" id="corsa" name="sc" value="corsa" v-model='type'>
-                <label for="corsa" class="tipo">Corsa</label>
-                <br>
-                <input type="radio" id="strada" name="sc" value="strada" v-model='type'>
-                <label for="strada" class="tipo">Strada</label>
-            </div>
             <div class="barra">
+                <select v-model="type" class="selectpicker show-menu-arrow">
+                    <option selected disabled> Tipo vettura </option>
+                    <option value="corsa">Corsa</option>
+                    <option value="strada">Strada</option>
+                </select>
                 <!-- Select record by name -->
                 <input type="text" v-model='parametro' placeholder="Search by name.." id="search" size="50" autocomplete="off">
                 <button class="search-button" @click='recordByName()'><i class="fas fa-search"></i></button>
