@@ -78,7 +78,7 @@
                 <input type="radio" id="corsa" name="sc" value="corsa" v-model='type'>
                 <label for="corsa" class="tipo">Corsa</label>
                 <br>
-                <input type="radio" id="strada" nome="sc" value="strada" v-model='type'>
+                <input type="radio" id="strada" name="sc" value="strada" v-model='type'>
                 <label for="strada" class="tipo">Strada</label>
             </div>
             <div class="barra">
