@@ -10,12 +10,11 @@
     <script src="https://kit.fontawesome.com/a076d05399.js"></script>
 
 
-    <!-- stylesheet for demo and examples -->
     <script src="js/jquery.min.js"></script>
 	  <script src="js/jquery-ui.min.js"></script>
     <script src="js/jquery.mousewheel.min.js"></script>
     
-    <!-- custom scrollbars plugin -->
+    <!-- Plugin della scrollbar -->
     <script src="js/jquery.mCustomScrollbar.js"></script>
     <script>
 
@@ -33,7 +32,7 @@
             
           });
     
-          /* Navigation */
+          /* Navigazione */
           $(".menu a").click(function(){
           
             var myid= $(this).attr("href");
@@ -73,7 +72,7 @@
       <link href='http://fonts.googleapis.com/css?family=Oswald:400,300' rel='stylesheet' type='text/css'>
 
   </head>
-  <body link="grey" vlink="grey">
+  <body link="white" vlink="white">
 
     <div class="overlay" id="overlay" style="display:none;"></div>
     <div id="mySidebar" class="sidebar">
@@ -105,16 +104,15 @@
     
 
     <div class="header">
-      <div class="titolo">Passione Ferrari</div>
+      <div class="titolo"><a href="../paginaIniziale/homePage.php">Passione Ferrari</a></div>
     </div>
     <div style="text-align: center;"></div>
 
-    <div style="text-align: center; margin-top: 30px; font-family: calibri;  font-size: 45px;"> 10 Salti nella storia </div>
+    <div style="text-align: center; margin-top: 30px; font-family: calibri;  font-size: 45px;"> History </div>
     <!-- PRIMO BOX -->
     <div id="container">
       <div class="slider content">
           <div class="my_container">
-
               <div class="line-element" id="page-1">
                   <div class="cont-page">
                     <div class="caption" >
@@ -288,6 +286,10 @@
     <h2>Enzo Ferrari</h2>
 <p>Enzo Ferrari nasce a Modena, il 18 febbraio 1898, è lui che darà vita al marchio più famoso del mondo. La prima vettura della “rossa” nasce nel 1947 ed è la 125 S, una vettura frutto della passione e della determinazione di Enzo. Un uomo che ha dedicato tutto per la sua creazione, tutto per le auto sportive.</p>
 <a class="close" title="chiudere" href="#close"></a>
+<br>
+<div class="video">
+  <iframe width="853" height="480" src="img/enzovideo.mp4" ></iframe>
+      </div>
 </div> 
 
 <!-- finestra popup 2 -->
@@ -395,7 +397,7 @@
         <img src="img/scudo2.png" /></a>
     </div>
     <h2>La Ferrari è Unica</h2>
-<p>La Ferrari è l’unico costruttore di automobili che abbia preso parte a tutte le edizioni del Campionato del di Formula Uno a partire dalla sua creazione, nel 1950. E’ stato per molti anni l’unico team a realizzare per le sue monoposto, dal telaio al motore, passando per cambio e sospensioni. Nella sua carriera in F1 ha conquistato 15 titoli mondiali Piloti e 16 Costruttori e detiene i record di vittorie, di pole position e giri più veloci in gara.</p>
+<p>La Ferrari è l’unico costruttore di automobili che abbia preso parte a tutte le edizioni del Campionato di Formula Uno a partire dalla sua creazione, nel 1950. E’ stato per molti anni l’unico team a realizzare per le sue monoposto, dal telaio al motore, passando per cambio e sospensioni. Nella sua carriera in F1 ha conquistato 15 titoli mondiali Piloti e 16 Costruttori e detiene i record di vittorie, di pole position e giri più veloci in gara.</p>
 <a class="close" title="chiudere" href="#close"></a>
 </div>
     

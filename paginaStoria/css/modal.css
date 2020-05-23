@@ -1,28 +1,12 @@
-﻿/* 
-* finestre modali 
-* in puro css senza  javascript
-* e immagini aggiuntivi
-*
-* Copirat (c) 2017 igor Kissi http://www.ioeweb.it
-*/
+﻿
+/* Titolo nel popup */
 
-/*** Stili relative alla finestra modale e contenuti ***/
-.popup h1,
-.popup h2,
-.popup h3 {
+.popup h2 {
 color: #800000;
 text-shadow: 0 1px 3px rgba(0,0,0,.3);
 font-weight: normal;
 }
-.popup h1 { /* titolo 1 */
-font-size:24px;
-}
-.popup h2 { /* titolo 2 */
-font-size: 1.5em;
-}
-.popup h3 { /* titolo3 3 */
-font-size: 1.2em;
-}
+
 /* Stili di base di ombreggiatura e finestra modale  */
 .overlay {
 top: 0;
@@ -31,6 +15,7 @@ bottom: 0;
 left: 0;
 z-index: 9999;
 visibility: hidden;
+
 /* sfondo oscurante */
 background-color: rgba(0, 0, 0, 0.7);
 opacity: 0;
@@ -59,27 +44,32 @@ margin: 0 auto;
 width: 100%;
 min-width: 320px;
 max-width: 820px;
-/* Posizionamento fisso, finestra rimane icolata allo scorimento della pagina */
+
+/* Posizionamento fisso, finestra rimane incollata allo scorimento della pagina */
 position: fixed;
 padding: 15px;
 border: 1px solid #383838;
+
 /* arrotondamento dei angoli */
 -webkit-border-radius: 4px;
 -moz-border-radius: 4px;
 -ms-border-radius: 4px;
 border-radius: 4px;
 background-color: #FFFFFF;
+
 /* ombra esetrna */
 -webkit-box-shadow: 0 15px 20px rgba(0,0,0,.22),0 19px 60px rgba(0,0,0,.3);
 -moz-box-shadow: 0 15px 20px rgba(0,0,0,.22),0 19px 60px rgba(0,0,0,.3);
 -ms-box-shadow: 0 15px 20px rgba(0,0,0,.22),0 19px 60px rgba(0,0,0,.3);
 -o-box-shadow: 0 15px 20px rgba(0,0,0,.22),0 19px 60px rgba(0,0,0,.3);
 box-shadow: 0 15px 20px rgba(0,0,0,.22),0 19px 60px rgba(0,0,0,.3);
+
 /* trasformazioni */
 -webkit-transform: translate(-50%, -150%);
 -ms-transform: translate(-50%, -150%);
 -o-transform: translate(-50%, -150%);
 transform: translate(-50%, -150%);
+
 /* trasformazioni animate */
 -webkit-transition: transform 0.6s ease-out;
 -moz-transition: transform 0.6s ease-out;
@@ -87,7 +77,8 @@ transform: translate(-50%, -150%);
 -o-transition: transform 0.6s ease-out;
 transition: transform 0.6s ease-out;
 }
-/* attivimo la finestra popup */
+
+/* attiviamo la finestra popup */
 .overlay:target+.popup {
 top: 50%;
 -webkit-transform: translate(-50%,-50%);
@@ -95,7 +86,8 @@ top: 50%;
 -o-transform: translate(-50%, -50%);
 transform: translate(-50%, -50%);
 }
-/* realizzimo il bottone della chiusura */
+
+/* bottone della chiusura */
 .close {
 position: absolute;
 padding: 0;
@@ -123,6 +115,7 @@ line-height: 20px;
 -o-transition:  background-color ease .7s;
 transition: background-color ease .7s;
 }
+
 .close:before {
 color: rgba(255, 255, 255, 0.9);
 content: '\2715';
@@ -138,39 +131,23 @@ background-color: rgba(252, 20, 0, 0.8);
 margin: 0;
 padding: 10px;
 }
-/* tablet */
-@media only screen and (min-width: 768px) and (max-width: 959px) {
-	.popup {
-		width: 95%;
-	}
-}
-/* smartfone*/
-@media only screen and (min-width: 320px) and (max-width: 767px) {
-	.popup {
-		width:85%;
-	}
-}
-/* immagine al inetrno della finestra */
+
+/* immagine immagine interna alla finestra */
 .popup img {
 display: block;
 border: none;
 width: 100%;
 height: auto;
 }
+
 /* miniature destra /sinistra */
-.pic-left, 
-.pic-right {
+.pic-left {
     width: 25%;
     height: auto;
-}
-.pic-left {
     float: left;
     margin: 5px 15px 5px 0;
 }
-.pic-right {
-    float: right;
-    margin: 5px 0 5px 15px;
-}
+
 /* elementi multuimediali incorporati, frame */
 /* blocon con video addativo */
 .video { 
@@ -179,6 +156,7 @@ padding-bottom: 56.25%;
 height: 0; 
 overflow:hidden; 
 } 
+
 .video iframe, 
 .video object, 
 .video embed {
@@ -226,7 +204,6 @@ height: 100%;
 }
 
 .caption span {
-    /* ... */
     display: none;
 }
 
