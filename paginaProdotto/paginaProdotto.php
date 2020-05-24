@@ -38,7 +38,7 @@
                 <div class="card-header">
                     <input class="titolo-recensione" type="text" v-model="titolo" placeholder="titolo recensione">
                     <select v-model="stars">
-                        <option disabled>Voto</option>
+                        <option disabled selected>Giudizio</option>
                         <option>1</option>
                         <option>2</option>
                         <option>3</option> 
@@ -51,19 +51,20 @@
                     <textarea class="textarea" v-model='descrizione' placeholder="Inserisci una recensione"></textarea>
                 </div>
             </div>
-            <div v-for="x in recensioni" class="card text-white bg-dark mb-3" style="margin-top:20px">
-                <div class="card-header">
-                    {{x.titolo}}
-                
-                    <div style="float:right;" v-for="i in parseInt(x.stelle)">
-                        <i class="fas fa-star"></i>
+            <section class="recensioni-db">
+                <div v-for="x in recensioni" class="card text-white bg-dark mb-3" style="margin-top:20px">
+                    <div class="card-header">
+                        {{x.titolo}}
+                        <div style="float:right;" v-for="i in parseInt(x.stelle)">
+                            <i class="fas fa-star"></i>
+                        </div>
+                    </div>
+                    <div class="card-body">
+                        {{x.descrizione}} 
+                        <footer class="blockquote-footer">{{x.email}} ({{x.data}})</footer>   
                     </div>
                 </div>
-                <div class="card-body">
-                    {{x.descrizione}} 
-                    <footer class="blockquote-footer">{{x.email}} ({{x.data}})</footer>   
-                </div>
-            </div>
+            </section>
         </section>
     </div>
     

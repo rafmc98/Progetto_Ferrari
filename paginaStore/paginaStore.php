@@ -138,9 +138,11 @@
               },
               buy: function(){ 
                 for (let i = 0; i < this.acquistati.length; i++){
+                  let costo = this.acquistati[i].quantity * this.acquistati[i].prezzo;
                   axios.post('acquista.php',{
                     nomeprodotto: this.acquistati[i].nomeprodotto,
                     quantity: this.acquistati[i].quantity,
+                    prezzo: costo,
                     idprodotto: this.acquistati[i].idprodotto
                   })
                   .then(function (response) {
@@ -150,6 +152,7 @@
                   console.log(error);
                   });
                 }
+                this.clear();
               },
               goToProdotto: function(param){
                 window.location.href = "../paginaProdotto/paginaProdotto.php?idprodotto=" + param;
