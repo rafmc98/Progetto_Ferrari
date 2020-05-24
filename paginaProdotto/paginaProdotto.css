@@ -1,0 +1,46 @@
+*{
+    margin:0;
+}
+
+body{
+    background-image: url('../paginaF1/immagini/bg3.jpg');
+}
+
+.product-wrapper{
+    margin: 0 auto;
+    width: 70%;
+}
+
+.prodotto{
+    width: 50%;
+    float: left;
+    height: 800px;
+}
+
+.foto-prodotto{
+    width: 400px;
+    height: 400px;
+}
+
+.textarea{
+    width: 100%;
+    border: none;
+    outline: none;
+    resize: none;
+}
+
+
+.titolo-recensione{
+    border: none;
+    outline: none;
+}
+
+.send-button{
+    float: right;
+}
+
+.recensioni{
+    overflow-y: scroll;
+    height: 546px;
+}
+

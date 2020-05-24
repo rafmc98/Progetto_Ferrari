@@ -1,6 +1,4 @@
-<?php 
-  /* Controllo sessione */
-  session_start(); 
+<?php session_start(); 
   /*if(!isset($_SESSION['email']))
       header("Location: ../paginaLogin/login.html");*/
 ?>
@@ -11,6 +9,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="../paginaIniziale/homePage.css" rel="stylesheet">
     <link href="paginaStore.css" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js" type="text/javascript"></script>
     <script src="https://kit.fontawesome.com/a076d05399.js"></script>
     <script src="../vue.min.js"></script>
     <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
@@ -64,9 +63,9 @@
         <!-- Prodotti -->
         <section class="products">
           <div class="container-prodotti">
-            <div v-for="product in products" :key="product.idProdotto" class="product">
-              <img :src="product.imgProdotto" class="product-image">
-              <div class="product-name"  @click='goToProdotto(product.idProdotto)' >{{ product.nomeProdotto }}</div>
+            <div v-for="product in products" :key="product.idprodotto" class="product">
+              <img :src="product.imgprodotto" class="product-image">
+              <div class="product-name"  @click='goToProdotto(product.idprodotto)' >{{ product.nomeprodotto }}</div>
               <div class="product-price"> Price: {{ product.prezzo }}€</div>
               <div class="cart">
                 <button class="addCart" @click="updateCart(product, 'add')" >add to cart</button>
@@ -79,9 +78,9 @@
         <section class="shopping-cart">
           <div class="carrello">
             <div class="cart-header"><i class="fas fa-shopping-cart"></i> Cart</div>
-            <div class="cart-row" v-for="product in cart" :key="product.idProdotto">
+            <div class="cart-row" v-for="product in cart" :key="product.idprodotto">
                 <div class="cart-product">
-                  {{ product.nomeProdotto }} ({{ product.quantity }})
+                  {{ product.nomeprodotto }} ({{ product.quantity }})
                   <button class="delete" @click="deleteProduct(product)">x</button>
                   <button class="cart-button" @click="updateCart(product, 'subtract')" class="cart__button">-</button>
                   <button class="cart-button" @click="updateCart(product, 'add')" class="cart__button">+</button>
@@ -90,7 +89,7 @@
             
             
             <div class="cart-footer" v-if="showCart">
-              <button class="buy-button" @click="buy()">Acquista</button> {{totalPrice}} €
+              <button class="buy-button" @click="buy()">Acquista</button><span style="margin-left:5px;"> {{totalPrice}} €</span>
               <button class="clear-button"v-if="showCart" @click="clear()">clear</button>
             </div>
           </div>
@@ -109,7 +108,7 @@
                 // scorre tutti i prodotti      
                 for (let i = 0; i < this.products.length; i++) {
                   // se il prodotto è quello selezionato
-                  if (this.products[i].idProdotto === product.idProdotto) {
+                  if (this.products[i].idprodotto === product.idprodotto) {
                     // controlla l'operazione da effettura sulla quantità del prodotto
                     if (updateType === 'subtract') {
                       // se l'operazione è una sottrazione diminiusce la quantità del prodotto nel carrello
@@ -132,7 +131,7 @@
                   });
               },
               deleteProduct: function(product){     
-                for (let i = 0; i < this.products.length; i++) if(this.products[i].id == product.id) this.products[i].quantity = 0;
+                for (let i = 0; i < this.products.length; i++) if(this.products[i].idprodotto == product.idprodotto) this.products[i].quantity = 0;
               },
               clear: function(){
                 for (let i = 0; i < this.products.length; i++) this.products[i].quantity = 0;
@@ -140,9 +139,9 @@
               buy: function(){ 
                 for (let i = 0; i < this.acquistati.length; i++){
                   axios.post('acquista.php',{
-                    nomeProdotto: this.acquistati[i].nomeProdotto,
+                    nomeprodotto: this.acquistati[i].nomeprodotto,
                     quantity: this.acquistati[i].quantity,
-                    idProdotto: this.acquistati[i].idProdotto
+                    idprodotto: this.acquistati[i].idprodotto
                   })
                   .then(function (response) {
                   console.log(response);
@@ -151,10 +150,9 @@
                   console.log(error);
                   });
                 }
-                
               },
               goToProdotto: function(param){
-                window.location.href = "../paginaProdotto/paginaProdotto.php?prodotto=" + param;
+                window.location.href = "../paginaProdotto/paginaProdotto.php?idprodotto=" + param;
               }
             },
             created: function(){
