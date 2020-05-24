@@ -36,7 +36,7 @@
                 index:0,
                 load:function(){
                 	   if(this.index<=this.questions.length-1){
-                        quizBox.innerHTML=this.index+1+". "+this.questions[this.index].q;      
+                        quizBox.innerHTML=this.index+1+" - "+this.questions[this.index].q;      
                         op1.innerHTML=this.questions[this.index].options[0];
                         op2.innerHTML=this.questions[this.index].options[1];
                         op3.innerHTML=this.questions[this.index].options[2];

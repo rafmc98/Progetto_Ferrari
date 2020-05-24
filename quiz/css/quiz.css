@@ -1,5 +1,5 @@
 body{
-	background-image: url('../../paginaF1/immagini/bg3.jpg');
+	background-image: url('../img/sfondo.jpg');
 	background-size: 100%;
 	margin:0;
 	padding:0;
@@ -20,10 +20,11 @@ h1{
 .quiz_wrapper{
 	height: 400px;
 	width: 750px;
-	background-color: #ff2800;
+	background-color: rgba(0, 0, 0, 0.8);
 	margin:50px auto;
 	border-radius: 8px;
 	padding: 30px;
+	margin-top: 100px;
 	-webkit-box-shadow: 5px 5px 10px 0px #000000;
 	-moz-box-shadow: 5px 5px 10px 0px #000000;
 	-o-box-shadow: 5px 5px 10px 0px #000000;
@@ -32,10 +33,10 @@ h1{
 
 .quiz_wrapper .question{
 	padding: 15px;
-	background-color:#ff2800;
+	background-color:  rgba(0, 0, 0, 0.8);
 	border-radius: 8px;
 	color:#ffffff;
-	font-size:20px;
+	font-size:17px;
 	float: left;
 	width: 100%;
 	-webkit-box-shadow: 5px 5px 10px 0px #000000;
@@ -64,7 +65,7 @@ h1{
 	border-radius:8px;
 	font-size: xx-large;
 	margin-top: 25px;
-	font-size: 20px;
+	font-size: 17px;
 	color:black;
 	box-shadow: 0px 3px 0px black;
 	cursor: pointer;
@@ -153,52 +154,37 @@ box-shadow: 0px 3px 0px transparent;
 }
 
 
-.header{
-	height: 125px;
-	background-color: #FF2800;
-	-webkit-box-shadow: 1px -4px 18px 13px #000000;
-	-moz-box-shadow: 1px -4px 18px 13px #000000;
-	-o-box-shadow: 1px -4px 18px 13px #000000;
-	box-shadow: 1px -4px 18px 13px #000000;
+
+  .loginbtn{
+	float: right;
+	padding-top: 10px;
+	padding-right: 15px;
   }
   
-  .titolo{
-	font-size: 50px;
+  .loginbtn a{
+	text-decoration: none;
 	color: white;
-	text-shadow: 0px 13px 10px #0A0A0A;
-	text-align: center;
-	vertical-align: middle;
-	line-height: 125px;
   }
 
-  .footer {
-	height: 200px;
-	width: 100%;
-	background-color: #FF2800;
-	text-align: center;
-	display: table;
-	margin-top: 100px;
+  .loginbtn a:hover {
+	color: whitesmoke;
+  }
+
+  #profile{
+	float: right;
   }
   
-  
-  .footerContent {
-	vertical-align: middle;
-	line-height:200px;
+  #iconaProfilo{
+	height: 60px;
+	width: 60px;
+	padding-left: 5px;
   }
   
-  .footerContent li{
-	cursor: pointer;
-	display: inline;
-  }
-  
-  .footerContent li i{
-	font-size: 40px;
-	padding: 20px;
-	color: rgb(14, 11, 11);
-  }
-  
-  .footerContent li:hover i{
-	color: white;
+  #username{
+	float:left;
+	font-size: 16px;
+	font-family: "FontFerrari";
+	color: whitesmoke;
   }
 
 

@@ -22,18 +22,12 @@ body{
     width: 55%;
 }
 
-#search{
+.search{
     border-radius: 120px;
     height: 30px;
     padding: 10px;
     border: none;
     outline: none;
-}
-
-.tipo{
-    color:white;
-    font-family: Calibri;
-    text-align:center;
 }
 
 
@@ -49,8 +43,9 @@ body{
 
 .selectpicker{
     outline:none;
-    border-radius: 16%;
+    border-radius: 120px;
     height:30px;
+    text-align: center;
 }
 
 .search-button{
