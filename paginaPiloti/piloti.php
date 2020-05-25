@@ -86,7 +86,7 @@
         </div>
         <h1 class="titolo-pagina"><?php echo $line["nome"];?> <?php echo $line["cognome"]; ?> </h1>
     </div>
-    
+
     <div class="description-box">
         <div class="testo">
             <div class="descrizione">
