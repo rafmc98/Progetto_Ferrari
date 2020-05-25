@@ -14,4 +14,12 @@ function closeNav() {
   document.getElementById("main").style.marginLeft= "0";
 }
 
+Vue.component('user-name', {
+  template: '<h1 style="color:red">Hi ANNICUUUUU</h1>'
+  })
+
+new Vue({
+  el: "#app"
+})
+
 
