@@ -4,16 +4,23 @@
         header("Location: ../paginaIniziale/homePage.php");
 ?>
 <!DOCTYPE html>
-<html lang="en">
+<html lang='en'>
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="../paginaF1/bootstrap/css/bootstrap.min.css" rel="stylesheet"/>
     <link href="../paginaIniziale/homePage.css" rel="stylesheet">
     <link href="paginaProfilo.css" rel="stylesheet">
     <script src="../paginaIniziale/HomePageScript.js"></script>
     <script src="https://kit.fontawesome.com/a076d05399.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.0/jquery.min.js" charset="utf-8"></script>
-    <script type="text/javascript" src="../vue.min.js"></script>
+    
+    <!-- Dropdown Bootstrap -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+
+    
     
     <script>
         $(document).ready(function(){
@@ -143,8 +150,37 @@
                 ?>
             </div>
     </div>
+    
+   
+    <div id="accordion">
+        <div class="card text-white bg-dark mb-3">
+            <div class="card-header">
+                <a  data-toggle="collapse" href="#collapseOne">
+                    Visualizza riepilogo ordini
+                </a>
+            </div>
+            
+            <div id="collapseOne" class="collapse" data-parent="#accordion">
+                <!-- Riepilogo ordini php -->
+                <?php
+                    $dbconn = pg_connect("host=localhost port=5432 dbname=PassioneFerrari user=postgres password=password")
+                    or die('Could not connect: '.pg_last_error());
+                    $email = $_SESSION['email'];
+                    $q = "select * from ordini where email = '$email' ";
+                    $result = pg_query($q) or die('Query failed: '.pg_last_error());
+                    while ($line = pg_fetch_array($result, null, PGSQL_ASSOC)){
+                ?>
+                    <div class="card-body">
+                        <?php echo $line["nomeprodotto"]; ?>
+                    </div>
+                <?php
+                    }
+                ?>
+            </div>
+        </div>
+    </div>
 
-
+    
     <!--Footer-->
     <div class="footer">
         <ul class="footerContent">
