@@ -1,0 +1,29 @@
+body{
+    background-image: url('sfondo.jpg');
+    background-size: 100%;
+    margin:0;
+    padding:0;
+    text-decoration: none;
+}
+
+.centrale{
+    width: 350px;
+    height: 250px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin: -100px 0 0 -175px;
+    font-family:Calibri;
+}
+
+.bottone{
+    width:250px;
+    font-size:18px;
+    margin-top:15px;
+    outline:none;
+    
+}
+
+.bottone:hover{
+    opacity:0.8;
+}
