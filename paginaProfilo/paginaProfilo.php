@@ -41,6 +41,7 @@
                 "background-size" : "cover"
             });
 
+            
             $('.avatar').click(function(){
                 var icon = $("img",this).attr("src");
                 $('#immagine').css({
@@ -51,6 +52,12 @@
                 // Send Ajax request to backend.php, with src set as "icon" in the POST data
                 $.post('backend.php',{iconcina : icon});
             });
+
+            $('.card-link').on("click", function (event) {
+                $('.arrow').toggleClass('rotate');
+                $('.arrow').toggleClass('rotate2');
+            });
+
 
             
         });
@@ -155,9 +162,12 @@
     <div id="accordion">
         <div class="card text-white bg-dark mb-3">
             <div class="card-header">
-                <a  data-toggle="collapse" href="#collapseOne">
-                    Visualizza riepilogo ordini
-                </a>
+                <div class="card-link btn text-white" data-toggle="collapse" href="#collapseOne">
+                    Visualizza riepilogo ordini <div class="arrow"><i class="fas fa-chevron-up arrow"></i></div>
+                </div>
+                
+                
+                
             </div>
             
             <div id="collapseOne" class="collapse" data-parent="#accordion">
@@ -171,8 +181,14 @@
                     while ($line = pg_fetch_array($result, null, PGSQL_ASSOC)){
                 ?>
                     <div class="card-body">
-                        <?php echo $line["nomeprodotto"]; ?>
+                        <p><?php echo $line["nomeprodotto"];?></p> 
+                        <p>Qty: <?php echo $line["quantità"];?></p> 
+                        <p>Costo: <?php echo $line["prezzo"]; ?>€</p>
+                        <footer class="blockquote-footer">
+                            <?php echo $line["data"]; ?>
+                        </footer>
                     </div>
+                
                 <?php
                     }
                 ?>

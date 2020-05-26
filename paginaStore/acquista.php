@@ -11,5 +11,6 @@
         die ( ' Could not connect : ' . pg_last_error( ) ) ;
     $q2 = "insert into ordini values (DEFAULT,$1,$2,$3,$4,$5,$6)";
     $data = pg_query_params($dbconn,$q2,array($email,$nomeprodotto,$quantity,$data,$idprodotto,$prezzo));
+    
     exit;
 ?>

@@ -189,6 +189,39 @@ body{
     margin-top: 60px;
 }
 
+.card-link{
+    width: 300px;
+    text-align: left;
+}
+
+.card-body p{
+    margin-right: 30px;
+    display: inline-block;
+}
+
 .footer{
     margin-top: 50px;
 }
+
+
+.collapse{
+    height: 300px;
+    overflow-y: scroll;
+}
+
+/* arrow rieppilogo ordini */
+.arrow{
+    padding-left: 10px;
+    float:right;
+}
+
+.rotate {
+    
+    transform: rotate(180deg);
+    transition: .3s;
+}
+.rotate2 {
+    transform: rotate(0deg);
+    transition: .3s;
+}
+

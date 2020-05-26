@@ -14,7 +14,7 @@
     <script src="../vue.min.js"></script>
     <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
     <script src="../paginaIniziale/homePageScript.js"></script>
-    <title>Document</title>
+    <title>Store</title>
     <script>
       $(document).ready(function(){
         $('#iconaProfilo').css({
@@ -147,6 +147,7 @@
                   })
                   .then(function (response) {
                   console.log(response);
+                  window.location.href = "../paginaConfermaAcquisto/paginaConfermaAcquisto.html";
                   })
                   .catch(function (error) {
                   console.log(error);
