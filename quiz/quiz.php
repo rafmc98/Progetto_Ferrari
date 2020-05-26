@@ -33,12 +33,6 @@
 		});
 	</script>
 
-	<script>
-		$(document).ready(function(){
-			$( ".punteggio" ).load(window.location.href + ".punteggio" );
-		});
-	</script>
-	  
 
 </head>
 <body>
@@ -53,30 +47,9 @@
 					<p style="text-align:center"><h3 class="punti"> MIGLIORI PUNTEGGI </h3></p>
 				</div>
 				<div class="punteggi">
-					<?php 
-						$dbconn = pg_connect("host=localhost port=5432 dbname=PassioneFerrari user=postgres password=password ")or 
-									die ( ' Could not connect : ' . pg_last_error( ) ) ;
-						$query  = "SELECT  email,punteggio,img
-									FROM record
-									ORDER BY punteggio desc
-									LIMIT 5
-									";
-						$result = pg_query ($query) or die ( ' Query failed : ' .pg_last_error( ) ) ;
-						$pos=1;
-						while ($line = pg_fetch_array ($result , null , PGSQL_ASSOC ) ) {
-						?>
-						<p class="classifica">
-							<?php echo $pos?>
-							<img src='<?php echo $line['img']; ?>' width="30px">
-							<?php echo $line["email"]; ?>
-							<?php echo $line["punteggio"]; ?>
-							<?php $pos=$pos+1 ?>
-						</p>
-					<?php
-						}
-					pg_free_result($result);
-					pg_close($dbconn);  
-					?>
+					<script type="text/javascript">
+						refresh_div();
+					</script>
 				</div>
 			</div>
            <div class="options">
@@ -148,7 +121,6 @@
                           ],
                index:0,
 			   email:mail,
-			   img:immagine,
 			   
                 load:function(){
                 	   if(this.index<=this.questions.length-1){
@@ -170,7 +142,6 @@
                         btn.style.display="none";
 						sparisci.style.display="";
 						
-					
 						}
                 },
 
@@ -220,19 +191,18 @@
                   axios.get('ajaxfile.php',{
                       params:{
                           score: this.score,
-						  email: this.email,
-						  img: this.img
+						  email: this.email
                   }
                   }).then(function (response) {
                       app.variants = response.data;
                   }).catch(function (error) {
                       console.log(error);
                   });
-              }
+				}
             }
 
             window.onload=app.load();
-      
+
            function button(ele){
            	     app.check(ele);
            	     app.notClickAble();
@@ -242,6 +212,18 @@
               app.next();
               app.clickAble();
          } 
+
+		 function refresh_div() {
+        	jQuery.ajax({
+            url:'ajaxfile2.php',
+            type:'GET',
+            success:function(results) {
+                jQuery(".punteggi").html(results);
+            }
+        });
+    }
+
+    t = setInterval(refresh_div,1000);
 
 </script>
 </html>

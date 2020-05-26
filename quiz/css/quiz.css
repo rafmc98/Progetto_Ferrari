@@ -46,10 +46,11 @@ h1{
 	border:3px solid yellow;
 	text-align:center;
 	color:white;
+	overflow-y: scroll;
 }
 
 .classifica{
-	font-size:15px;
+	font-size:20px;
 }
 
 .quiz_wrapper{
