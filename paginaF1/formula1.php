@@ -55,7 +55,7 @@
             ?>
         </div>
     </div>   
-      
+    
     <!--Header-->
     <div class="header">
         <div class="titolo">Passione Ferrari</div>
@@ -64,6 +64,7 @@
     <div class="f1">
         <h1 class="titolo-pagina">FORMULA 1 E FERRARI</h1>
     </div>
+
 
     <div class="description-box">
         <div class="testo">

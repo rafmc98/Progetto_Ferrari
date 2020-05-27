@@ -8,6 +8,11 @@
   var op4=document.getElementById('op4');
 
 
+  var variabilejs="<?php echo json_encode($_SESSION['email']); ?>"
+
+  function getEmail(){
+     return variabilejs;
+  }
       var app={
                 questions:[
                           {q:'Qual è stato l ultimo pilota italiano ad iniziare una stagione da pilota titolare Ferrari?', 
@@ -32,7 +37,8 @@
                           {q:'Quale pilota brasiliano ha ottenuto più vittorie con la Ferrari?',options:['Rubens Barrichello','Nelson Piquet','Felipe Massa','Nessuna delle precedneti'],answer:3}
 
                           ],
-                index:0,
+               index:0,
+               email:getEmail(),
                 load:function(){
                 	   if(this.index<=this.questions.length-1){
                         quizBox.innerHTML=this.index+1+" - "+this.questions[this.index].q;      
@@ -40,22 +46,29 @@
                         op2.innerHTML=this.questions[this.index].options[1];
                         op3.innerHTML=this.questions[this.index].options[2];
                         op4.innerHTML=this.questions[this.index].options[3];
-                           this.scoreCard();
-                        }
-                        else{
-
-                        quizBox.innerHTML="$_SESSION['email']";
+                        this.scoreCard();
+                        sparisci.style.display="none";
+                     }
+                     else{
+                        app.getQuery();
+                        quizBox.innerHTML="Complimenti! Hai completato il quiz.";      
                         op1.style.display="none";
                         op2.style.display="none";
                         op3.style.display="none";
                         op4.style.display="none";
                         btn.style.display="none";
+                        sparisci.style.display="";
+                       
+
                         }
                 },
+
                  next:function(){
                     this.index++;
                     this.load();
                  },
+
+
                 check:function(ele){
                    
                          var id=ele.id.split('');
@@ -88,14 +101,25 @@
                 },
                 score:0,
                 scoreCard:function(){
-                	scoreCard.innerHTML=this.score+"/"+this.questions.length;
-                }
- 
-           }
+                   scoreCard.innerHTML=this.score+"/"+this.questions.length;
+                },
+               
+                getQuery: function(){   
+                  axios.get('ajaxfile.php',{
+                      params:{
+                          score: this.score,
+                          email: this.email
+                  }
+                  }).then(function (response) {
+                      app.variants = response.data;
+                  }).catch(function (error) {
+                      console.log(error);
+                  });
+              }
+            }
 
-
-           window.onload=app.load();
-
+            window.onload=app.load();
+      
            function button(ele){
            	     app.check(ele);
            	     app.notClickAble();

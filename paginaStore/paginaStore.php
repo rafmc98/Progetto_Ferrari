@@ -14,7 +14,7 @@
     <script src="../vue.min.js"></script>
     <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
     <script src="../paginaIniziale/homePageScript.js"></script>
-    <title>Document</title>
+    <title>Store</title>
     <script>
       $(document).ready(function(){
         $('#iconaProfilo').css({
@@ -78,6 +78,7 @@
         <section class="shopping-cart">
           <div class="carrello">
             <div class="cart-header"><i class="fas fa-shopping-cart"></i> Cart</div>
+            
             <div class="cart-row" v-for="product in cart" :key="product.idprodotto">
                 <div class="cart-product">
                   {{ product.nomeprodotto }} ({{ product.quantity }})
@@ -87,12 +88,12 @@
                 </div>
             </div>
             
-            
             <div class="cart-footer" v-if="showCart">
               <button class="buy-button" @click="buy()">Acquista</button><span style="margin-left:5px;"> {{totalPrice}} €</span>
               <button class="clear-button"v-if="showCart" @click="clear()">clear</button>
             </div>
           </div>
+          
         </section> 
     </div>     
     <script>
@@ -135,12 +136,15 @@
               },
               clear: function(){
                 for (let i = 0; i < this.products.length; i++) this.products[i].quantity = 0;
+                localStorage.removeItem('products');
               },
               buy: function(){ 
                 for (let i = 0; i < this.acquistati.length; i++){
+                  let costo = this.acquistati[i].quantity * this.acquistati[i].prezzo;
                   axios.post('acquista.php',{
                     nomeprodotto: this.acquistati[i].nomeprodotto,
                     quantity: this.acquistati[i].quantity,
+                    prezzo: costo,
                     idprodotto: this.acquistati[i].idprodotto
                   })
                   .then(function (response) {
@@ -150,13 +154,23 @@
                   console.log(error);
                   });
                 }
+                this.clear();
+                window.location.href = "../paginaConfermaAcquisto/paginaConfermaAcquisto.html";
               },
               goToProdotto: function(param){
                 window.location.href = "../paginaProdotto/paginaProdotto.php?idprodotto=" + param;
               }
             },
             created: function(){
-              this.getProducts()
+              if(localStorage.getItem('products')){
+                try {
+                  this.products = JSON.parse(localStorage.getItem('products'));
+                } catch(e) {
+                  localStorage.removeItem('products');
+                }
+              }
+              else this.getProducts()
+              /*window.addEventListener('beforeunload',this.saveOrder)*/
             },
             computed: {
               cart() {
@@ -164,6 +178,8 @@
                 this.acquistati = this.products.filter(product => product.quantity > 0);
                 if(this.acquistati.length > 0) this.showCart = true;
                 if(this.acquistati.length == 0) this.showCart = false;
+                const parsed = JSON.stringify(this.products);
+                localStorage.setItem('products',parsed);
                 return this.acquistati;
               },
               totalPrice() {

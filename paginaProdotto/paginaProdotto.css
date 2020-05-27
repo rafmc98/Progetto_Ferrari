@@ -6,15 +6,31 @@ body{
     background-image: url('../paginaF1/immagini/bg3.jpg');
 }
 
+.header{
+    height: 120px;
+    font-family: 'FerrariFont';
+}
+
+#iconaProfilo{
+    margin-top: 5px;
+}
+
+
+.titolo{
+    line-height: 120px;
+    font-size: 50px;
+}
+
 .product-wrapper{
-    margin: 0 auto;
+
+    margin: 100px auto;
     width: 70%;
+    
 }
 
 .prodotto{
     width: 50%;
     float: left;
-    height: 800px;
 }
 
 .foto-prodotto{
@@ -39,8 +55,8 @@ body{
     float: right;
 }
 
-.recensioni{
+.recensioni-db{
     overflow-y: scroll;
-    height: 546px;
+    height: 400px;
 }
 

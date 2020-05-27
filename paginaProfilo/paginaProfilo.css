@@ -22,7 +22,8 @@ body{
 .box-info{
     width: 60%;
     height: 400px;
-    margin: 70px auto;
+    margin: 0 auto;
+    margin-top: 50px;
     box-shadow: 2px 4px 21px 1px rgba(0,0,0,0.33);
     background-color: #fff;
 }
@@ -154,6 +155,7 @@ body{
     width: 40%;
     border-radius: 120px;
     outline: none;
+    cursor:pointer;
 }
 
 .title-field{
@@ -175,10 +177,42 @@ body{
 }
 
 
-
-/* immagine di profilo (prova) */
 #immagine{
     height: 160px;
     width: 160px;
     border-radius: 50%;
 }
+
+.card{
+    width: 40%;
+    margin: 0 auto;
+    margin-top: 60px;
+}
+
+.card-link{
+    width: 100%;
+    text-align: left;
+}
+
+.card-body p{
+    margin-right: 30px;
+    display: inline-block;
+}
+
+.footer{
+    margin-top: 50px;
+}
+
+
+.collapse{
+    height: 300px;
+    overflow-y: scroll;
+}
+
+/* arrow rieppilogo ordini */
+.arrow{
+    float:right;
+}
+
+
+
