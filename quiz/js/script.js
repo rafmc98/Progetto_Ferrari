@@ -1,8 +1,7 @@
-   
-   var ul=document.getElementById('ul');
-   var btn=document.getElementById('button');
-   var scoreCard=document.getElementById('scoreCard');
-   var quizBox=document.getElementById('questionBox');
+  var ul=document.getElementById('ul');
+  var btn=document.getElementById('button');
+  var scoreCard=document.getElementById('scoreCard');
+  var quizBox=document.getElementById('questionBox');
   var op1=document.getElementById('op1');
   var op2=document.getElementById('op2');
   var op3=document.getElementById('op3');
@@ -45,7 +44,7 @@
                         }
                         else{
 
-                        quizBox.innerHTML="Complimenti! Hai completato il quiz.";      
+                        quizBox.innerHTML="$_SESSION['email']";
                         op1.style.display="none";
                         op2.style.display="none";
                         op3.style.display="none";
@@ -69,7 +68,7 @@
                          }
                          else{
                          	ele.className="wrong";
-                            ele.innerHTML="SBAGLIATO";
+                           ele.innerHTML="SBAGLIATO";
                            
 
                          }

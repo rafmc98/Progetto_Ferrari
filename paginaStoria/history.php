@@ -108,7 +108,7 @@
     </div>
     <div style="text-align: center;"></div>
 
-    <div style="text-align: center; margin-top: 30px; font-family: calibri;  font-size: 45px;"> History </div>
+    <div class="sottotitolo"> History </div>
     <!-- PRIMO BOX -->
     <div id="container">
       <div class="slider content">

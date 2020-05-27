@@ -37,9 +37,9 @@
 	<div class="quiz_wrapper">
            
            <div class="question" id="questionBox">
-           	
+		   
            </div>
-           
+		   
            <div class="options">
            	  <ul id="ul">
            	  	  <li id="op1" onclick="button(this)"></li>
