@@ -18,7 +18,6 @@ h1{
 }
 
 #sparisci{
-	border:3px solid green;
 	width:100%;
 	height:320px;
 	position:relative;
@@ -27,23 +26,21 @@ h1{
 
 .titolo-class{
 	width:100%;
-	height:30%;
+	height:25%;
 	font-family:Calibri;
-	border:3px solid red;
 	text-align:center;
 
 }
 
 .punti{
-	color:red;
+	color:white;
 	font-size:25px;
 }
 
 .punteggi{
 	width:100%;
-	height:70%;
+	height:75%;
 	font-family:Calibri;
-	border:3px solid yellow;
 	text-align:center;
 	color:white;
 	overflow-y: scroll;
@@ -51,6 +48,16 @@ h1{
 
 .classifica{
 	font-size:20px;
+	color:white;
+	text-align:center;
+	margin-left:auto;
+	margin-right:auto;
+	width:200px;
+}
+
+.title{
+	color:orange;
+	text-align:center;
 }
 
 .quiz_wrapper{

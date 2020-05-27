@@ -44,11 +44,11 @@
 
 		   <div id="sparisci" >
 				<div class="titolo-class">
-					<p style="text-align:center"><h3 class="punti"> MIGLIORI PUNTEGGI </h3></p>
+					<p style="text-align:center"><h3 class="punti"> TOP 5 SCORE </h3></p>
 				</div>
 				<div class="punteggi">
 					<script type="text/javascript">
-						refresh_div();
+                        refresh_div();
 					</script>
 				</div>
 			</div>
@@ -121,7 +121,7 @@
                           ],
                index:0,
 			   email:mail,
-			   
+			   img:immagine,
                 load:function(){
                 	   if(this.index<=this.questions.length-1){
                         quizBox.innerHTML=this.index+1+" - "+this.questions[this.index].q;      
@@ -191,14 +191,16 @@
                   axios.get('ajaxfile.php',{
                       params:{
                           score: this.score,
-						  email: this.email
+                          email: this.email,
                   }
+
                   }).then(function (response) {
                       app.variants = response.data;
                   }).catch(function (error) {
                       console.log(error);
                   });
-				}
+                },
+                
             }
 
             window.onload=app.load();
