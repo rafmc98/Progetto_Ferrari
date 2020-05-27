@@ -8,6 +8,16 @@ function closeNav() {
   document.getElementById("main").style.marginLeft= "0";
 }
 
+function controllo(mail){
+ 
+  if(mail ==  undefined){
+    window.alert("Devi effettuare il login per accedere al gioco!");
+  }
+  else{
+    window.location.href="../quiz/quiz.php";
+  }
+}
+
 $(document).ready(function(){
   $(".parent div").mouseenter(function(){
     $(this).find("span").fadeIn(900);

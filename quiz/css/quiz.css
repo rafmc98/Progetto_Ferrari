@@ -5,6 +5,7 @@ body{
 	padding:0;
 	text-decoration: none;
 }
+
 *{
 	box-sizing: border-box;
 	font-family: Calibri;
@@ -87,6 +88,7 @@ h1{
 	-o-box-shadow: 5px 5px 10px 0px #000000;
 	box-shadow: 5px 5px 10px 0px #000000;
 }
+
 .quiz_wrapper .options{
 	float: left;
 	width: 100%;
@@ -115,10 +117,12 @@ h1{
 	outline: none;
 	text-align: center;
 }
+
 .quiz_wrapper .options ul li:active{
 	box-shadow: 0px 3px 0px transparent;	
 
 }
+
 .quiz_wrapper .options ul li.correct{
 	background-color: #0fd40f;
 	box-shadow: 0px 3px 0px #03a503;
@@ -139,6 +143,7 @@ h1{
 	width: 40%;
 	float: left;
 }
+
 .quiz_wrapper .score .next button{
 	padding: 15px 80px;
 	color:white;
@@ -150,20 +155,23 @@ h1{
 	box-shadow: 0px 3px 0px #c97a06;
 	outline: none;
 }
+
 .quiz_wrapper .score .next button:active{
-box-shadow: 0px 3px 0px transparent;	
+	box-shadow: 0px 3px 0px transparent;	
 }
 
 .quiz_wrapper .score .score-card{
 	width: 30%;
 	float: left;
 }
+
 .quiz_wrapper .score .score-card{
 	font-size: 20px;
 	color:white;
 	line-height: 50px;
 	text-transform: uppercase;
 }
+
 .quiz_wrapper .score .score-card span{
 	background-color: #4caf50;
 	padding: 5px 20px;
@@ -176,12 +184,14 @@ box-shadow: 0px 3px 0px transparent;
 	width: 30%;
 	float: right;
 }
+
 .quiz_wrapper .score .home{
 	font-size: 30px;
 	color:black;
 	line-height: 25px;
 	text-transform: uppercase;
 }
+
 .quiz_wrapper .score .home span{
 	width: 90px;
 	text-align: center;
@@ -196,39 +206,39 @@ box-shadow: 0px 3px 0px transparent;
 	box-shadow: 5px 5px 10px 0px #000000;
 }
 
-
-
-  .loginbtn{
+.loginbtn{
 	float: right;
 	padding-top: 10px;
 	padding-right: 15px;
-  }
+}
   
-  .loginbtn a{
+.loginbtn a{
 	text-decoration: none;
 	color: white;
-  }
+}
 
-  .loginbtn a:hover {
+.loginbtn a:hover {
 	color: whitesmoke;
-  }
+}
 
-  #profile{
+#profile{
 	float: right;
-  }
-  
-  #iconaProfilo{
+}
+
+#iconaProfilo{
 	height: 60px;
 	width: 60px;
 	padding-left: 10px;
-  }
-  
-  #username{
+}
+
+#username{
 	float:left;
 	font-size: 16px;
-	font-family: "FontFerrari";
+	font-family: Calibri;
 	color: whitesmoke;
-  }
+	text-align:center;
+}
+
 
 
 

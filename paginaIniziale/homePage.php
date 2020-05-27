@@ -5,7 +5,7 @@
     <link rel="stylesheet" href="homePage.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.0/jquery.min.js" charset="utf-8"></script>
     <script src="https://kit.fontawesome.com/a076d05399.js"></script>
-    <script src="HomePageScript.js"></script>
+    <script src="HomePageScript.js" type="text/javascript"></script>
   </head>
   <script>
     $(document).ready(function(){
@@ -16,7 +16,9 @@
             });
     });
   </script>
+
   <body>
+
 
     <div id="mySidebar" class="sidebar">
       <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
@@ -30,9 +32,15 @@
         </div>
       </div>
       <a href="../paginaNews/news.php">News section</a>
+      <a href="#" onclick="controllo(mail)"> Quiz </a>
       <a href="#">Contact</a>
     </div>
-    
+
+    <script type="text/javascript">
+      var mail="<?php echo $_SESSION['email']; ?>";
+    </script>
+
+
     <div class="navbar">
       <div class="openbtn" onclick="openNav()">☰ MENU</div>
       <div class="loginbtn">
@@ -44,6 +52,8 @@
         ?>
       </div>
     </div>
+
+
     
 
     <div class="header">

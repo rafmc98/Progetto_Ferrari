@@ -32,4 +32,4 @@
 						pg_free_result($result);
 						pg_close($dbconn);  
 					?>
-					</table>
+				</table>
