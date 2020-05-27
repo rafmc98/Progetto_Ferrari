@@ -53,10 +53,11 @@
                 $.post('backend.php',{iconcina : icon});
             });
 
-            $('.card-link').on("click", function (event) {
-                $('.arrow').toggleClass('rotate');
-                $('.arrow').toggleClass('rotate2');
-            });
+            $('.card-link').click(function(){
+                if($('#freccia').attr('class')=='fas fa-angle-down') $('#freccia').attr('class','fas fa-angle-up');
+                else $('#freccia').attr('class','fas fa-angle-down');
+                });
+                
 
 
             
@@ -163,11 +164,8 @@
         <div class="card text-white bg-dark mb-3">
             <div class="card-header">
                 <div class="card-link btn text-white" data-toggle="collapse" href="#collapseOne">
-                    Visualizza riepilogo ordini <div class="arrow"><i class="fas fa-chevron-up arrow"></i></div>
+                    Visualizza riepilogo ordini <div class="arrow"><i id="freccia" class="fas fa-angle-up"></i></div>
                 </div>
-                
-                
-                
             </div>
             
             <div id="collapseOne" class="collapse" data-parent="#accordion">

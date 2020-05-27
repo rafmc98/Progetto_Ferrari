@@ -190,7 +190,7 @@ body{
 }
 
 .card-link{
-    width: 300px;
+    width: 100%;
     text-align: left;
 }
 
@@ -211,7 +211,6 @@ body{
 
 /* arrow rieppilogo ordini */
 .arrow{
-    padding-left: 10px;
     float:right;
 }
 

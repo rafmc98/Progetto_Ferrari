@@ -78,6 +78,7 @@
         <section class="shopping-cart">
           <div class="carrello">
             <div class="cart-header"><i class="fas fa-shopping-cart"></i> Cart</div>
+            
             <div class="cart-row" v-for="product in cart" :key="product.idprodotto">
                 <div class="cart-product">
                   {{ product.nomeprodotto }} ({{ product.quantity }})
@@ -87,12 +88,12 @@
                 </div>
             </div>
             
-            
             <div class="cart-footer" v-if="showCart">
               <button class="buy-button" @click="buy()">Acquista</button><span style="margin-left:5px;"> {{totalPrice}} €</span>
               <button class="clear-button"v-if="showCart" @click="clear()">clear</button>
             </div>
           </div>
+          
         </section> 
     </div>     
     <script>
@@ -103,7 +104,20 @@
                 showCart: false,
                 acquistati:''
             },
+            mounted() {
+              if(localStorage.getItem('acquistati')){
+                try {
+                  this.acquistati = JSON.parse(localStorage.getItem('acquistati'));
+                } catch(e) {
+                  localStorage.removeItem('acquistati');
+                }
+              }
+            },
             methods: {
+              saveOrder: function() {
+                const parsed = JSON.stringify(this.acquistati);
+                localStorage.setItem('acquistati',parsed);
+              },
               updateCart: function(product, updateType) { 
                 // scorre tutti i prodotti      
                 for (let i = 0; i < this.products.length; i++) {
@@ -161,6 +175,7 @@
             },
             created: function(){
               this.getProducts()
+              window.addEventListener('beforeunload',this.saveOrder)
             },
             computed: {
               cart() {
