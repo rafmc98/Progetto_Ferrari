@@ -7,6 +7,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.rawgit.com/twbs/bootstrap/v4-dev/dist/js/bootstrap.js" type="text/javascript"></script>
+    <link href="../paginaF1/bootstrap/css/bootstrap.min.css" rel="stylesheet"/>
     <link href="../paginaIniziale/homePage.css" rel="stylesheet">
     <link href="paginaStore.css" rel="stylesheet">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js" type="text/javascript"></script>
@@ -58,18 +60,19 @@
       <div class="titolo">Passione Ferrari</div>
     </div>
 
+    
       <div style="height:120px; width:100%"></div>
     <div id="app">
         <!-- Prodotti -->
         <section class="products">
           <div class="container-prodotti">
-            <div v-for="product in products" :key="product.idprodotto" class="product">
-              <img :src="product.imgprodotto" class="product-image">
-              <div class="product-name"  @click='goToProdotto(product.idprodotto)' >{{ product.nomeprodotto }}</div>
-              <div class="product-price"> Price: {{ product.prezzo }}€</div>
-              <div class="cart">
-                <button class="addCart" @click="updateCart(product, 'add')" >add to cart</button>
-              </div>
+            <div v-for="product in products" :key="product.idprodotto" class="card"> 
+              <img :src="product.imgprodotto" class="card-img-top"> 
+              <div class="card-body"> 
+                <div class="card-title"  @click='goToProdotto(product.idprodotto)' ><strong>{{ product.nomeprodotto }}</strong></div> 
+                <div class="cart-text"> Price: {{ product.prezzo }}€</div> 
+                  <button class="addCart" @click="updateCart(product, 'add')" >add to cart</button>
+              </div> 
             </div>
           <div>
         </section>
@@ -170,7 +173,6 @@
                 }
               }
               else this.getProducts()
-              /*window.addEventListener('beforeunload',this.saveOrder)*/
             },
             computed: {
               cart() {

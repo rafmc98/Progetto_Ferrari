@@ -1,5 +1,6 @@
 *{
     margin:0;
+    outline: none;
 }
 
 .header{
@@ -127,48 +128,28 @@ body{
     width: fit-content;
 }
 
-.product{
-    margin-left: 25px;
-    float: right;
+.card{
     width: 200px;
-    height: 314px;
-    background-color: whitesmoke;
-    box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
-    border-radius: 15px;
-    margin-bottom: 25px;
+    float: right;
+    margin-left: 30px;
+    margin-bottom: 30px;
+}
+.card-img-top{
+    height: 220px;
 }
 
-.product-name{
-    width: 100%;
-    font-weight: bold;
-    margin-top: 10px;
-    font-size: 20px;
+.card-title{
     cursor:pointer;
 }
 
-.product-name:hover{
+.card-title:hover{
     color: rgb(93, 93, 95)
 }
 
-.product-price{
-    margin-bottom: 10px;
-    width: 100%;
-}
-
-.product-image{
-    border-top-left-radius: 15px;
-    border-top-right-radius: 15px;
-    height: 60%;
-    width: 100%;
-    object-fit: cover;
-}
-
-
 .addCart{
-    outline:none;
     border: none;
     height: 40px;
-    width: 75%;
+    width: 80%;
     background-color: rgb(93, 93, 235);
     border-radius: 10px;
     cursor:pointer;

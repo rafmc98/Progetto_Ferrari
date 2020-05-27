@@ -69,7 +69,7 @@
     </div>
     <div class="product-wrapper">
         <section class="prodotto">
-            <div class="card" style="width:400px">
+            <div class="card">
                 <img class="card-img-top foto-prodotto" src="../paginaStore/<?php echo $line['imgprodotto']?>" alt="Card image">
                 <div class="card-body">
                 <h4 class="card-title"><?php echo $line['nomeprodotto']?></h4>
