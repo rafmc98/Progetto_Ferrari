@@ -104,20 +104,7 @@
                 showCart: false,
                 acquistati:''
             },
-            mounted() {
-              if(localStorage.getItem('acquistati')){
-                try {
-                  this.acquistati = JSON.parse(localStorage.getItem('acquistati'));
-                } catch(e) {
-                  localStorage.removeItem('acquistati');
-                }
-              }
-            },
             methods: {
-              saveOrder: function() {
-                const parsed = JSON.stringify(this.acquistati);
-                localStorage.setItem('acquistati',parsed);
-              },
               updateCart: function(product, updateType) { 
                 // scorre tutti i prodotti      
                 for (let i = 0; i < this.products.length; i++) {
@@ -149,6 +136,7 @@
               },
               clear: function(){
                 for (let i = 0; i < this.products.length; i++) this.products[i].quantity = 0;
+                localStorage.removeItem('products');
               },
               buy: function(){ 
                 for (let i = 0; i < this.acquistati.length; i++){
@@ -161,21 +149,28 @@
                   })
                   .then(function (response) {
                   console.log(response);
-                  window.location.href = "../paginaConfermaAcquisto/paginaConfermaAcquisto.html";
                   })
                   .catch(function (error) {
                   console.log(error);
                   });
                 }
                 this.clear();
+                window.location.href = "../paginaConfermaAcquisto/paginaConfermaAcquisto.html";
               },
               goToProdotto: function(param){
                 window.location.href = "../paginaProdotto/paginaProdotto.php?idprodotto=" + param;
               }
             },
             created: function(){
-              this.getProducts()
-              window.addEventListener('beforeunload',this.saveOrder)
+              if(localStorage.getItem('products')){
+                try {
+                  this.products = JSON.parse(localStorage.getItem('products'));
+                } catch(e) {
+                  localStorage.removeItem('products');
+                }
+              }
+              else this.getProducts()
+              /*window.addEventListener('beforeunload',this.saveOrder)*/
             },
             computed: {
               cart() {
@@ -183,6 +178,8 @@
                 this.acquistati = this.products.filter(product => product.quantity > 0);
                 if(this.acquistati.length > 0) this.showCart = true;
                 if(this.acquistati.length == 0) this.showCart = false;
+                const parsed = JSON.stringify(this.products);
+                localStorage.setItem('products',parsed);
                 return this.acquistati;
               },
               totalPrice() {
