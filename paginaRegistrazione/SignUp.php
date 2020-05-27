@@ -26,12 +26,13 @@
                 $surname = $_POST['inputSurname'];
                 $email = $_POST['inputEmail'];
                 $password = md5($_POST['inputPassword']);
-                $q2 = "insert into utenze values ($1,$2,$3,$4)";
-                $data = pg_query_params($dbconn,$q2,array($email,$name,$surname,$password));
+                $img = '../Flat avatars icons pack/PNG/256x256/256_13.png';
+                $q2 = "insert into utenze values ($1,$2,$3,$4,$5,$6)";
+                $data = pg_query_params($dbconn,$q2,array($email,$name,$surname,$password,null,$img));
                 if($data){
                     $_SESSION['email'] = $email;
                     $_SESSION['nome'] = $name;
-                    $_SESSION['user-pic'] = '../Flat avatars icons pack/PNG/256x256/256_1.png';
+                    $_SESSION['user-pic'] = $img;
                     header("Location: ../paginaProfilo/paginaProfilo.php");
                 }
             }
