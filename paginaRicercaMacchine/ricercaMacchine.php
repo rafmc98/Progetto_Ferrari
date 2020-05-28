@@ -8,12 +8,14 @@
         $condition = $_GET['parametro']; 
         $query = "select nome,tipo,anno
                 from macchine 
-                where nome ilike '%".$condition."%' and tipo='$tipo'";
+                where nome ilike '%".$condition."%' and tipo='$tipo'
+                order by anno desc";
     }
     else{
         $query = "SELECT nome,tipo,anno
             FROM macchine
-            WHERE tipo='$tipo'";
+            WHERE tipo='$tipo'
+            order by anno desc";
         }
 
         

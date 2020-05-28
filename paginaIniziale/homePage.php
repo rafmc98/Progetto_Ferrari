@@ -6,6 +6,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.0/jquery.min.js" charset="utf-8"></script>
     <script src="https://kit.fontawesome.com/a076d05399.js"></script>
     <script src="HomePageScript.js" type="text/javascript"></script>
+    <title> Passione Ferrari </title>
   </head>
   <script>
     $(document).ready(function(){
@@ -17,29 +18,40 @@
     });
   </script>
 
+  <script>
+    $(document).ready(function(){
+      $('#quiz').click(function() {
+        if('<?php echo isset($_SESSION["email"]);?>'){
+          window.location.replace("../quiz/quiz.php");
+        }
+        else{
+          window.alert("Devi effettuare il login per accedere al quiz!");
+        }
+      });
+    });
+  </script>
+
+
   <body>
 
 
     <div id="mySidebar" class="sidebar">
       <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
-      <a href="#">Home</a>
+      <a href="../paginaIniziale/homePage.php">Home</a>
       <div class="dropdown">
         <div class="dropbtn">Formula 1</div>
         <div class="dropdown-content">
-            <a href="../f1/formula1.html">Panoramica</a>
-            <a href="#">Auto</a>
-            <a href="../f1/piloti.html">Piloti</a>
+            <a href="../paginaF1/formula1.php">Panoramica</a>
+            <a href="../paginaRicercaPiloti/paginaRicercaPiloti.php">Cerca piloti Ferrari</a>
         </div>
       </div>
-      <a href="../paginaNews/news.php">News section</a>
-      <a href="#" onclick="controllo(mail)"> Quiz </a>
-      <a href="#">Contact</a>
+      <a href="../paginaRicercaMacchine/paginaRicercamacchine.php">Cerca auto</a>
+      <a href="../paginaStoria/history.php"> Storia Ferrari </a>
+      <a href="../paginaNews/news.php">News</a>
+      <a href="../paginaStore/paginaStore.php"> Store </a>
+      <a href='#' id="quiz"> Quiz </a>
+      <a href="../paginaContatti/contatti.php">Contact</a>
     </div>
-
-    <script type="text/javascript">
-      var mail="<?php echo $_SESSION['email']; ?>";
-    </script>
-
 
     <div class="navbar">
       <div class="openbtn" onclick="openNav()">☰ MENU</div>

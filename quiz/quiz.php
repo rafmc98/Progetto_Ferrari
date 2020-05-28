@@ -88,12 +88,13 @@
         var op3=document.getElementById('op3');
         var op4=document.getElementById('op4');
         var mail="<?php echo $_SESSION['email']; ?>";
+        var img='<?php echo $_SESSION['user-pic'] ?>';
 
         var app={
                 index:0,
                 score:0,
                 email:mail,
-
+                immagine:img,
                 questions:[
                             {q:'Qual è stato l ultimo pilota italiano ad iniziare una stagione da pilota titolare Ferrari?', 
                             options:['Giancarlo Fisichella','Ivan Capelli','Nicola Larini','Nessuno di questi'],answer:2},
@@ -186,6 +187,7 @@
                         params:{
                             score: this.score,
                             email: this.email,
+                            immagine:this.immagine,
                     }
                     }).then(function (response) {
                         app.variants = response.data;

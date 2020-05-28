@@ -10,6 +10,7 @@
 <script src="../paginaIniziale/HomePageScript.js"></script>
 <link rel="stylesheet" href="../paginaIniziale/homePage.css">
 <link rel="stylesheet" href="contatti.css">
+<title> Contatti </title>
 </head>
 
 <script>
@@ -22,38 +23,54 @@
     });
 </script>
 
+<script>
+    $(document).ready(function(){
+      $('#quiz').click(function() {
+        if('<?php echo isset($_SESSION["email"]);?>'){
+          window.location.replace("../quiz/quiz.php");
+        }
+        else{
+          window.alert("Devi effettuare il login per accedere al quiz!");
+        }
+      });
+    });
+  </script>
+
 <body>
+
     <div id="mySidebar" class="sidebar">
-        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
-        <a href="#">Home</a>
-        <div class="dropdown">
-          <div class="dropbtn">Formula 1</div>
-          <div class="dropdown-content">
-              <a href="../f1/formula1.html">Panoramica</a>
-              <a href="#">Auto</a>
-              <a href="../f1/piloti.html">Piloti</a>
-          </div>
-        </div>
-        <a href="../paginaNews/news.php">News section</a>
-        <a href="#">Contact</a>
-      </div>
-      
-      <div class="navbar">
-        <div class="openbtn" onclick="openNav()">☰ MENU</div>
-        <div class="loginbtn">
-          <?php if(isset($_SESSION['email']))
-            echo "<div id=\"profile\"><div id=\"iconaProfilo\"></div><div id=\"username\"><a href=\"../paginaProfilo/paginaProfilo.php\">".$_SESSION['nome']."</a></div></div>";
-          ?>
-          <?php if(!isset($_SESSION['email']))
-            echo "<a href=\"../paginaLogin/Login.html\">LOGIN</a>";
-          ?>
+      <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
+      <a href="../paginaIniziale/homePage.php">Home</a>
+      <div class="dropdown">
+        <div class="dropbtn">Formula 1</div>
+        <div class="dropdown-content">
+            <a href="../paginaF1/formula1.php">Panoramica</a>
+            <a href="../paginaRicercaPiloti/paginaRicercaPiloti.php">Cerca piloti Ferrari</a>
         </div>
       </div>
+      <a href="../paginaRicercaMacchine/paginaRicercamacchine.php">Cerca auto</a>
+      <a href="../paginaStoria/history.php"> Storia Ferrari </a>
+      <a href="../paginaNews/news.php">News</a>
+      <a href="../paginaStore/paginaStore.php"> Store </a>
+      <a href='#' id="quiz"> Quiz </a>
+      <a href="../paginaContatti/contatti.php">Contact</a>
+    </div>
+
+    <div class="navbar">
+      <div class="openbtn" onclick="openNav()">☰ MENU</div>
+      <div class="loginbtn">
+        <?php if(isset($_SESSION['email']))
+          echo "<div id=\"profile\"><div id=\"iconaProfilo\"></div><div id=\"username\"><a href=\"../paginaProfilo/paginaProfilo.php\">".$_SESSION['nome']."</a></div></div>";
+        ?>
+        <?php if(!isset($_SESSION['email']))
+          echo "<a href=\"../paginaLogin/Login.html\">LOGIN</a>";
+        ?>
+      </div>
+    </div>
       
-  
-      <div class="header">
+    <div class="header">
         <div class="titolo">Passione Ferrari</div>
-      </div>
+    </div>
 
 
     <section class="team-area">

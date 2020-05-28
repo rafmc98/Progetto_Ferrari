@@ -57,36 +57,47 @@
                 if($('#freccia').attr('class')=='fas fa-angle-down') $('#freccia').attr('class','fas fa-angle-up');
                 else $('#freccia').attr('class','fas fa-angle-down');
                 });
-                
-
-
             
+            $('#quiz').click(function() {
+                if('<?php echo isset($_SESSION["email"]);?>'){
+                window.location.replace("../quiz/quiz.php");
+                }
+                else{
+                window.alert("Devi effettuare il login per accedere al quiz!");
+                }
+            });
+
         });
     </script>
 
     <title>Profile page</title>
+
 </head>
 <body>
-    <!--Siderbar-->
+
+
     <div id="mySidebar" class="sidebar">
-        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
-        <a href="#">About</a>
-        <div class="dropdown">
-          <div class="dropbtn">Formula 1</div>
-          <div class="dropdown-content">
-              <a href="#">Panoramica</a>
-              <a href="#">Auto</a>
-              <a href="#">Piloti</a>
-          </div>
+      <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
+      <a href="../paginaIniziale/homePage.php">Home</a>
+      <div class="dropdown">
+        <div class="dropbtn">Formula 1</div>
+        <div class="dropdown-content">
+            <a href="../paginaF1/formula1.php">Panoramica</a>
+            <a href="../paginaRicercaPiloti/paginaRicercaPiloti.php">Cerca piloti Ferrari</a>
         </div>
-        <a href="#">Clients</a>
-        <a href="#">Contact</a>
+      </div>
+      <a href="../paginaRicercaMacchine/paginaRicercamacchine.php">Cerca auto</a>
+      <a href="../paginaStoria/history.php"> Storia Ferrari </a>
+      <a href="../paginaNews/news.php">News</a>
+      <a href="../paginaStore/paginaStore.php"> Store </a>
+      <a href='#' id="quiz"> Quiz </a>
+      <a href="../paginaContatti/contatti.php">Contact</a>
     </div>
-      
-    <!--Navabar-->
-    <div class="navbar">
-    <div class="openbtn" onclick="openNav()">☰ MENU</div>
+
+    <div class="navbar" style="position:absolute">
+      <div class="openbtn" onclick="openNav()">☰ MENU</div>
     </div>
+
     
     <!--Header-->
     <div class="header">
