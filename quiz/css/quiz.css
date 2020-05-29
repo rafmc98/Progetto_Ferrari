@@ -11,12 +11,6 @@ body{
 	font-family: Calibri;
 }
 
-h1{
-	text-align: center;
-	color: #ffffff;
-	margin:30px 0px -15px;
-	font-family: "FontFerrari";
-}
 
 #sparisci{
 	width:100%;
@@ -81,11 +75,11 @@ h1{
 
 .quiz_wrapper{
 	width: 750px;
-	min-height:500px;
+	overflow: auto;
 	background-color: rgba(0, 0, 0, 0.8);
 	margin:50px auto;
 	border-radius: 8px;
-	padding: 30px;
+	padding: 25px;
 	margin-top: 40px;
 	-webkit-box-shadow: 5px 5px 10px 0px #000000;
 	-moz-box-shadow: 5px 5px 10px 0px #000000;
@@ -154,7 +148,7 @@ h1{
 .quiz_wrapper .score{
 	float: left;
 	width: 100%;
-	padding:25px 0px;
+	padding: 5px 0px;
 }
 
 .quiz_wrapper .score .next{
@@ -172,6 +166,7 @@ h1{
 	cursor: pointer;
 	box-shadow: 0px 3px 0px #c97a06;
 	outline: none;
+	margin-top: 25px;
 }
 
 .quiz_wrapper .score .next button:active{
@@ -181,6 +176,7 @@ h1{
 .quiz_wrapper .score .score-card{
 	width: 30%;
 	float: left;
+	margin-top: 25px;
 }
 
 .quiz_wrapper .score .score-card{
@@ -195,7 +191,6 @@ h1{
 	padding: 5px 20px;
 	border-radius: 8px;
 	color:#ffffff;
-
 }
 
 .quiz_wrapper .score .home{
@@ -210,33 +205,10 @@ h1{
 	text-transform: uppercase;
 }
 
-.quiz_wrapper .score .home span{
-	width: 90px;
-	text-align: center;
-	background-color: white;
-	padding: 5px 20px;
-	border-radius: 8px;
-	color:#ffffff;
-	float: right;
-	-webkit-box-shadow: 5px 5px 10px 0px #000000;
-	-moz-box-shadow: 5px 5px 10px 0px #000000;
-	-o-box-shadow: 5px 5px 10px 0px #000000;
-	box-shadow: 5px 5px 10px 0px #000000;
-}
-
 .loginbtn{
 	float: right;
 	padding-top: 10px;
 	padding-right: 15px;
-}
-  
-.loginbtn a{
-	text-decoration: none;
-	color: white;
-}
-
-.loginbtn a:hover {
-	color: whitesmoke;
 }
 
 #profile{
