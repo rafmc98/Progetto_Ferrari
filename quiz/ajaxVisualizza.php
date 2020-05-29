@@ -10,7 +10,7 @@
 				";
 				$result = pg_query ($query) or die ( ' Query failed : ' .pg_last_error( ) ) ;
 				$pos=1;
-				echo "<table class=classifica><tr><td><h3 class=title><strong>Posizione</strong></h3></td> <td> </td><td><h3 class=title><strong>Email</strong></h3> </td> <td><h3 class=title><strong>Score</strong></h3></td> </tr>";
+				echo "<table class=classifica>";
 				while ($line = pg_fetch_array ($result , null , PGSQL_ASSOC ) ) {
 ?>					<tr>
 						<td heigth=70>
