@@ -67,6 +67,11 @@
                 }
             });
 
+            $('.card-body').click(function(){
+                var idprodotto = $(this).attr('id');
+                window.location.href = "../paginaProdotto/paginaProdotto.php?idprodotto=" + idprodotto;
+            });
+
         });
     </script>
 
@@ -189,7 +194,7 @@
                     $result = pg_query($q) or die('Query failed: '.pg_last_error());
                     while ($line = pg_fetch_array($result, null, PGSQL_ASSOC)){
                 ?>
-                    <div class="card-body">
+                    <div class="card-body"  id='<?php echo $line["idprodotto"]?>'>
                         <p><?php echo $line["nomeprodotto"];?></p> 
                         <p>Qty: <?php echo $line["quantità"];?></p> 
                         <p>Costo: <?php echo $line["prezzo"]; ?>€</p>

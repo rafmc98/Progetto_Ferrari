@@ -1,7 +1,4 @@
-<?php session_start(); 
-  /*if(!isset($_SESSION['email']))
-      header("Location: ../paginaLogin/login.html");*/
-?>
+<?php session_start(); ?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -37,6 +34,7 @@
         }
       });
     });
+
   </script>
   </head>
 
@@ -90,7 +88,7 @@
               <div class="card-body"> 
                 <div class="card-title"  @click='goToProdotto(product.idprodotto)' ><strong>{{ product.nomeprodotto }}</strong></div> 
                 <div class="cart-text"> Price: {{ product.prezzo }}€</div> 
-                  <button class="addCart" @click="updateCart(product, 'add')" >add to cart</button>
+                  <button class="btn btn-primary addCart" @click="updateCart(product, 'add')" >add to cart</button>
               </div> 
             </div>
           <div>
@@ -99,21 +97,38 @@
         <!-- Shopping cart -->
         <section class="shopping-cart">
           <div class="carrello">
-            <div class="cart-header"><i class="fas fa-shopping-cart"></i> Cart</div>
+            <!--<div class="cart-header"><i class="fas fa-shopping-cart"></i> Cart </div>-->
             
-            <div class="cart-row" v-for="product in cart" :key="product.idprodotto">
-                <div class="cart-product">
-                  {{ product.nomeprodotto }} ({{ product.quantity }})
-                  <button class="delete" @click="deleteProduct(product)">x</button>
-                  <button class="cart-button" @click="updateCart(product, 'subtract')" class="cart__button">-</button>
-                  <button class="cart-button" @click="updateCart(product, 'add')" class="cart__button">+</button>
-                </div>
-            </div>
-            
-            <div class="cart-footer" v-if="showCart">
-              <button class="buy-button" @click="buy()">Acquista</button><span style="margin-left:5px;"> {{totalPrice}} €</span>
-              <button class="clear-button"v-if="showCart" @click="clear()">clear</button>
-            </div>
+            <div class="table-responsive">          
+              <table class="table table-light table-striped">
+                <thead class="thead-dark">
+                  <tr>
+                    <th>Name</th>
+                    <th>Quantity</th>
+                    <th></th>
+                    <th></th>
+                    <th><i class="fas fa-shopping-cart"></i></th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr v-for="product in cart" :key="product.idprodotto" >
+                    <td>{{ product.nomeprodotto }}</td>
+                    <td>{{ product.quantity }}</td>
+                    <td><button class="btn btn-sm btn-light" @click="updateCart(product, 'add')"><i class="fas fa-plus"></i></button></td>
+                    <td><button class="btn btn-sm btn-light" @click="updateCart(product, 'subtract')"><i class="fas fa-minus"></i></button></td>
+                    <td><button class="btn btn-sm btn-danger" @click="deleteProduct(product)"><i class="fa fa-trash"></i></button></td>
+                  </tr>
+                </tbody>
+                <tfoot v-if="showCart">
+                  <tr>
+                    <td><button class="btn btn-primary compra" @click="buy()">Acquista</button></td>
+                    <td>{{totalPrice}} €</td>
+                    <td></td>
+                    <td></td>
+                    <td><button class="btn btn-light" v-if="showCart" @click="clear()">clear</button></td>
+                  </tr>
+                </tfoot>
+              </table>
           </div>
           
         </section> 
@@ -210,5 +225,15 @@
             }
           });
     </script>
+
+    <!--Footer-->
+    <div class="footer">
+        <ul class="footerContent">
+          <li><i class="fab fa-instagram"></i></li>
+          <li><i class="fab fa-facebook"></i></li>
+          <li><i class="fab fa-twitter"></i></li>
+          <li><i class="fab fa-youtube"></i></li>
+        </ul>
+    </div>
 </body>
 </html>

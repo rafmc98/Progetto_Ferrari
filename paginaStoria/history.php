@@ -104,7 +104,7 @@
           <p>{{x.descrizione}}</p>
           <a class="close" title="chiudere" href="#close">×</a>
           <br>
-            <iframe v-if="x.video" width="100%" height="350px" :src="x.video"></iframe>
+            <iframe v-if="x.video" width="100%" height="350px" controls :src="x.video"></iframe>
         </div>
       
       </div>
