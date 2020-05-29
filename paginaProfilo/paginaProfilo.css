@@ -62,10 +62,12 @@ body{
     vertical-align: middle;
     line-height: 35px;
     border-radius: 120px;
-    -webkit-box-shadow: 7px 7px 6px -3px rgba(0,0,0,0.75);
-    -moz-box-shadow: 7px 7px 6px -3px rgba(0,0,0,0.75);
     box-shadow: 7px 7px 6px -3px rgba(0,0,0,0.75);
     cursor:pointer;
+}
+
+.select-button:active{
+    transform: translate(2px,2px);
 }
 
 .select-content{
@@ -104,6 +106,7 @@ body{
     height: 35px;
     vertical-align: middle;
     line-height: 35px;
+    cursor: pointer;
 }
 
 .avatar img{
@@ -154,8 +157,18 @@ body{
     height: 40px;
     width: 40%;
     border-radius: 120px;
-    outline: none;
     cursor:pointer;
+    border: none;
+    outline: none;
+}
+
+.logout-button:hover{
+    background-color: rgb(150, 142, 142);
+}
+
+.logout-button:active{
+    transform: translate(2px,2px);
+
 }
 
 .title-field{

@@ -35,7 +35,7 @@
                 $(this).css("background-color","#ff2800")
             });
 
-            // setta l'immagine dell'avatar in base a quella di default
+            // setta l'immagine dell'avatar relativo all'utente
             $('#immagine').css({
                 "background-image" : "url('<?php echo $_SESSION['user-pic'] ?>')",
                 "background-size" : "cover"
@@ -49,7 +49,7 @@
                     "background-size" : "cover"
                 });
 
-                // Send Ajax request to backend.php, with src set as "icon" in the POST data
+                // Invia una richiesta Ajax per associare l'avatar scelto alla sessione corrente
                 $.post('backend.php',{iconcina : icon});
             });
 
@@ -180,7 +180,7 @@
         <div class="card text-white bg-dark mb-3">
             <div class="card-header">
                 <div class="card-link btn text-white" data-toggle="collapse" href="#collapseOne">
-                    Visualizza riepilogo ordini <div class="arrow"><i id="freccia" class="fas fa-angle-up"></i></div>
+                    Visualizza riepilogo ordini <div class="arrow"><i id="freccia" class="fas fa-angle-down"></i></div>
                 </div>
             </div>
             

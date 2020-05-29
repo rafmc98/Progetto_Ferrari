@@ -176,6 +176,7 @@
                 localStorage.removeItem('products');
               },
               buy: function(){ 
+                let l = this.acquistati.length - 1;
                 for (let i = 0; i < this.acquistati.length; i++){
                   let costo = this.acquistati[i].quantity * this.acquistati[i].prezzo;
                   axios.post('acquista.php',{
@@ -185,14 +186,21 @@
                     idprodotto: this.acquistati[i].idprodotto
                   })
                   .then(function (response) {
+                    if(i == l){
+                      if(response.data == "true"){
+                        window.location.href = "../paginaConfermaAcquisto/paginaConfermaAcquisto.html"; 
+                        }
+                      else{
+                        // se l'acquisto non è andato a buon fine significa che  l'utente non ha effettuato il login
+                        alert("Devi effettuare il login per procedere all'acquisto");
+                      }
+                    }
                   console.log(response);
                   })
                   .catch(function (error) {
                   console.log(error);
                   });
                 }
-                this.clear();
-                window.location.href = "../paginaConfermaAcquisto/paginaConfermaAcquisto.html";
               },
               goToProdotto: function(param){
                 window.location.href = "../paginaProdotto/paginaProdotto.php?idprodotto=" + param;
