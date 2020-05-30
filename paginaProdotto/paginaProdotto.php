@@ -76,7 +76,6 @@
     <div id="app" class="product-wrapper">
         <section v-for="p in prodotto" class="prodotto">
             <div class="card">
-                
                 <img :src="'../paginaStore/' + p.imgprodotto" class="card-img-top foto-prodotto">
                 <div class="card-body">
                 <h4 class="card-title">{{p.nomeprodotto}}</h4>
