@@ -8,21 +8,28 @@
     margin-top: 25px;
 }
 
-/* scrollbar per select-content */
+/* SCROLLBAR */
+
 .orizzontale::-webkit-scrollbar {
     width: 2px;
+    height: 8px;
 }
 
-/* Handle */
 .orizzontale::-webkit-scrollbar-thumb {
     background: white; 
     border-radius: 10px;
 }
 
-/* Handle on hover */
 .orizzontale::-webkit-scrollbar-thumb:hover {
-    background: black; 
+    background:white; 
 }
+
+
+.orizzontale::-webkit-scrollbar-thumb:active {
+    background:#FF2800; 
+}
+
+
 
 .line-element{
     flex: 0 0 auto;

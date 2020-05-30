@@ -5,6 +5,7 @@
 <!-- UTILIZZO DI BOOTSTRAP 4 -->
 <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="shortcut icon" type="img/png" href="../favicon.png">
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.0/jquery.min.js" charset="utf-8"></script>
 <script src="https://kit.fontawesome.com/a076d05399.js"></script>
 <script src="../paginaIniziale/HomePageScript.js"></script>

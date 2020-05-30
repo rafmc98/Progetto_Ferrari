@@ -12,6 +12,7 @@
     <link href="../paginaF1/bootstrap/css/bootstrap.min.css" rel="stylesheet"/>
     <link href="../paginaIniziale/homePage.css" rel="stylesheet">
     <link href="../paginaRicercaPiloti/paginaRicercaPiloti.css" rel="stylesheet">
+    <link rel="shortcut icon" type="img/png" href="../favicon.png">
     <script src="../paginaIniziale/HomePageScript.js"></script>
     <title>Ricerca Macchine</title>
 </head>

@@ -3,6 +3,7 @@
 <html>
   <head>
     <link rel="stylesheet" href="homePage.css">
+    <link rel="shortcut icon" type="img/png" href="../favicon.png">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.0/jquery.min.js" charset="utf-8"></script>
     <script src="https://kit.fontawesome.com/a076d05399.js"></script>
     <script src="HomePageScript.js" type="text/javascript"></script>
