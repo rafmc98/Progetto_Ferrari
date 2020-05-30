@@ -1,9 +1,9 @@
 <?php 
-    session_start(); 
+    $nome = $_GET["nome"];
     $dbconn = pg_connect("host=localhost port=5432 dbname=PassioneFerrari user=postgres password=password ")or 
     die ( ' Could not connect : ' . pg_last_error( ) ) ;
     $query  = "SELECT * 
-                FROM prodotti WHERE idprodotto =".$_GET['idprodotto']."";
+                FROM macchine WHERE nome ='$nome'";
     $data = pg_query ($query) or die ( ' Query failed : ' .pg_last_error( ) ) ;
     $response = array();
     while ($row = pg_fetch_array ($data , null , PGSQL_ASSOC ) ) {
