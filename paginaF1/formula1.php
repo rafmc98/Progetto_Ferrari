@@ -9,7 +9,7 @@
     <script src="https://cdn.rawgit.com/twbs/bootstrap/v4-dev/dist/js/bootstrap.js" type="text/javascript"></script>
     <link rel="shortcut icon" type="img/png" href="../favicon.png">
     <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet"/>
-    <script src="javascript/scriptF1.js" type="text/javascript"></script>
+    <script src="../paginaIniziale/homePageScript.js" type="text/javascript"></script>
     <script src="https://kit.fontawesome.com/a076d05399.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
     <link href="../paginaIniziale/homePage.css" rel="stylesheet">
@@ -37,6 +37,9 @@
             window.alert("Devi effettuare il login per accedere al quiz!");
             }
         });
+        $('.carousel').carousel({
+            interval: 4000
+        })
         });
     </script>
 
@@ -54,7 +57,7 @@
             <a href="../paginaRicercaPiloti/paginaRicercaPiloti.php">Ricerca piloti</a>
         </div>
       </div>
-      <a href="../paginaRicercaMacchine/paginaRicercamacchine.php">Ricerca auto</a>
+      <a href="../paginaRicercaMacchine/paginaRicercamacchine.php">Ricerca vetture</a>
       <a href="../paginaStoria/history.php"> Storia Ferrari </a>
       <a href="../paginaNews/news.php">News</a>
       <a href="../paginaStore/paginaStore.php"> Store </a>
@@ -217,13 +220,14 @@
     </div>
 
     <div class="footer">
-        <ul class="footerContent">
-            <li><i class="fab fa-instagram"></i></li>
-            <li><i class="fab fa-facebook"></i></li>
-            <li><i class="fab fa-twitter"></i></li>
-            <li><i class="fab fa-youtube"></i></li>
-        </ul>
+      <ul class="footerContent">
+        <li><a href="https://www.instagram.com/ferrari"> <i class="fab fa-instagram"></i></a></li>
+        <li><a href="https://www.facebook.com/ScuderiaFerrari"> <i class="fab fa-facebook"></i></a></li>
+        <li><a href="https://twitter.com/ScuderiaFerrari" > <i class="fab fa-twitter"></i></a></li>
+        <li><a href="https://www.youtube.com/ferrari"> <i class="fab fa-youtube"></i></a></li>
+      </ul>
     </div>
+    
     
     
 
