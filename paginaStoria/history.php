@@ -86,7 +86,6 @@
     <div class="header">
       <div class="titolo"><a href="../paginaIniziale/homePage.php">Passione Ferrari</a></div>
     </div>
-    <div style="text-align: center;"></div>
 
     <div class="sottotitolo"> History </div>
     

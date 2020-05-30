@@ -77,8 +77,9 @@
       <div class="titolo">Passione Ferrari</div>
     </div>
 
+    <div class="titolo-pagina">Ferrari Shop</div>
+
     
-      <div style="height:120px; width:100%"></div>
     <div id="app">
         <!-- Prodotti -->
         <section class="products">

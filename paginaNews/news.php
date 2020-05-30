@@ -40,7 +40,7 @@
 </head>
 <body>
   <?php
-    $url = 'http://newsapi.org/v2/everything?qInTitle=Ferrari&sortBy=publishedAt&language=it&apiKey=250d309974014125a29d1bbcba131d36';
+    $url = 'http://newsapi.org/v2/everything?qInTitle=Ferrari+f1&sortBy=publishedAt&language=it&apiKey=250d309974014125a29d1bbcba131d36';
     $response = file_get_contents($url);
     $NewsData = json_decode($response);
   ?>
@@ -81,7 +81,7 @@
     <div class="titolo">Passione Ferrari</div>
   </div>
 
-  <div class="titolo-pagina">News section</div>
+  <div class="titolo-pagina" >News Section</div>
 
 
   <div class="container-fluid">

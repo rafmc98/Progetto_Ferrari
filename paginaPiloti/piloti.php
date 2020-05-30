@@ -15,8 +15,6 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="../paginaIniziale/homePage.css" rel="stylesheet">
-    <link href="piloti.css" rel="stylesheet">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js" type="text/javascript"></script>
     <script src="https://cdn.rawgit.com/twbs/bootstrap/v4-dev/dist/js/bootstrap.js" type="text/javascript"></script>
     <link href=".../bootstrap/css/bootstrap.min.css" rel="stylesheet"/>
@@ -25,6 +23,8 @@
     <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
     <script src="javascript/scriptPiloti.js" type="text/javascript"></script>
     <script src="../paginaIniziale/homePageScript.js" type="text/javascript"></script>
+    <link href="../paginaIniziale/homePage.css" rel="stylesheet">
+    <link href="piloti.css" rel="stylesheet">
     
     <title><?php echo $line["nome"];?> <?php echo $line["cognome"]; ?></title>
     <!--JQUERY-->
@@ -77,7 +77,7 @@
       <a href="../paginaContatti/contatti.php">Contact</a>
     </div>
 
-    <div class="navbar" style="position:absolute">
+    <div class="navbar">
       <div class="openbtn" onclick="openNav()">☰ MENU</div>
       <div class="loginbtn">
         <?php if(isset($_SESSION['email']))

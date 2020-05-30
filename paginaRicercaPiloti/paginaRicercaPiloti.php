@@ -80,6 +80,8 @@
     <div class="header">
         <div class="titolo">Passione Ferrari</div>
     </div>
+
+    <div class="titolo-pagina">Ricerca piloti</div>
     
     
 

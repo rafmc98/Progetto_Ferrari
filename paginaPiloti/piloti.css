@@ -11,8 +11,8 @@ body{
 
 .ricerca{
     width:12%;
-    position: absolute;
     float:left;
+    position: absolute;
     background-color:red;
     cursor:pointer;
     margin:15px;
@@ -39,6 +39,7 @@ body{
 
 .titolo-pagina{
     color:red;
+    margin-top: 30px;
 }
 .titoletto{
     padding-top: 50px;
@@ -49,8 +50,6 @@ body{
     font-family: 'formula1';
     width: 100%;
     height: 450px;
-    margin-top:30px;
-
 }
 
 .testo{

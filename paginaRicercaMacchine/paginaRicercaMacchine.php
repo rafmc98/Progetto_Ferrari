@@ -5,13 +5,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="../paginaIniziale/homePage.css" rel="stylesheet">
-    <link href="../paginaRicercaPiloti/paginaRicercaPiloti.css" rel="stylesheet">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js" type="text/javascript"></script>
     <script src="https://kit.fontawesome.com/a076d05399.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
     <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
     <link href="../paginaF1/bootstrap/css/bootstrap.min.css" rel="stylesheet"/>
+    <link href="../paginaIniziale/homePage.css" rel="stylesheet">
+    <link href="../paginaRicercaPiloti/paginaRicercaPiloti.css" rel="stylesheet">
     <script src="../paginaIniziale/HomePageScript.js"></script>
     <title>Ricerca Macchine</title>
 </head>
@@ -46,7 +46,7 @@
 
 </script>  
 
-<body>
+<body style="background-repeat:repeat;">
     <div id="mySidebar" class="sidebar">
       <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
       <a href="../paginaIniziale/homePage.php">Home</a>
@@ -65,7 +65,7 @@
       <a href="../paginaContatti/contatti.php">Contact</a>
     </div>
 
-    <div class="navbar" style="position:absolute">
+    <div class="navbar" >
       <div class="openbtn" onclick="openNav()">☰ MENU</div>
       <div class="loginbtn">
         <?php if(isset($_SESSION['email']))
@@ -81,13 +81,15 @@
     <div class="header">
         <div class="titolo">Passione Ferrari</div>
     </div>
+
+    <div class="titolo-pagina">Ricerca vetture</div>
     
     
 
     <div class="content">
         <div id="app" class="finestra">
             <div class="barra">
-                <select v-model="type" class="selectpicker show-menu-arrow">
+                <select v-model="type" class="selectpicker" style="border:none;">
                     <option selected disabled> Tipo vettura </option>
                     <option value="corsa">Corsa</option>
                     <option value="strada">Strada</option>
