@@ -130,10 +130,20 @@ opacity: 1;
     background-color: rgba(252, 20, 0, 0.8);
 }
 
+.popup h2{
+    margin-left: 3%;
+    float:left;
+}
+
 .popup p {
-    margin: 0;
-    padding: 10px;
+    margin-left: 3%;
+    float:left;
+    width: 72%;
     color: rgb(102, 102, 102);
+}
+
+.popup video{
+    margin-top: 10px;
 }
 
 /* immagine immagine interna alla finestra */
@@ -141,16 +151,14 @@ opacity: 1;
     display: block;
     border: none;
     width: 100%;
-    height: 100%;
+    height: auto;
     margin-bottom: 10px;
 }
 
 /* miniature destra /sinistra */
 .pic-left {
     width: 25%;
-    height: 120px;
     float: left;
-    margin: 5px 15px 5px 0;
 }
 
 .caption {
