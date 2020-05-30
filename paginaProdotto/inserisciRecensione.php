@@ -13,4 +13,7 @@
                 die ( ' Could not connect : ' . pg_last_error() ) ;
     $q2 = "insert into recensioni values (DEFAULT,$1,$2,$3,$4,$5,$6)";
     $data = pg_query_params($dbconn,$q2,array($titolo,$descrizione,$stars,$data,$email,$idprodotto));
+    if($data){
+        echo json_encode("true");
+    }
 ?>

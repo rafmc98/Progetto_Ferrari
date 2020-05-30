@@ -1,13 +1,3 @@
-<?php 
-    session_start(); 
-    $dbconn = pg_connect("host=localhost port=5432 dbname=PassioneFerrari user=postgres password=password ")or 
-    die ( ' Could not connect : ' . pg_last_error( ) ) ;
-    $query  = "SELECT * 
-                FROM prodotti WHERE idprodotto =".$_GET['idprodotto']."";
-    $data = pg_query ($query) or die ( ' Query failed : ' .pg_last_error( ) ) ;
-    while ($line = pg_fetch_array ($data , null , PGSQL_ASSOC ) ) {
-?>
-
 <!DOCTYPE html>
 <html>
 <head>
@@ -22,7 +12,7 @@
     <link href="../paginaIniziale/homePage.css" rel="stylesheet">
     <link href="paginaProdotto.css" rel="stylesheet">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.0/jquery.min.js" charset="utf-8"></script>
-    <title><?php echo $line['nomeprodotto']?></title>
+    <title>Prodotto</title>
 
 
     <!--JQUERY-->
@@ -83,18 +73,19 @@
     <div class="header">
         <div class="titolo">Passione Ferrari</div>
     </div>
-    <div class="product-wrapper">
-        <section class="prodotto">
+    <div id="app" class="product-wrapper">
+        <section v-for="p in prodotto" class="prodotto">
             <div class="card">
-                <img class="card-img-top foto-prodotto" src="../paginaStore/<?php echo $line['imgprodotto']?>" alt="Card image">
+                
+                <img :src="'../paginaStore/' + p.imgprodotto" class="card-img-top foto-prodotto">
                 <div class="card-body">
-                <h4 class="card-title"><?php echo $line['nomeprodotto']?></h4>
-                <p>Price: <?php echo $line['prezzo']?></p>
-                <p class="card-text"><?php echo $line['descrizione']?></p>
+                <h4 class="card-title">{{p.nomeprodotto}}</h4>
+                <p>Price: {{p.prezzo}}</p>
+                <p class="card-text">{{p.descrizione}}</p>
                 </div>
             </div>
         </section>
-        <section id="app" class="recensioni">
+        <section  class="recensioni">
             <div class="card">
                 <div class="card-header">
                     <input class="titolo-recensione" type="text" v-model="titolo" placeholder="titolo recensione">
@@ -133,6 +124,7 @@
         var app=new Vue({
             el:'#app',
             data:{
+                prodotto: '',
                 idprodotto: '<?php echo $_GET['idprodotto']  ?>',
                 titolo: '',
                 descrizione: '',
@@ -140,6 +132,18 @@
                 recensioni:''
             },
             methods:{
+                getProdotto: function(){
+                    axios.get('getProdotto.php',{
+                        params:{
+                            idprodotto: this.idprodotto
+                        }
+                    })
+                    .then(function(response){
+                        app.prodotto = response.data;
+                    }).catch(function(error){
+                        console.log(error);
+                    });
+                },
                 insertFeedback: function(){
                     axios.get('inserisciRecensione.php',{
                         params:{
@@ -150,7 +154,7 @@
                         }
                     })
                     .then(function(response){
-                        console.log(response);
+                        if(response.data!="true") alert("devi prima effettuare il login");
                     }).catch(function(error){
                         console.log(error);
                     });
@@ -169,6 +173,7 @@
                 }
             },
             created: function(){
+                this.getProdotto();
                 this.stampa();
             },
             computed:{
@@ -192,8 +197,4 @@
 </body>
 </html>
 
-<?php
-    }
-    pg_free_result($data);
-    pg_close($dbconn);
-?>
+
