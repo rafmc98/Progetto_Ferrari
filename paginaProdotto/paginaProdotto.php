@@ -12,6 +12,7 @@
     <link href="../paginaF1/bootstrap/css/bootstrap.min.css" rel="stylesheet"/>
     <link href="../paginaIniziale/homePage.css" rel="stylesheet">
     <link href="paginaProdotto.css" rel="stylesheet">
+    <link rel="shortcut icon" type="img/png" href="../favicon.png">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.0/jquery.min.js" charset="utf-8"></script>
     <title>Prodotto</title>
 
