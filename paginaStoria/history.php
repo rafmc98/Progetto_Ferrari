@@ -23,6 +23,19 @@
             });
     });
   </script>
+
+<script>
+    $(document).ready(function(){
+      $('#quiz').click(function() {
+        if('<?php echo isset($_SESSION["email"]);?>'){
+          window.location.replace("../quiz/quiz.php");
+        }
+        else{
+          window.alert("Devi effettuare il login per accedere al quiz!");
+        }
+      });
+    });
+  </script>
       
 
       
@@ -39,20 +52,22 @@
 </head>
 <body link="white" vlink="white">
 
-    <div class="overlay" id="overlay" style="display:none;"></div>
-    <div id="mySidebar" class="sidebar">
+<div id="mySidebar" class="sidebar">
       <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
-      <a href="#">About</a>
+      <a href="../paginaIniziale/homePage.php">Home</a>
       <div class="dropdown">
         <div class="dropbtn">Formula 1</div>
         <div class="dropdown-content">
-            <a href="#">Panoramica</a>
-            <a href="#">Auto</a>
-            <a href="#">Piloti</a>
+            <a href="../paginaF1/formula1.php">Panoramica</a>
+            <a href="../paginaRicercaPiloti/paginaRicercaPiloti.php">Cerca piloti Ferrari</a>
         </div>
       </div>
-      <a href="#">Clients</a>
-      <a href="#">Contact</a>
+      <a href="../paginaRicercaMacchine/paginaRicercamacchine.php">Cerca auto</a>
+      <a href="../paginaStoria/history.php"> Storia Ferrari </a>
+      <a href="../paginaNews/news.php">News</a>
+      <a href="../paginaStore/paginaStore.php"> Store </a>
+      <a href='#' id="quiz"> Quiz </a>
+      <a href="../paginaContatti/contatti.php">Contact</a>
     </div>
 
     <div class="navbar">
@@ -103,8 +118,7 @@
           <h2>{{x.titolo}}</h2>
           <p>{{x.descrizione}}</p>
           <a class="close" title="chiudere" href="#close">×</a>
-          <br>
-            <iframe v-if="x.video" width="100%" height="350px" controls :src="x.video"></iframe>
+            <video v-if="x.video" width="100%" height="350px" :src="x.video" style="outline:none;" controls></video>
         </div>
       
       </div>
