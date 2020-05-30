@@ -10,6 +10,7 @@
     <script src="https://kit.fontawesome.com/a076d05399.js"></script>
     <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
     <script src="../vue.min.js"></script>
+    <title> History </title>
 
     
     
@@ -59,10 +60,10 @@
         <div class="dropbtn">Formula 1</div>
         <div class="dropdown-content">
             <a href="../paginaF1/formula1.php">Panoramica</a>
-            <a href="../paginaRicercaPiloti/paginaRicercaPiloti.php">Cerca piloti Ferrari</a>
+            <a href="../paginaRicercaPiloti/paginaRicercaPiloti.php">Ricerca piloti</a>
         </div>
       </div>
-      <a href="../paginaRicercaMacchine/paginaRicercamacchine.php">Cerca auto</a>
+      <a href="../paginaRicercaMacchine/paginaRicercamacchine.php">Ricerca auto</a>
       <a href="../paginaStoria/history.php"> Storia Ferrari </a>
       <a href="../paginaNews/news.php">News</a>
       <a href="../paginaStore/paginaStore.php"> Store </a>
@@ -84,7 +85,7 @@
     
 
     <div class="header">
-      <div class="titolo"><a href="../paginaIniziale/homePage.php">Passione Ferrari</a></div>
+      <div class="titolo">Passione Ferrari</div>
     </div>
 
     <div class="sottotitolo"> History </div>

@@ -54,10 +54,10 @@
         <div class="dropbtn">Formula 1</div>
         <div class="dropdown-content">
             <a href="../paginaF1/formula1.php">Panoramica</a>
-            <a href="../paginaRicercaPiloti/paginaRicercaPiloti.php">Cerca piloti Ferrari</a>
+            <a href="../paginaRicercaPiloti/paginaRicercaPiloti.php">Ricerca piloti</a>
         </div>
       </div>
-      <a href="../paginaRicercaMacchine/paginaRicercamacchine.php">Cerca auto</a>
+      <a href="../paginaRicercaMacchine/paginaRicercamacchine.php">Ricerca auto</a>
       <a href="../paginaStoria/history.php"> Storia Ferrari </a>
       <a href="../paginaNews/news.php">News</a>
       <a href="../paginaStore/paginaStore.php"> Store </a>

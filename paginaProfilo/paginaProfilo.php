@@ -88,10 +88,10 @@
         <div class="dropbtn">Formula 1</div>
         <div class="dropdown-content">
             <a href="../paginaF1/formula1.php">Panoramica</a>
-            <a href="../paginaRicercaPiloti/paginaRicercaPiloti.php">Cerca piloti Ferrari</a>
+            <a href="../paginaRicercaPiloti/paginaRicercaPiloti.php">Ricerca piloti</a>
         </div>
       </div>
-      <a href="../paginaRicercaMacchine/paginaRicercamacchine.php">Cerca auto</a>
+      <a href="../paginaRicercaMacchine/paginaRicercamacchine.php">Ricerca auto</a>
       <a href="../paginaStoria/history.php"> Storia Ferrari </a>
       <a href="../paginaNews/news.php">News</a>
       <a href="../paginaStore/paginaStore.php"> Store </a>
@@ -187,8 +187,6 @@
             <div id="collapseOne" class="collapse" data-parent="#accordion">
                 <!-- Riepilogo ordini php -->
                 <?php
-                    $dbconn = pg_connect("host=localhost port=5432 dbname=PassioneFerrari user=postgres password=password")
-                    or die('Could not connect: '.pg_last_error());
                     $email = $_SESSION['email'];
                     $q = "select * from ordini where email = '$email' ";
                     $result = pg_query($q) or die('Query failed: '.pg_last_error());
