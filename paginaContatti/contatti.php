@@ -49,7 +49,7 @@
             <a href="../paginaRicercaPiloti/paginaRicercaPiloti.php">Ricerca piloti</a>
         </div>
       </div>
-      <a href="../paginaRicercaMacchine/paginaRicercamacchine.php">Ricerca auto</a>
+      <a href="../paginaRicercaMacchine/paginaRicercamacchine.php">Ricerca vetture</a>
       <a href="../paginaStoria/history.php"> Storia Ferrari </a>
       <a href="../paginaNews/news.php">News</a>
       <a href="../paginaStore/paginaStore.php"> Store </a>
@@ -77,8 +77,78 @@
     <section class="team-area">
         <div class="container">
             <h5 class="section-heading">Membri del team</h5>
-    <div class="row">
-                <!-- Team member -->
+          <div class="row">
+            <!-- Team member -->
+            <div class="col-xs-12 col-sm-6 col-md-4">
+                <div class="team-single">
+                    <div class="content-area">
+                        <div class="side-one">
+                            <div class="card">
+                                <div class="card-body text-center">
+                                    <div class="img-area">
+                                      <img src="donatiAvatar.png" alt=""></div>
+                                      <h4>
+                                      Donati Riccardo</h4>
+                                      <p>
+                                      Studente</p>
+                                    </div>
+                                </div>
+                            </div>
+                    <div class="side-two">
+                      <div class="card">
+                        <div class="card-body text-center mt-4">
+                          <h4>Donati Riccardo</h4>
+                          <br><br>
+                          <p class="mail">donati.1797895@studenti.uniroma1.it</p>
+                          <br>
+                          <ul class="list-inline">
+                            <li class="list-inline-item">
+                                <a class="social-icon" target="_blank" >
+                                    <i class="fas fa-envelope" style="font-size:40px"></i>
+                                </a>
+                            </li>
+                          </ul>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-xs-12 col-sm-6 col-md-4">
+                <div class="team-single">
+                    <div class="content-area">
+                        <div class="side-one">
+                            <div class="card">
+                                <div class="card-body text-center">
+                                    <div class="img-area">
+                                      <img src="avatarMarco.png" alt=""></div>
+                                      <h4>
+                                      Raffaele Marco</h4>
+                                      <p>
+                                      Studente</p>
+                                </div>
+                              </div>
+                        </div>
+                        <div class="side-two">
+                          <div class="card">
+                              <div class="card-body text-center mt-4">
+                                  <h4>Raffaele Marco</h4>
+                                  <br><br>
+                                  <p class="mail" >raffaele.1799912@studenti.uniroma1.it</p>
+                                  <br>
+                                  <ul class="list-inline">
+                                    <li class="list-inline-item">
+                                        <a class="social-icon" target="_blank" >
+                                            <i class="fas fa-envelope" style="font-size:40px"></i>
+                                        </a>
+                                    </li>
+                                  </ul>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                </div>
                 <div class="col-xs-12 col-sm-6 col-md-4">
                     <div class="team-single">
                         <div class="content-area">
@@ -86,124 +156,47 @@
                                 <div class="card">
                                     <div class="card-body text-center">
                                         <div class="img-area">
-    <img src="donatiAvatar.png" alt=""></div>
-    <h4>
-    Donati Riccardo</h4>
-    <p>
-    Studente</p>
-    </div>
-    </div>
-    </div>
-    <div class="side-two">
-    <div class="card">
-    <div class="card-body text-center mt-4">
-    <h4>Donati Riccardo</h4>
-    <br><br>
-    <p class="mail">donati.1797895@studenti.uniroma1.it</p>
-    <br>
-    <ul class="list-inline">
-        <li class="list-inline-item">
-            <a class="social-icon" target="_blank" >
-                <i class="fas fa-envelope" style="font-size:40px"></i>
-            </a>
-        </li>
-    </ul>
-    </div>
-    </div>
-    </div>
-    </div>
-    </div>
-    </div>
-    <!-- ./Team member -->
-
-                <!-- Team member -->
-                <div class="col-xs-12 col-sm-6 col-md-4">
-                    <div class="team-single">
-                        <div class="content-area">
-                            <div class="side-one">
-                                <div class="card">
-                                    <div class="card-body text-center">
-                                        <div class="img-area">
-    <img src="avatarMarco.png" alt=""></div>
-    <h4>
-    Raffaele Marco</h4>
-    <p>
-    Studente</p>
-    </div>
-    </div>
-    </div>
-    <div class="side-two">
-                                <div class="card">
-                                    <div class="card-body text-center mt-4">
-                                        <h4>Raffaele Marco</h4>
-    <br><br>
-    <p class="mail" >raffaele.1799912@studenti.uniroma1.it</p>
-    <br>
-    <ul class="list-inline">
-    <li class="list-inline-item">
-        <a class="social-icon" target="_blank" >
-            <i class="fas fa-envelope" style="font-size:40px"></i>
-        </a>
-    </li>
-    </ul>
-    </div>
-    </div>
-    </div>
-    </div>
-    </div>
-    </div>
-    <!-- ./Team member -->
-
-                <!-- Team member -->
-                <div class="col-xs-12 col-sm-6 col-md-4">
-                    <div class="team-single">
-                        <div class="content-area">
-                            <div class="side-one">
-                                <div class="card">
-                                    <div class="card-body text-center">
-                                        <div class="img-area">
-    <img src="avatarSilvio.png" alt=""></div>
-    <h4>
-    Silvestri Daniele</h4>
-    <p>
-    Studente</p>
-    </div>
-    </div>
-    </div>
-    <div class="side-two">
-        <div class="card">
-            <div class="card-body text-center mt-4">
-                <h4>Silvestri Daniele</h4>
-                <br><br>
-                <p class="mail">silvestri.1799313@studenti.uniroma1.it</p>
-    <br>
-    <ul class="list-inline">
-    <li class="list-inline-item">
-        <a class="social-icon" target="_blank" >
-            <i class="fas fa-envelope" style="font-size:40px"></i>
-        </a>
-    </li>
-    </ul>
-    </div>
-    </div>
-    </div>
-    </div>
-    </div>
-    </div>
-    <!-- ./Team member -->            
-    
+                                          <img src="avatarSilvio.png" alt=""></div>
+                                          <h4>
+                                          Silvestri Daniele</h4>
+                                          <p>
+                                          Studente</p>
+                                        </div>
+                                  </div>
+                              </div>
+                    <div class="side-two">
+                        <div class="card">
+                            <div class="card-body text-center mt-4">
+                                <h4>Silvestri Daniele</h4>
+                                <br><br>
+                                <p class="mail">silvestri.1799313@studenti.uniroma1.it</p>
+                                <br>
+                                <ul class="list-inline">
+                                  <li class="list-inline-item">
+                                      <a class="social-icon" target="_blank" >
+                                          <i class="fas fa-envelope" style="font-size:40px"></i>
+                                      </a>
+                                  </li>
+                                </ul>
+                            </div>
+                        </div>
+                      </div>
+                   </div>
+                </div>
             </div>
-    </div>
+          </div>
+      </div>
     </section>
 
-    <div class="footer">
+    
+  <div class="footer">
       <ul class="footerContent">
-        <li><i class="fab fa-instagram"></i></li>
-        <li><i class="fab fa-facebook"></i></li>
-        <li><i class="fab fa-twitter"></i></li>
-        <li><i class="fab fa-youtube"></i></li>
+        <li><a href="https://www.instagram.com/ferrari"> <i class="fab fa-instagram"></i></a></li>
+        <li><a href="https://www.facebook.com/ScuderiaFerrari"> <i class="fab fa-facebook"></i></a></li>
+        <li><a href="https://twitter.com/ScuderiaFerrari" > <i class="fab fa-twitter"></i></a></li>
+        <li><a href="https://www.youtube.com/ferrari"> <i class="fab fa-youtube"></i></a></li>
       </ul>
-    </div>
+  </div>
     
 </body>
 </html>

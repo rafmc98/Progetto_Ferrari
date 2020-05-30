@@ -1,5 +1,5 @@
 body{
-    font-family: calibri;
+  font-family: calibri;
 }
 
 .header{
@@ -7,9 +7,9 @@ body{
   }
   
 .titolo{
-    line-height: 120px;
-    font-size: 50px;
-  }
+  line-height: 120px;
+  font-size: 50px;
+}
 
 .team-area{
 padding: 60px 0;
@@ -21,12 +21,12 @@ padding: 60px 0;
 
 
 .section-heading {
-    text-align: center;
-    color: #fff;
-    margin-bottom: 40px;
-    text-transform: uppercase;
-    font-size: 35px;
-    letter-spacing: 5px;
+  text-align: center;
+  color: #fff;
+  margin-bottom: 40px;
+  text-transform: uppercase;
+  font-size: 35px;
+  letter-spacing: 5px;
 }
 
 .team-area .card {

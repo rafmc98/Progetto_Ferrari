@@ -115,14 +115,15 @@
     </div>
     
     
-    <div class="footer">
-      <ul class="footerContent">
-        <li><i class="fab fa-instagram"></i></li>
-        <li><i class="fab fa-facebook"></i></li>
-        <li><i class="fab fa-twitter"></i></li>
-        <li><i class="fab fa-youtube"></i></li>
-      </ul>
-    </div>
+  <div class="footer">
+    <ul class="footerContent">
+      <li><a href="https://www.instagram.com/ferrari"> <i class="fab fa-instagram"></i></a></li>
+      <li><a href="https://www.facebook.com/ScuderiaFerrari"> <i class="fab fa-facebook"></i></a></li>
+      <li><a href="https://twitter.com/ScuderiaFerrari" > <i class="fab fa-twitter"></i></a></li>
+      <li><a href="https://www.youtube.com/ferrari"> <i class="fab fa-youtube"></i></a></li>
+    </ul>
+  </div>
+    
 
   </body>
 </html>

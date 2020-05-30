@@ -56,7 +56,7 @@
             <a href="../paginaRicercaPiloti/paginaRicercaPiloti.php">Ricerca piloti</a>
         </div>
       </div>
-      <a href="../paginaRicercaMacchine/paginaRicercamacchine.php">Ricerca auto</a>
+      <a href="../paginaRicercaMacchine/paginaRicercamacchine.php">Ricerca vetture</a>
       <a href="../paginaStoria/history.php"> Storia Ferrari </a>
       <a href="../paginaNews/news.php">News</a>
       <a href="../paginaStore/paginaStore.php"> Store </a>
@@ -109,11 +109,11 @@
   </div>
   <div class="footer">
       <ul class="footerContent">
-        <li><i class="fab fa-instagram"></i></li>
-        <li><i class="fab fa-facebook"></i></li>
-        <li><i class="fab fa-twitter"></i></li>
-        <li><i class="fab fa-youtube"></i></li>
+        <li><a href="https://www.instagram.com/ferrari"> <i class="fab fa-instagram"></i></a></li>
+        <li><a href="https://www.facebook.com/ScuderiaFerrari"> <i class="fab fa-facebook"></i></a></li>
+        <li><a href="https://twitter.com/ScuderiaFerrari" > <i class="fab fa-twitter"></i></a></li>
+        <li><a href="https://www.youtube.com/ferrari"> <i class="fab fa-youtube"></i></a></li>
       </ul>
-    </div>
+  </div>
 </body>
 </html>
