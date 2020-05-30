@@ -13,16 +13,16 @@
 				echo "<table class=classifica>";
 				while ($line = pg_fetch_array ($result , null , PGSQL_ASSOC ) ) {
 ?>					<tr>
-						<td heigth=70>
+						<td>
 							<?php echo $pos?>
 						</td>
-						<td height=70>
+						<td>
 							<img src='<?php echo $line["img"]?>' width="30px">
 						</td>
-						<td height=70>
+						<td>
 							<?php echo $line['email']?>
 						</td>
-						<td height=70> 
+						<td> 
 							<?php echo $line["punteggio"] ?>
 						</td>
 						<?php $pos=$pos+1 ?>

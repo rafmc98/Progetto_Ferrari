@@ -35,7 +35,8 @@
 
 		   <div id="sparisci" >
 				<div class="titolo-class">
-					<p style="text-align:center"><h3 class="punti"> TOP 5 SCORE </h3></p>
+                    <p style="text-align:center"><h3 class="punti"> TOP 5 SCORE </h3></p>
+                    <p class="title"><h4 class="title">POSIZIONE </h4><h4 class="title"> EMAIL </h4><h4 class="title">SCORE </h4></p>
 				</div>
 				<div class="punteggi">
 					<script type="text/javascript">
