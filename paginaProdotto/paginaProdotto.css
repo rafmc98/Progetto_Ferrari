@@ -65,6 +65,42 @@ body{
     overflow: auto;
 }
 
+
+.recensioni-db::-webkit-scrollbar {
+  width: 12px;
+  height: 12px;
+}
+.recensioni-db::-webkit-scrollbar-button {
+  width: 0px;
+  height: 0px;
+}
+.recensioni-db::-webkit-scrollbar-thumb {
+  background: #cecaca;
+  border: 89px none #241e1e;
+  border-radius: 50px;
+}
+.recensioni-db::-webkit-scrollbar-thumb:hover {
+  background: #313030;
+}
+.recensioni-db::-webkit-scrollbar-thumb:active {
+  background: #1a1919;
+}
+.recensioni-db::-webkit-scrollbar-track {
+  background: #666666;
+  border: 47px none #a60c0c;
+  border-radius: 19px;
+}
+.recensioni-db::-webkit-scrollbar-track:hover {
+  background: #666666;
+}
+.recensioni-db::-webkit-scrollbar-track:active {
+  background: #333333;
+}
+.recensioni-db::-webkit-scrollbar-corner {
+  background: transparent;
+}
+
+
 .footer{
     margin-top: 70px;
 }

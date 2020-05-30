@@ -99,7 +99,7 @@
         <!-- Shopping cart -->
         <section class="shopping-cart">
           <div class="carrello">
-            <!--<div class="cart-header"><i class="fas fa-shopping-cart"></i> Cart </div>-->
+            
             
             <div class="table-responsive">          
               <table class="table table-light table-striped">
@@ -190,6 +190,7 @@
                   .then(function (response) {
                     if(i == l){
                       if(response.data == "true"){
+                        
                         window.location.href = "../paginaConfermaAcquisto/paginaConfermaAcquisto.html"; 
                         }
                       else{
@@ -203,6 +204,7 @@
                   console.log(error);
                   });
                 }
+                this.clear();
               },
               goToProdotto: function(param){
                 window.location.href = "../paginaProdotto/paginaProdotto.php?idprodotto=" + param;
@@ -216,7 +218,7 @@
                   localStorage.removeItem('products');
                 }
               }
-              else this.getProducts()
+              else this.getProducts();
             },
             computed: {
               cart() {
