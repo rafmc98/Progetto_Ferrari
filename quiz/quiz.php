@@ -57,8 +57,8 @@
            <div class="score">
 
                 <div class="next">
-                    <button type="button" onclick="next()" id="button"><b>Successiva</b></button>
-                  </div>
+                    <div  onclick="next()" id="button">Next <i class="fas fa-arrow-alt-circle-right"></i></div>
+                </div>
                   
            	   <div class="score-card">
            	   	  <b>Score : </b><span id="scoreCard">0</span>
