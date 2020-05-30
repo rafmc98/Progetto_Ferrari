@@ -203,6 +203,8 @@
                 
                 <?php
                     }
+                    pg_free_result($result);
+                    pg_close($dbconn);
                 ?>
             </div>
         </div>
