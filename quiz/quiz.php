@@ -65,11 +65,9 @@
                 </div>
                 
 				<div class="home">
-                    <div class="loginbtn">
-                        <?php if(isset($_SESSION['email']))
-                        echo "<div id=\"profile\"><a href=\"../paginaProfilo/paginaProfilo.php\"><div id=\"iconaProfilo\"><div id=\"username\"><p style='margin-top:60px;text-align:center'>".$_SESSION['nome']."</p></div></div></div></a></div></div>";
-                        ?>
-                    </div>
+                    <?php if(isset($_SESSION['email']))
+                    echo "<a href=\"../paginaProfilo/paginaProfilo.php\" style=text-decoration:none;><div id=iconaProfilo></div><p class=prof>" .$_SESSION['nome']. "</p></a>";
+                    ?>
 				</div>
 
            </div>

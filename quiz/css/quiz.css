@@ -207,28 +207,27 @@ body{
 	text-transform: uppercase;
 }
 
-.loginbtn{
-	float: right;
-	padding-top: 10px;
-}
+.home{
 
-#profile{
-	float: right;
-}
-
-#iconaProfilo{
-	height: 60px;
-	width: 60px;
-}
-
-#username{
-	float:left;
-	font-size: 16px;
-	font-family: Calibri;
-	color: whitesmoke;
 	text-align:center;
-	margin-left:10px;
 }
+
+#iconaprofilo{
+	width:60px;
+	height:60px;
+	margin:0 auto;
+	margin-top:20px;
+	
+	
+}
+
+.prof{
+	font-size:18px;
+	color:white;
+}
+
+
+
 
 
 
