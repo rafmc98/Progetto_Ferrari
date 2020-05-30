@@ -35,7 +35,8 @@
 
 		   <div id="sparisci" >
 				<div class="titolo-class">
-					<p style="text-align:center"><h3 class="punti"> TOP 5 SCORE </h3></p>
+                    <p style="text-align:center"><h3 class="punti"> TOP 5 SCORE </h3></p>
+                    <p class="title"><h4 class="title">POSIZIONE </h4><h4 class="title"> EMAIL </h4><h4 class="title">SCORE </h4></p>
 				</div>
 				<div class="punteggi">
 					<script type="text/javascript">
@@ -64,11 +65,9 @@
                 </div>
                 
 				<div class="home">
-                    <div class="loginbtn">
-                        <?php if(isset($_SESSION['email']))
-                        echo "<div id=\"profile\"><a href=\"../paginaProfilo/paginaProfilo.php\"><div id=\"iconaProfilo\"><div id=\"username\"><p style='margin-top:60px;text-align:center'>".$_SESSION['nome']."</p></div></div></div></a></div></div>";
-                        ?>
-                    </div>
+                    <?php if(isset($_SESSION['email']))
+                    echo "<a href=\"../paginaProfilo/paginaProfilo.php\" style=text-decoration:none;><div id=iconaProfilo></div><p class=prof>" .$_SESSION['nome']. "</p></a>";
+                    ?>
 				</div>
 
            </div>

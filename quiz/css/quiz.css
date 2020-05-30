@@ -14,9 +14,9 @@ body{
 
 #sparisci{
 	width:100%;
-	height:320px;
+	height:300px;
 	position:relative;
-	margin-top:60px;
+	margin-top:80px;
 }
 
 .titolo-class{
@@ -30,6 +30,7 @@ body{
 .punti{
 	color:white;
 	font-size:25px;
+	margin-left:35px;
 }
 
 .punteggi{
@@ -64,13 +65,14 @@ body{
 	text-align:center;
 	margin-left:auto;
 	margin-right:auto;
-	width:200px;
-	height:300px;
+	width:350px;
+	height:200px;
 }
 
 .title{
 	color:orange;
-	text-align:center;
+	display:inline-block;
+	margin-right:80px;
 }
 
 .quiz_wrapper{
@@ -205,28 +207,27 @@ body{
 	text-transform: uppercase;
 }
 
-.loginbtn{
-	float: right;
-	padding-top: 10px;
-	padding-right: 15px;
-}
+.home{
 
-#profile{
-	float: right;
-}
-
-#iconaProfilo{
-	height: 60px;
-	width: 60px;
-}
-
-#username{
-	float:left;
-	font-size: 16px;
-	font-family: Calibri;
-	color: whitesmoke;
 	text-align:center;
 }
+
+#iconaprofilo{
+	width:60px;
+	height:60px;
+	margin:0 auto;
+	margin-top:20px;
+	
+	
+}
+
+.prof{
+	font-size:18px;
+	color:white;
+}
+
+
+
 
 
 

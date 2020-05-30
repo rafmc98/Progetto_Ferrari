@@ -8,6 +8,7 @@
     <link href="../paginaF1/bootstrap/css/bootstrap.min.css" rel="stylesheet"/>
     <link href="../paginaIniziale/homePage.css" rel="stylesheet">
     <link href="paginaStore.css" rel="stylesheet">
+    <link rel="shortcut icon" type="img/png" href="../favicon.png">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js" type="text/javascript"></script>
     <script src="https://kit.fontawesome.com/a076d05399.js"></script>
     <script src="../vue.min.js"></script>

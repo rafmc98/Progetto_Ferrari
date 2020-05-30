@@ -7,6 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="../paginaIniziale/homePage.css" rel="stylesheet">
     <link href="paginaRicercaPiloti.css" rel="stylesheet">
+    <link rel="shortcut icon" type="img/png" href="../favicon.png">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js" type="text/javascript"></script>
     <script src="https://kit.fontawesome.com/a076d05399.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
