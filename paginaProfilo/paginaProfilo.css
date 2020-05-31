@@ -15,6 +15,10 @@ body{
     font-size: 50px;
 }
 
+#iconaProfilo{
+    margin-top: 5px;
+}
+
 .titolo-pagina{
     width: 100%;
     text-align: center;
