@@ -9,9 +9,6 @@
 .header{
   height: 400px;
   background-color: #FF2800;
-  -webkit-box-shadow: 1px -4px 18px 13px #000000;
-  -moz-box-shadow: 1px -4px 18px 13px #000000;
-  -o-box-shadow: 1px -4px 18px 13px #000000;
   box-shadow: 1px -4px 18px 13px #000000;
   font-family:"FerrariFont";
 }

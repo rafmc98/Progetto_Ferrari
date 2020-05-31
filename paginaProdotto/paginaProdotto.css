@@ -25,9 +25,30 @@ body{
     font-size: 50px;
 }
 
+.store{
+  font-family: calibri;
+  width: 100%;
+  font-size: 25px;
+  margin-top: 30px;
+  margin-bottom: 30px;
+  margin-left: 30px;
+}
+
+.store a{
+  text-decoration: none;
+  color: white;
+}
+
+.store:hover a{
+  color: rgb(185, 184, 184)
+}
+
+.store:active a{
+  color: #111;
+}
+
 .product-wrapper{
     margin: 0 auto;
-    margin-top: 100px;
     width: 70%;
     height: fit-content;  
 }
