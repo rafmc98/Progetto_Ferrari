@@ -15,13 +15,14 @@ $(document).ready(function(){
     $(this).find("span").fadeOut(600);
   });
 
-  $(".dropdown").mouseenter(function(){
-    $(".dropdown-content").show(600);
+  $(".dropdown").click(function(){
+    $(".dropdown-content").slideToggle(600);
   });
 
-  $(".dropdown").mouseleave(function(){
-    $(".dropdown-content").hide(600);
-  });
+  $('.dropdown').click(function(){
+    if($('#menu-arrow').attr('class')=='fas fa-caret-down') $('#menu-arrow').attr('class','fas fa-caret-up');
+    else $('#menu-arrow').attr('class','fas fa-caret-down');
+    });
 
 });
 

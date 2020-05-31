@@ -46,7 +46,7 @@
       <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
       <a href="../paginaIniziale/homePage.php">Home</a>
       <div class="dropdown">
-        <div class="dropbtn">Formula 1</div>
+        <div class="dropbtn">Formula 1 &nbsp<i id="menu-arrow" class="fas fa-caret-down"></i></div>
         <div class="dropdown-content">
             <a href="../paginaF1/formula1.php">Panoramica</a>
             <a href="../paginaRicercaPiloti/paginaRicercaPiloti.php">Ricerca piloti</a>
