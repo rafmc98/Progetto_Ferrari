@@ -75,7 +75,7 @@ body{
 }
 
 .txtb span::before{
-  content: attr(data-placeholder); /*css del placeholder(da rivedere) */
+  content: attr(data-placeholder); 
   position: absolute;
   top: 50%;
   left: 5px;
@@ -127,4 +127,8 @@ body{
 
 .logbtn:hover{
   background-color:rgb(136, 2, 26);
+}
+
+.logbtn:active {
+  transform: translate(5px,5px);
 }
