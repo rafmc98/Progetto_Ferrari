@@ -2,6 +2,10 @@
     height: 120px;
 }
 
+.navbar{
+    padding:0;
+}
+
 body{
     background-image: url("../paginaF1/immagini/bg3.jpg");
 }

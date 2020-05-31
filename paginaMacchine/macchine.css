@@ -1,3 +1,11 @@
+.navbar{
+    padding: 0;
+}
+
+#iconaProfilo{
+    margin-top: 5px;
+}
+
 
 .header{
     height: 120px;

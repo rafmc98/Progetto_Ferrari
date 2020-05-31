@@ -42,6 +42,15 @@ body{
     margin-left: 25px;
 }
 
+.navbar{
+    padding: 0;
+}
+
+#iconaProfilo{
+    margin-top: 5px;
+}
+
+
 
 
 table, .table-responsive{

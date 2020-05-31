@@ -14,6 +14,15 @@ $(document).ready(function(){
   $(".parent div").mouseleave(function(){
     $(this).find("span").fadeOut(600);
   });
+
+  $(".dropdown").mouseenter(function(){
+    $(".dropdown-content").show(600);
+  });
+
+  $(".dropdown").mouseleave(function(){
+    $(".dropdown-content").hide(600);
+  });
+
 });
 
 

@@ -14,6 +14,7 @@
     <script src="../paginaF1/javascript/scriptF1.js" type="text/javascript"></script>
     <link href="../paginaIniziale/homePage.css" rel="stylesheet">
     <link href="macchine.css" rel="stylesheet">
+    <script src="../paginaIniziale/homePageScript.js" type="text/javascript"></script>
     <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
     <script src="../vue.min.js"></script>
     

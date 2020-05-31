@@ -10,12 +10,21 @@
     <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
     <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
     <link href="../paginaF1/bootstrap/css/bootstrap.min.css" rel="stylesheet"/>
-    <link href="../paginaIniziale/homePage.css" rel="stylesheet">
-    <link href="../paginaRicercaPiloti/paginaRicercaPiloti.css" rel="stylesheet">
     <link rel="shortcut icon" type="img/png" href="../favicon.png">
     <script src="../paginaIniziale/HomePageScript.js"></script>
+    <link href="../paginaIniziale/homePage.css" rel="stylesheet">
+    <link href="../paginaRicercaPiloti/paginaRicercaPiloti.css" rel="stylesheet">
     <title>Ricerca Macchine</title>
 </head>
+<style>
+    .navbar{
+        padding: 0;
+    }
+    
+    #iconaProfilo{
+        margin-top: 5px;
+    }
+</style>
  <!--JQUERY-->
 <script>
     $(document).ready(function(){
