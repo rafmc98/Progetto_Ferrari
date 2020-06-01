@@ -149,7 +149,6 @@
                   console.log(error);
                   });
                 }
-                this.clear();
               },
               goToProdotto: function(param){
                 window.location.href = "../paginaProdotto/paginaProdotto.php?idprodotto=" + param;
