@@ -29,6 +29,7 @@
             $('.select-button').on('click', function() {
                 $('.select-content').slideToggle(800);
             });
+
             $('.select-button').mouseenter(function(){
                 $(this).css("background-color","#b62006")
             });
@@ -57,9 +58,8 @@
             $('.card-link').click(function(){
                 if($('#freccia').attr('class')=='fas fa-angle-down') $('#freccia').attr('class','fas fa-angle-up');
                 else $('#freccia').attr('class','fas fa-angle-down');
-                });
-            
             });
+
 
             $('.card-body').click(function(){
                 var idprodotto = $(this).attr('id');
