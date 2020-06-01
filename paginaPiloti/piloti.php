@@ -29,28 +29,13 @@
     
     <title><?php echo $line["nome"];?> <?php echo $line["cognome"]; ?></title>
     <!--JQUERY-->
-    <script>
-    $(document).ready(function(){
-        $('#iconaProfilo').css({
-            "background-image" : "url('<?php echo $_SESSION['user-pic'] ?>')",
-            "background-size" : "cover"
-        });
-    });
-    </script>
+    <?php include '../templates/jquerySessioni.php'; ?>
     
     <script>
         $(document).ready(function(){
             $(".box").click(function(){
                 $(".foto-evento, .evento").slideDown(700);
 
-            });
-            $('#quiz').click(function() {
-                if('<?php echo isset($_SESSION["email"]);?>'){
-                window.location.replace("../quiz/quiz.php");
-                }
-                else{
-                window.alert("Devi effettuare il login per accedere al quiz!");
-                }
             });
         });
     </script>

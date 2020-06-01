@@ -14,29 +14,8 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.0/jquery.min.js" charset="utf-8"></script>
     <script src="../paginaIniziale/homePageScript.js"></script>
     <script src="https://kit.fontawesome.com/a076d05399.js"></script>
-    <script>
-       $(document).ready(function(){
 
-        $('#iconaProfilo').css({
-          "background-image" : "url('<?php echo $_SESSION['user-pic'] ?>')",
-          "background-size" : "cover"
-        }); 
-    
-      });
-    </script>
-
-    <script>
-      $(document).ready(function(){
-        $('#quiz').click(function() {
-          if('<?php echo isset($_SESSION["email"]);?>'){
-            window.location.replace("../quiz/quiz.php");
-          }
-          else{
-            window.alert("Devi effettuare il login per accedere al quiz!");
-          }
-          });  
-        });
-    </script>
+    <?php include '../templates/jquerySessioni.php'; ?>
     
 </head>
 <body>

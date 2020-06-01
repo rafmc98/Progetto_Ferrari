@@ -26,14 +26,9 @@
     }
 </style>
  <!--JQUERY-->
-<script>
-    $(document).ready(function(){
-        $('#iconaProfilo').css({
-            "background-image" : "url('<?php echo $_SESSION['user-pic'] ?>')",
-            "background-size" : "cover"
-        });
-    });
-</script>
+
+<?php include '../templates/jquerySessioni.php'; ?>
+
 <script>
     $(document).ready(function(){
         $(".seeAll").click(function(){
@@ -43,14 +38,6 @@
         $(".search-button").click(function(){
             $(".intestazione").fadeIn(500);
         });
-
-        $('#quiz').click(function() {
-        if('<?php echo isset($_SESSION["email"]);?>'){
-          window.location.replace("../quiz/quiz.php");
-        }
-        else{
-          window.alert("Devi effettuare il login per accedere al quiz!");
-        }
       });
     });
 

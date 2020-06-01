@@ -16,14 +16,7 @@
 
 	<link rel="shortcut icon" type="img/png" href="../favicon.png">
 
-	<script>
-		$(document).ready(function(){
-            $('#iconaProfilo').css({
-                "background-image" : "url('<?php echo $_SESSION['user-pic'] ?>')",
-                "background-size" : "cover"
-            });
-		});
-    </script>
+    <?php include '../templates/jquerySessioni.php'; ?>
     
 </head>
 <body>
