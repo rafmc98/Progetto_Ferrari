@@ -75,18 +75,17 @@ body{
 }
 
 .txtb span::before{
-  content: attr(data-placeholder); 
+  content: attr(data-placeholder); /* scrive il contenuto del'attributo data-placeholder prima dello span */
   position: absolute;
   top: 50%;
   left: 5px;
   color: #adadad; /*colore placeholder*/
-  transform: translateY(-50%); /*alza la scritta del placeholder*/
+  transform: translateY(-50%); /*posiziona la scritta del placeholder sopra lo span*/
   z-index: -1;
   transition: .5s;
 }
 
 
-/** PER ME SUPERFLUO (Comprende anche uno script) ------------------------------------------------------------------------------------------------------- */
 
 .txtb span::after{
   content: '';
@@ -104,10 +103,9 @@ body{
 }
 
 .focus + span::after{
-  width: 100%;      /* la scritta nel placeholder torna alla sua altezza normale */
+  width: 100%;      /* allunga lo span colorato sotto all'input */
 }
 
-/** ----------------------------------------------------------------------------------------------------------------------------*/
 
 
 
