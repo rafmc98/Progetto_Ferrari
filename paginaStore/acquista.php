@@ -1,5 +1,6 @@
 <?php
     session_start();
+    // Insert nalla tabella ordini del prodotto con nome appeso alla richiesta
     $ordine = json_decode(file_get_contents("php://input"));
     $nomeprodotto = $ordine -> nomeprodotto;
     $quantity = $ordine -> quantity;

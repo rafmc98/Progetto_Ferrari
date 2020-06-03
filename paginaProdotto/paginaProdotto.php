@@ -55,7 +55,7 @@
                     <button class="btn btn-default send-button" v-if="mostraInvio" @click="insertFeedback" onClick="window.location.reload();">Invia</button>
                 </div>
                 <div class="card-body">
-                    <textarea class="textarea" v-model='descrizione' placeholder="Inserisci una recensione"></textarea>
+                    <textarea class="corpo-recensione" v-model='descrizione' placeholder="Inserisci una recensione"></textarea>
                 </div>
             </div>
             <!--  Recensioni relative al prodotto -->

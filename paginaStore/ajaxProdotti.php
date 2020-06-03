@@ -1,5 +1,5 @@
 <?php
-    
+    // Query per recuperare tutti i prodotti in vendita dal db
     $dbconn = pg_connect("host=localhost port=5432 dbname=PassioneFerrari user=postgres password=password ")or 
                 die ( ' Could not connect : ' . pg_last_error( ) ) ;
     $query  = "SELECT * 

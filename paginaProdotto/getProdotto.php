@@ -1,5 +1,5 @@
 <?php 
-    session_start(); 
+    // Query che restituisce tutte le informazioni relative al prodotto con id uguale a quello appeso alla richiesta
     $dbconn = pg_connect("host=localhost port=5432 dbname=PassioneFerrari user=postgres password=password ")or 
     die ( ' Could not connect : ' . pg_last_error( ) ) ;
     $query  = "SELECT * 

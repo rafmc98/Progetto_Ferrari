@@ -50,9 +50,7 @@ body{
     margin-top: 5px;
 }
 
-
-
-
+/* Tabella carrello */
 table, .table-responsive{
     border-radius: .25rem;
     vertical-align: middle;

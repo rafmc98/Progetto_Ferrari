@@ -1,5 +1,5 @@
 <?php
-    
+    // Query che restitisce tutte le recensioni relative al prodotto appeso alla richiesta
     $dbconn = pg_connect("host=localhost port=5432 dbname=PassioneFerrari user=postgres password=password ")or 
                 die ( ' Could not connect : ' . pg_last_error( ) ) ;
     $query  = "SELECT * 

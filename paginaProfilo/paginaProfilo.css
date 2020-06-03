@@ -80,6 +80,7 @@ body{
     transform: translate(2px,2px);
 }
 
+/* contenitore avatar */
 .select-content{
     margin: auto;
     background-color: whitesmoke;
@@ -205,6 +206,7 @@ body{
     width: 160px;
     border-radius: 50%;
 }
+
 
 .card{
     width: 40%;
