@@ -1,5 +1,6 @@
 <?php
     session_start();
+    // Aggiorna l'icona dell'utente all'interno del db e chiude la sessione
     if(isset($_SESSION['email'])){
 
         $dbconn = pg_connect("host=localhost port=5432 dbname=PassioneFerrari user=postgres password=password ")or 

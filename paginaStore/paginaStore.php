@@ -178,7 +178,7 @@
                 this.acquistati = this.products.filter(product => product.quantity > 0);
                 if(this.acquistati.length > 0) this.showCart = true;
                 if(this.acquistati.length == 0) this.showCart = false;
-                // Aggiorna constantemente il localStorage in caso di cambiamenti all'interno del carrello
+                // Aggiorna il localStorage in caso di cambiamenti all'interno del carrello
                 const parsed = JSON.stringify(this.products);
                 localStorage.setItem('products',parsed);
                 return this.acquistati;

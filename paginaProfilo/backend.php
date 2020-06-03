@@ -1,5 +1,5 @@
 <?php
     session_start();
-    // do any authentication first, then add POST variable to session
+    // Associa la nuova icona appesa alla richiesta alla sessione corrente
     $_SESSION['user-pic'] = $_POST['iconcina'];
 ?>

@@ -1,6 +1,6 @@
 <?php
     session_start();
-    
+    // Insert di una nuova recensione
     $titolo = $_GET['titolo'];
     $descrizione = $_GET['descrizione'];
     $stars = $_GET['stars'];

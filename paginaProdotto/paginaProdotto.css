@@ -25,6 +25,8 @@ body{
     font-size: 50px;
 }
 
+
+/* Bottone per tornare allo store */
 .store{
   font-family: calibri;
   width: 100%;
@@ -47,12 +49,14 @@ body{
   color: #111;
 }
 
+/* contenitore prodotto e recensioni */
 .product-wrapper{
     margin: 0 auto;
     width: 70%;
     height: fit-content;  
 }
 
+/*sezione info prodotto */
 .prodotto{
     width: 50%;
     float: left;
@@ -68,7 +72,8 @@ body{
     width:95%;
 }
 
-.textarea{
+
+.corpo-recensione{
     width: 100%;
     border: none;
     outline: none;
@@ -85,12 +90,15 @@ body{
     float: right;
 }
 
+
+/* Contenitore recensioni relative al prodotto */
 .recensioni-db{
     height: 450px ;
     overflow: auto;
 }
 
 
+/* Css scrollBar recensioni */
 .recensioni-db::-webkit-scrollbar {
   width: 12px;
   height: 12px;
