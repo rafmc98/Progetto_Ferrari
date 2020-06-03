@@ -45,11 +45,12 @@
     </div>
 
 
-
+    
     <div id="app" class="contenitore">
         <div v-for="x in car" class="vue-for">
             <div class="tabella">
                 <div class="datacar">
+                    <!-- DATI DELLA VETTURA-->
                     <h1 class="titolo-tabella">DATI VETTURA</h1>
                     <div class="campi">
                         <p class="dati">Nome:</p>
@@ -73,6 +74,7 @@
                 </div>
             </div>
 
+            <!-- SLIDESHOW DELLA VETTURA-->
             <div class="foto-macchina">
                 <div class="foto">
                     <div id="carousel" class="carousel slide" data-ride="carousel">
@@ -102,7 +104,7 @@
             el: '#app',
             data:{
                 nome: '<?php echo $_GET['nome'] ?>',
-                car: ''
+                car: '' /* array per risultati query  */
             },
             methods:{
                 getCar: function(){

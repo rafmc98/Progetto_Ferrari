@@ -140,7 +140,7 @@
             </script>
         </div>
 
-        
+        <!-- DATI PILOTA-->
         <div class="tabella-pilota">
             <div style="width:360px;">
                 <p class="centra"> <h1 class="titolo-evento">DATI DEL PILOTA </h1></p>

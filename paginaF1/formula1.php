@@ -24,11 +24,12 @@
 
   <?php include '../templates/header-sideBar.php'; ?>
     
+
     <div class="f1">
         <h1 class="titolo-pagina">FORMULA 1 E FERRARI</h1>
     </div>
 
-
+    <!-- descrizione e albo d'oro-->
     <div class="description-box">
         <div class="testo">
             <div class="descrizione">
@@ -71,7 +72,7 @@
         </div>
     </div>
 
-    <!-- sezione slideshow-->
+    <!-- SLIDESHOW PILOTI-->
     <div class="container-slide">
         <div class="titoletto">
             <h1 class="titoli">PILOTI FERRARI </h1>

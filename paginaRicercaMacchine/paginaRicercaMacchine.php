@@ -39,7 +39,6 @@
             $(".intestazione").fadeIn(500);
         });
       });
-    });
 
 </script>  
 
@@ -54,15 +53,16 @@
     <div class="content">
         <div id="app" class="finestra">
             <div class="barra">
+                <!-- Selezione tipo della vettura-->
                 <select v-model="type" class="selectpicker" style="border:none;">
                     <option selected disabled> Tipo vettura </option>
                     <option value="corsa">Corsa</option>
                     <option value="strada">Strada</option>
                 </select>
-                <!-- Select record by name -->
+                <!-- Ricerca per nome -->
                 <input type="text" v-model='parametro' placeholder="Search by name.." class="search" size="50" autocomplete="off">
                 <button class="search-button" @click='recordByName()'><i class="fas fa-search" style="outline:none;"></i></button>
-                <!-- Select all records -->
+                <!-- Ricerca tutti i record -->
                 <button class="search-button seeAll" @click='allRecords()'>See All</button>
             </div>
             <!-- risultato ricerca -->
@@ -86,7 +86,7 @@
                 data:{
                     macchine:'',
                     parametro:'',
-                    type:'corsa',
+                    type:'corsa', /* tipo della vettura da cercare */
                 },
                 methods:{
                     allRecords: function(){ 
