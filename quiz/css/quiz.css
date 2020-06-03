@@ -43,16 +43,15 @@ body{
 }
 
 
+/* Scrollbar della classifica */
 .punteggi::-webkit-scrollbar {
     width: 6px;
 }
-
 
 .punteggi::-webkit-scrollbar-thumb {
     background: rgb(180, 175, 175); 
     border-radius: 10px;
 }
-
 
 .punteggi::-webkit-scrollbar-thumb:hover {
     background:orange; 
@@ -75,6 +74,7 @@ body{
 	margin-right:80px;
 }
 
+/* Classe relativa al box del quiz */
 .quiz_wrapper{
 	width: 750px;
 	overflow: auto;
@@ -86,6 +86,7 @@ body{
 	box-shadow: 5px 5px 10px 0px #000000;
 }
 
+/* Classe relavita alle domande */
 .quiz_wrapper .question{
 	padding: 15px;
 	background-color:  rgba(0, 0, 0, 0.8);
@@ -97,6 +98,7 @@ body{
 	box-shadow: 5px 5px 10px 0px #000000;
 }
 
+/* Classe relativa alle risposte selezionabili */
 .quiz_wrapper .options{
 	float: left;
 	width: 100%;
@@ -126,16 +128,18 @@ body{
 	text-align: center;
 }
 
+
 .quiz_wrapper .options ul li:active{
 	box-shadow: 0px 3px 0px transparent;	
-
 }
 
+/* Risposta corretta */
 .quiz_wrapper .options ul li.correct{
 	background-color: #0fd40f;
 	box-shadow: 0px 3px 0px #03a503;
 }
 
+/* Risposta sbagliata */
 .quiz_wrapper .options ul li.wrong{
 	background-color: #e91e1e;
 	box-shadow: 0px 3px 0px #cb0b0b;

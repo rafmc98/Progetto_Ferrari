@@ -67,6 +67,7 @@
 
     </div>
     
+    <!-- SCRIPT QUIZ -->
     <script type="text/javascript">
         
         var ul=document.getElementById('ul');
@@ -109,7 +110,7 @@
 
                             ],
                 
-
+                /* Funzione di caricamento e visualizzazione del quiz */
                 load:function(){
 
                     if(this.index<=this.questions.length-1){
@@ -134,12 +135,13 @@
                     }
                 },
 
+                /* Passaggio alla domanda successiva */
                 next:function(){
                     this.index++;
                     this.load();	
                 },
 
-
+                /* Controllo sulla correttezza della risposta data */
                 check:function(ele){
                     var id=ele.id.split('');
                     if(id[id.length-1]==this.questions[this.index].answer){
@@ -168,10 +170,12 @@
                     }
                 },
 
+                /* Visualizzazione del punteggio in tempo reale */
                 scoreCard:function(){
                     scoreCard.innerHTML=this.score+"/"+this.questions.length;
                 },
                 
+                /* Richiesta axios per recuperare i dati dell'utente e visualizzarli in classifica */
                 getQuery: function(){   
                     axios.get('ajaxUpdate.php',{
                         params:{
@@ -200,6 +204,7 @@
             app.clickAble();
         } 
 
+        /* Funzione di aggiornamento della classifica al termine del quiz */
         function refresh_div() {
             jQuery.ajax({
             url:'ajaxVisualizza.php',

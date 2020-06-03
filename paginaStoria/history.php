@@ -70,6 +70,7 @@
       
       </div>
     </div>
+  <!-- SCRIPT -->
   <script>
     var app=new Vue({
         el:'#app',

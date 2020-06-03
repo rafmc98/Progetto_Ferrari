@@ -37,11 +37,13 @@ padding: 60px 0;
   letter-spacing: 5px;
 }
 
+/* Stile relativo alle card */
 .team-area .card {
 border: none;
 background: #ffffff;
 margin: auto;
 }
+
 .img-area{
 width: 150px;
 height: 150px;
@@ -49,11 +51,12 @@ display: inline-block;
 overflow: hidden;
 border-radius: 50%;
 }
+
+/* Rotazione delle cards */
 .team-single:hover .side-two {
 transform: rotateY(0deg);
 border-radius: .25rem;
 }
-
 .team-single:hover .side-one {
 transform: rotateY(180deg);
 }
@@ -65,6 +68,7 @@ transform-style: preserve-3d;
 position: relative;
 }
 
+/* Fronte delle cards */
 .side-one {
 position: relative;
 transform: rotateY(0deg);
@@ -72,6 +76,7 @@ z-index: 2;
 margin-bottom: 30px;
 }
 
+/* Retro delle cards */
 .side-two {
 position: absolute;
 top: 0;
@@ -103,7 +108,7 @@ letter-spacing: 5px;
 font-size: 25px;
 }
 
-
+/* Stile dell'immagine nelle cards */
 .side-one .card .card-body img {
 width: 120px;
 height: 120px;

@@ -60,8 +60,8 @@ visibility: hidden;
 /* sfondo oscurante */
 background-color: rgba(0, 0, 0, 0.7);
 opacity: 0;
-position: fixed; /* posizionamento fisso */
-cursor: default; /* tipo del cursore */
+position: fixed; 
+cursor: default; 
 transition: all 0.6s;
 }
 
@@ -70,7 +70,7 @@ visibility: visible;
 opacity: 1;
 }
 
-/* Stili delle finestre modali */
+/* Stili dei popup */
 .popup {
     top: 0;
     right: 0;
@@ -102,7 +102,7 @@ opacity: 1;
     transition: transform 0.6s ease-out;
 }
 
-/* attiviamo la finestra popup */
+/* attivazione della finestra popup */
 .overlay:target + .popup {
     top: 50%;
     transform: translate(-50%, -50%);
@@ -155,7 +155,7 @@ opacity: 1;
     margin-bottom: 10px;
 }
 
-/* miniature destra /sinistra */
+/* miniature sinistra */
 .pic-left {
     width: 25%;
     float: left;

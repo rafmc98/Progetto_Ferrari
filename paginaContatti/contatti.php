@@ -25,7 +25,7 @@
         <div class="container">
             <h5 class="section-heading">Membri del team</h5>
           <div class="row">
-            <!-- Team member -->
+            <!-- Primo membro del team -->
             <div class="col-xs-12 col-sm-6 col-md-4">
                 <div class="team-single">
                     <div class="content-area">
@@ -61,6 +61,7 @@
                   </div>
                 </div>
               </div>
+              <!-- Secondo membro del team -->
               <div class="col-xs-12 col-sm-6 col-md-4">
                 <div class="team-single">
                     <div class="content-area">
@@ -96,6 +97,7 @@
                       </div>
                     </div>
                 </div>
+                <!-- Terzo membro del team -->
                 <div class="col-xs-12 col-sm-6 col-md-4">
                     <div class="team-single">
                         <div class="content-area">
