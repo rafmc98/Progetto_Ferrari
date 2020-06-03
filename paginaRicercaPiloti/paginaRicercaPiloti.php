@@ -15,10 +15,12 @@
     <script src="../paginaIniziale/HomePageScript.js"></script>
     <title>Ricerca Piloti</title>
 </head>
- <!--JQUERY-->
+ 
 
 <?php include '../templates/jquerySessioni.php'; ?>
 
+
+<!--JQUERY per effetti visualizzazione risultati della ricerca-->
 <script>
     $(document).ready(function(){
         $(".seeAll").click(function(){
@@ -28,8 +30,6 @@
         $(".search-button").click(function(){
             $(".intestazione").fadeIn(500);
         });
-
-
     });
 </script>  
 
@@ -73,7 +73,7 @@
                     parametro:''
                 },
                 methods:{
-                    allRecords: function(){ 
+                    allRecords: function(){  /*tramite richiesta axios ottiene tutti i record dei piloti presenti nel db */
                         axios.get('ricercaPiloti.php')
                             .then(function (response) {
                                 app.piloti = response.data;
@@ -81,7 +81,7 @@
                                 console.log(error);
                             });
                     },
-                    recordByName: function(){
+                    recordByName: function(){  /*tramite richiesta axios ottiene i piloti ricercati per nome */
                         axios.get('ricercaPiloti.php',{
                             params:{
                                 parametro: this.parametro
@@ -93,7 +93,7 @@
                             console.log(error);
                         });
                     },
-                    goToPilota: function(param){
+                    goToPilota: function(param){   /* redirect alla pagina del pilota */
                         window.location.href = "../paginaPiloti/piloti.php?cognome=" + param;
                     }
                 }

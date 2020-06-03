@@ -19,6 +19,15 @@
 
     <?php include '../templates/jquerySessioni.php'; ?>
 
+    <!-- Jquery per intervalli cambio immagini slider-->
+    <script>
+        $(document).ready(function() {
+            $('.carousel').carousel({
+            interval: 2500
+            });
+        });
+    </script>
+
   <body>
 
 

@@ -25,10 +25,11 @@
         margin-top: 5px;
     }
 </style>
- <!--JQUERY-->
+
 
 <?php include '../templates/jquerySessioni.php'; ?>
 
+ <!--JQUERY per effetti visualizzazione risultati della ricerca-->
 <script>
     $(document).ready(function(){
         $(".seeAll").click(function(){
@@ -86,10 +87,10 @@
                 data:{
                     macchine:'',
                     parametro:'',
-                    type:'corsa', /* tipo della vettura da cercare */
+                    type:'corsa', /* tipo della vettura da cercare (corsa o strada)*/
                 },
                 methods:{
-                    allRecords: function(){ 
+                    allRecords: function(){  /* tramite richiesta axios ottiene tutti i record delle macchine presenti nel db*/
                         axios.get('ricercaMacchine.php',{
                             params:{
                                 type:this.type
@@ -102,7 +103,7 @@
                             });
                     },
 
-                    recordByName: function(){
+                    recordByName: function(){  /* tramite richiesta axios ottiene le macchine cercate per nome */
                         axios.get('ricercaMacchine.php',{
                             params:{
                                 parametro: this.parametro,
@@ -116,7 +117,7 @@
                         });
                     },
 
-                    goToMacchina: function(param){
+                    goToMacchina: function(param){   /* redirect alla pagina della macchina */
                         window.location.href = "../paginaMacchine/macchine.php?nome=" + param;
                     }
                 }

@@ -19,7 +19,8 @@
     <script src="../vue.min.js"></script>
     
     <title><?php echo $_GET["nome"];?></title>
-    <!--JQUERY-->
+
+    <!--JQUERY per intervalli cambio immagini slider-->
 
     <script>
         $(document).ready(function() {
@@ -107,7 +108,7 @@
                 car: '' /* array per risultati query  */
             },
             methods:{
-                getCar: function(){
+                getCar: function(){  /* tramite richiesta axios ottiene i dati e le immagini della vettura */
                     axios.get('getCar.php',{
                         params:{
                             nome: this.nome
@@ -120,7 +121,7 @@
                     });
                 }
             },
-            created: function(){
+            created: function(){ /* al momento della creazione dell'oggetto richiama il metodo getCar */
                 this.getCar();
             }
         });

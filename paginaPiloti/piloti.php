@@ -28,9 +28,10 @@
     <link href="piloti.css" rel="stylesheet">
     
     <title><?php echo $line["nome"];?> <?php echo $line["cognome"]; ?></title>
-    <!--JQUERY-->
+    
     <?php include '../templates/jquerySessioni.php'; ?>
     
+    <!--JQUERY per regolare l'effetto della comparsa degli eventi-->
     <script>
         $(document).ready(function(){
             $(".box").click(function(){
@@ -115,13 +116,13 @@
                         variants:''
                     },
                     methods:{
-                        updateAll:function(im,des,t,v){
+                        updateAll:function(im,des,t,v){ /*Aggiorna i campi data */
                             this.image=im;
                             this.description=des;
                             this.titolo=t;
                             this.video=v;
                         },
-                        getQuery: function(){   
+                        getQuery: function(){   /* tramite richiesta axios ottiene gli eventi del pilota */
                             axios.get('ajaxfile.php',{
                                 params:{
                                     cognome: this.cognome
@@ -133,7 +134,7 @@
                             });
                         }
                     },
-                    created: function(){
+                    created: function(){  /* al momento della creazione dell'oggetto richiama il metodo getQuery */
                         this.getQuery()
                     }
                 });
@@ -172,7 +173,7 @@
                 <div class="titolo-macchine">
                     <h2 class="scritta" style="font-family:formula1">VETTURE CARRIERA</h2>
                 </div>
-                <!-- Query per vedere macchine del pilota -->
+                <!-- Query per ottenere le macchine del pilota -->
                 <div class="cardab">
                     <?php
                         $query = "SELECT macchine.nome, macchine.anno 

@@ -96,6 +96,7 @@ body{
     margin-top:15px;
 }
 
+/* div per macchine guidate dal pilota */
 .cardab{
     width:100%;
     margin-top:20px;
@@ -109,6 +110,8 @@ body{
 .namecar a{
     color:powderblue;
 }
+
+/* fine div */
 
 .info{
     width:100%;
@@ -240,6 +243,7 @@ body{
     height: 100%;
 }
 
+/* box eventi */
 .color-box{
     background-color: red;
     padding: 10px;
@@ -267,6 +271,7 @@ body{
     padding-left:30px;
 }
 
+/* importa il font formula1 */
 @font-face {
 	font-family: 'formula1';
 	src: url('../paginaF1/f1-fonts/Formula1-Display-Bold.eot');
