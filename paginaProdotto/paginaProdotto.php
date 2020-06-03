@@ -28,6 +28,7 @@
     <div class="store"><a href="../paginaStore/paginaStore.php"><b>Store</b> <i class="fas fa-shopping-basket"></i></a></div>
 
     <div id="app" class="product-wrapper">
+        <!-- Prodotto -->
         <section v-for="p in prodotto" class="prodotto">
             <div class="card">
                 <img :src="'../paginaStore/' + p.imgprodotto" class="card-img-top foto-prodotto">
@@ -38,6 +39,7 @@
                 </div>
             </div>
         </section>
+        <!--  Componenti per l'inserimento di una nuova recensione -->
         <section  class="recensioni">
             <div class="card">
                 <div class="card-header">
@@ -56,6 +58,7 @@
                     <textarea class="textarea" v-model='descrizione' placeholder="Inserisci una recensione"></textarea>
                 </div>
             </div>
+            <!--  Recensioni relative al prodotto -->
             <section class="recensioni-db">
                 <div v-for="x in recensioni" class="card text-white bg-dark mb-3" style="margin-top:20px">
                     <div class="card-header">
@@ -86,6 +89,7 @@
             },
             methods:{
                 getProdotto: function(){
+                    // Richiesta axios per recuperare i dati dal db relativi al prodotto passato come parametro
                     axios.get('getProdotto.php',{
                         params:{
                             idprodotto: this.idprodotto
@@ -98,6 +102,7 @@
                     });
                 },
                 insertFeedback: function(){
+                    // Richiesta axios per l'inserimento di una nuova recensione relativa al prodotto passato come parametro
                     axios.get('inserisciRecensione.php',{
                         params:{
                             titolo: this.titolo,
@@ -107,12 +112,14 @@
                         }
                     })
                     .then(function(response){
+                        // Se la richiesta non va a buon fine, significa che l'utente non ha ancora effettuato il login
                         if(response.data!="true") alert("devi prima effettuare il login");
                     }).catch(function(error){
                         console.log(error);
                     });
                 },
                 stampa: function(){
+                    // Richiesta axios per recuperare le recensioni relative al prodotto passato come parametro
                     axios.get('cercaRecensioni.php',{
                         params:{
                             idprodotto: this.idprodotto
@@ -126,10 +133,12 @@
                 }
             },
             created: function(){
+                // Al momento dell'apertura della pagina vengono richiamate le funzioni per recuperare i dati del prodotto e le sue relative recensioni
                 this.getProdotto();
                 this.stampa();
             },
             computed:{
+                // Il tasto per inserire la recensione all'interno del db viene mostrato solo se tutti i campi della recensione sono completi
                 mostraInvio(){
                     if( this.titolo != '' && this.descrizione != '' && this.stars != '') return true;
                     else return false;

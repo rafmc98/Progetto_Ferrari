@@ -1,5 +1,7 @@
 <?php 
+    // avvia la sessione
     session_start();
+    // rimanda alla homePage se non c'è un utente attualmente loggato
     if(!isset($_SESSION['email']))
         header("Location: ../paginaIniziale/homePage.php");
 ?>
@@ -26,6 +28,7 @@
     <script>
         $(document).ready(function(){
 
+            // mostra e nasconde il div contenente gli avatar selezionabili
             $('.select-button').on('click', function() {
                 $('.select-content').slideToggle(800);
             });
@@ -43,7 +46,8 @@
                 "background-size" : "cover"
             });
 
-            
+            // Imposta la nuova immagine selezionata dopo il click e la sostituisce
+            // a quella della sessione corrente tramite una richiesta ajax
             $('.avatar').click(function(){
                 var icon = $("img",this).attr("src");
                 $('#immagine').css({
@@ -55,12 +59,13 @@
                 $.post('backend.php',{iconcina : icon});
             });
 
+            // Inverte la freccia della sezione riepilogo ordini al momento del click
             $('.card-link').click(function(){
                 if($('#freccia').attr('class')=='fas fa-angle-down') $('#freccia').attr('class','fas fa-angle-up');
                 else $('#freccia').attr('class','fas fa-angle-down');
             });
 
-
+            // redireziona alla pagina relativa al prodotto cliccato nel riepilogo
             $('.card-body').click(function(){
                 var idprodotto = $(this).attr('id');
                 window.location.href = "../paginaProdotto/paginaProdotto.php?idprodotto=" + idprodotto;
@@ -85,10 +90,12 @@
         <!-- Sezione avatar-->
         <div class="profile-pic">
             <div class="img-box">
+                <!-- Foto profilo relativa all'utente loggato -->
                 <div id="immagine"></div>
             </div>
             <div class="select-box">
                 <div class="select-button">Choose avatar</div>
+                <!-- Div a scomparsa con avatar da selezionare -->
                 <div class="select-content">
                     <div class="avatar"><img src="../Flat avatars icons pack/PNG/256x256/256_1.png">Avatar 1</div>
                     <div class="avatar"><img src="../Flat avatars icons pack/PNG/256x256/256_2.png">Avatar 2</div>
@@ -134,6 +141,7 @@
                                 <div class="info-db"><?php echo $line["email"]; ?></div>
                             </div>
                             <div class="user-field" id="button-div">
+                                <!-- Bottone per richiamare la pagina php per il logout -->
                                 <button onclick="window.location.href='logout.php'" class="logout-button">Logout</button>
                             </div>
                         </div>
@@ -143,7 +151,7 @@
             </div>
     </div>
     
-   
+   <!-- Sezione ordini relativi all'utente -->
     <div id="accordion">
         <div class="card text-white bg-dark mb-3">
             <div class="card-header">
@@ -153,6 +161,7 @@
             </div>
             
             <div id="collapseOne" class="collapse" data-parent="#accordion">
+
                 <!-- Riepilogo ordini php -->
                 <?php
                     $email = $_SESSION['email'];
@@ -178,7 +187,7 @@
         </div>
     </div>
 
-    
+    <!--  Footer -->
     <?php include '../templates/footer.html'; ?>
     
 </body>

@@ -1,3 +1,5 @@
+
+<!-- Imposta la foto utente della sessione corrente -->
 <script>
     $(document).ready(function(){
 
@@ -8,6 +10,7 @@
     });
   </script>
 
+  <!-- Blocca l'accesso alla pagina Quiz in caso di login non ancora effettuato -->
   <script>
     $(document).ready(function(){
       $('#quiz').click(function() {

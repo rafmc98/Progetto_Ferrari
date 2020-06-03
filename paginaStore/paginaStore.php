@@ -108,6 +108,7 @@
                 }
               },
               getProducts: function(){
+                // Richiesta axios per ottenere i prodotti dal database
                 axios.get('ajaxProdotti.php')
                     .then(function (response) {
                       app.products = response.data;
@@ -115,15 +116,19 @@
                       console.log(error);
                   });
               },
-              deleteProduct: function(product){     
+              deleteProduct: function(product){ 
+                // Elimina dal carrello il prodotto con id uguale a quello del prodotto passato come parametro settando la quantità a 0    
                 for (let i = 0; i < this.products.length; i++) if(this.products[i].idprodotto == product.idprodotto) this.products[i].quantity = 0;
               },
               clear: function(){
+                // Svuota l'intero carrello
                 for (let i = 0; i < this.products.length; i++) this.products[i].quantity = 0;
                 localStorage.removeItem('products');
               },
               buy: function(){ 
+                // Effettua l'operazione d'acquisto
                 let l = this.acquistati.length - 1;
+                // Per ogni prodotto nel carrello effettua una richiesta Axios di tipo post per inserire negli ordini del db il prodotto in questione
                 for (let i = 0; i < this.acquistati.length; i++){
                   let costo = this.acquistati[i].quantity * this.acquistati[i].prezzo;
                   axios.post('acquista.php',{
@@ -133,6 +138,7 @@
                     idprodotto: this.acquistati[i].idprodotto
                   })
                   .then(function (response) {
+                    // se l'acquisto va a buon fine rimanda ad una pagina di conferma acquisto avvenuto
                     if(i == l){
                       if(response.data == "true"){
                         
@@ -151,10 +157,12 @@
                 }
               },
               goToProdotto: function(param){
+                // Redireziona alla pagina del prodotto sui cui si è effettuato il click passando l'id del prodotto
                 window.location.href = "../paginaProdotto/paginaProdotto.php?idprodotto=" + param;
               }
             },
             created: function(){
+              // Al momento dell'apertura della pagina si controlla che il localStorage mantenga una copia dei prodotti nel carrello
               if(localStorage.getItem('products')){
                 try {
                   this.products = JSON.parse(localStorage.getItem('products'));
@@ -170,6 +178,7 @@
                 this.acquistati = this.products.filter(product => product.quantity > 0);
                 if(this.acquistati.length > 0) this.showCart = true;
                 if(this.acquistati.length == 0) this.showCart = false;
+                // Aggiorna constantemente il localStorage in caso di cambiamenti all'interno del carrello
                 const parsed = JSON.stringify(this.products);
                 localStorage.setItem('products',parsed);
                 return this.acquistati;

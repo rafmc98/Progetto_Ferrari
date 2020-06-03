@@ -19,6 +19,7 @@
     
 </head>
 <body>
+  <!-- Decodifica il file Json restituito dall'url dell'API  -->
   <?php
     $url = 'http://newsapi.org/v2/everything?qInTitle=Ferrari+f1&sortBy=publishedAt&language=it&apiKey=250d309974014125a29d1bbcba131d36';
     $response = file_get_contents($url);
@@ -29,13 +30,15 @@
 
   <div class="titolo-pagina" >News Section</div>
 
-
+  <!-- News  -->
   <div class="container-fluid">
+    <!-- Itera sugli elementi del file json-->
     <?php
       foreach($NewsData->articles as $News)
       {
     ?>
-    <div class="row NewsGrid">
+      <!-- Per ogni News prendo le sezioni che mi interessano ($News -> sezione) -->
+      <div class="row NewsGrid">
         <div class="col-md-3">
           <img src="<?php echo $News->urlToImage ?>" alt="News thumbnail">
         </div>
@@ -45,9 +48,9 @@
           <p><!--Content:--> <?php echo $News->content ?></p>
           <h6><!--URL:--><?php  echo "<a href=$News->url>Click to see more</a>"; ?></h6>
           <h6><!--Aurther:--> <?php echo $News->author ?><h6>
-          <h6><!--Publishied:--> <?php echo $News->publishedAt ?><h6>
+          <h6><!--PublishiedAt:--> <?php echo $News->publishedAt ?><h6>
         </div>
-    </div>
+      </div>
     <?php
       }
     ?>
