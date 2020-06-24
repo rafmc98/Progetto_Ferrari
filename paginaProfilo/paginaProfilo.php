@@ -189,6 +189,6 @@
 
     <!--  Footer -->
     <?php include '../templates/footer.html'; ?>
-    
+
 </body>
 </html>
